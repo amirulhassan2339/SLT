@@ -1,0 +1,131 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15211258200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I navigate to patient grid",
+            "match": {
+              "location": "SD_PatientGrid.I_navigate_to_patient_grid()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7643905100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SD_Login.Browser()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Verify Existing Approved Care Plan",
+        "description": "",
+        "id": "existing-care-plan;verify-existing-approved-care-plan;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 7015950800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SD_Login.Logout()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9263060300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I search Dermo505, Mac505 using global search",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Dermo505, Mac505",
+                  "offset": 9
+                }
+              ],
+              "location": "SD_SearchPatient.search_Patient(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 465915900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I am on PWB",
+            "match": {
+              "location": "SD_BOPMR.I_am_on_PWB()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6956957900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on care plan tab",
+            "match": {
+              "location": "SD_BOPMR.click_On_Care_Plan_Tab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 451315800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I shoule see approved care plan as TestApproved",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TestApproved",
+                  "offset": 35
+                }
+              ],
+              "location": "SD_Existing_CarePlan.I_shoule_see_approved_existing_care_plan(String)"
+            },
+            "keyword": "* "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeUSMM_ExistingApproved"
+          }
+        ]
+      }
+    ],
+    "name": "Existing Care Plan",
+    "description": "",
+    "id": "existing-care-plan",
+    "keyword": "Feature",
+    "uri": "Include/features/PatientGrid/CarePlan/ExistingCarePlan.feature",
+    "tags": []
+  }
+]

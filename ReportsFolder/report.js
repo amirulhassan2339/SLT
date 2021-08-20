@@ -1,21 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Include/features/PatientGrid/CarePlan/Blank.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Include/features/PatientGrid/CarePlan/ExistingCarePlan.feature");
 formatter.feature({
-  "name": "Care Plan - Blank",
+  "name": "Existing Care Plan",
   "description": "",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@Blank"
-    }
-  ]
+  "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Verify reject status function using save button",
+  "name": "Verify Existing Approved Care Plan",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@SmokeUSMM_RejectedSaveBtn_Blank"
+      "name": "@SmokeUSMM_ExistingApproved"
     }
   ]
 });
@@ -32,80 +27,8 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "name": "I click on add new care plan button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I click on blank",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I should see patient \u003cPatient\u003e as patient_name",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "I should see intial status as \u003cNew Status\u003e on CP header",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I enter title \u003cTitle\u003e",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "I select work in progress as no",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I click on save button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I should see success message \u003cSucessMessage\u003e of CP",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "I should see patient \u003cPatient\u003e as patient_name",
+  "name": "I shoule see approved care plan as \u003cExistingCarePlan\u003e",
   "keyword": "* "
-});
-formatter.step({
-  "name": "I should see patient data of draft status",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I should see status as \u003cDraft Status\u003e on CP header",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I click on reject button_Blank",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "I should see rejected alert popup",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "I click on proceed button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I should see rejected success message",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I click on title from care plan grid",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "I should see patient \u003cPatient\u003e as patient_name",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "I should see patient data as read only",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I should see reject status as \u003cRejected Status\u003e on CP header",
-  "keyword": "And "
 });
 formatter.examples({
   "name": "",
@@ -115,21 +38,13 @@ formatter.examples({
     {
       "cells": [
         "Patient",
-        "Title",
-        "New Status",
-        "Draft Status",
-        "Rejected Status",
-        "SucessMessage"
+        "ExistingCarePlan"
       ]
     },
     {
       "cells": [
         "Dermo505, Mac505",
-        "RejectedPatient",
-        "New",
-        "Draft",
-        "Rejected",
-        "successCare Plan Saved SuccessfullyHide"
+        "TestApproved"
       ]
     }
   ]
@@ -148,4 +63,61 @@ formatter.step({
 });
 formatter.match({
   "location": "SD_PatientGrid.I_navigate_to_patient_grid()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify Existing Approved Care Plan",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@SmokeUSMM_ExistingApproved"
+    }
+  ]
+});
+formatter.step({
+  "name": "I search Dermo505, Mac505 using global search",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SD_SearchPatient.search_Patient(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I am on PWB",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SD_BOPMR.I_am_on_PWB()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on care plan tab",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SD_BOPMR.click_On_Care_Plan_Tab()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I shoule see approved care plan as TestApproved",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_Existing_CarePlan.I_shoule_see_approved_existing_care_plan(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 });

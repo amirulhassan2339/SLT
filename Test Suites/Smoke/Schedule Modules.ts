@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>f3623f4a-adc4-448d-a558-4d8c9d4a1f73</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/CucumberRunners/Schedule Module/TC_VerifyDataFromExcel</testCaseId>
    </testCaseLink>
    <testCaseLink>
