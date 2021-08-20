@@ -24,11 +24,11 @@ class SD_SupperBill {
 
 		WebUI.enableSmartWait()
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'))
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'), 10)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'))
-		
-		
+
+
 	}
 
 	@And("I enter (.*) as date of service from date")
@@ -50,11 +50,11 @@ class SD_SupperBill {
 	@And("I click on Apply button to apply supper bill filters")
 	public void I_click_on_supperbill_apply_button() {
 
-		
+
 		Thread.sleep(3000)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ApplyBTN'), 15)
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ApplyBTN'))
 		Thread.sleep(4000)
 	}
@@ -64,47 +64,47 @@ class SD_SupperBill {
 
 		String date = DateOfService_FromDate.substring(0, 2)
 
-//		
-//		// Store date format in String buffer
-//		StringBuffer sBuffer = new StringBuffer(date);
-//		String mon;
-//		String dd;
-//		String year;
-//	  
-//		// Store the Date in String Buffer and Break down the date
-//		// 0,2 - Month
-//		// 3,5 - Date
-//		// 6,10 - Year
-//		mon = sBuffer.substring(0,2);
-//		dd = sBuffer.substring(3,5);
-//		year = sBuffer.substring(6,10);
-//	  
-//		System.out.println("DD: "+ dd + " Mon: "+ mon + " Year: "+ year);
-//	  
-//		// Validating Date Format for Turn In Date and Live Date to be MM/dd/yyyy using regular expression
-//		if(mon.matches("0[1-9]|1[0-2]") && dd.matches("0[1-9]|[12][0-9]|3[01]") && year.matches("(19|20)\\d\\d"))
-//		{
-//		 System.out.println("Date Format matched.");
-//		 return true;
-//		}
-//		else
-//		{
-//		 System.out.println("Date Format didn't matched.");
-//		 return false;
-//		}
-		
-		
+		//
+		//		// Store date format in String buffer
+		//		StringBuffer sBuffer = new StringBuffer(date);
+		//		String mon;
+		//		String dd;
+		//		String year;
+		//
+		//		// Store the Date in String Buffer and Break down the date
+		//		// 0,2 - Month
+		//		// 3,5 - Date
+		//		// 6,10 - Year
+		//		mon = sBuffer.substring(0,2);
+		//		dd = sBuffer.substring(3,5);
+		//		year = sBuffer.substring(6,10);
+		//
+		//		System.out.println("DD: "+ dd + " Mon: "+ mon + " Year: "+ year);
+		//
+		//		// Validating Date Format for Turn In Date and Live Date to be MM/dd/yyyy using regular expression
+		//		if(mon.matches("0[1-9]|1[0-2]") && dd.matches("0[1-9]|[12][0-9]|3[01]") && year.matches("(19|20)\\d\\d"))
+		//		{
+		//		 System.out.println("Date Format matched.");
+		//		 return true;
+		//		}
+		//		else
+		//		{
+		//		 System.out.println("Date Format didn't matched.");
+		//		 return false;
+		//		}
+
+
 		String actual_DateOfServiceDate = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_DateOfService_Verify'))
 
 		String date1 = DateOfService_FromDate.substring(0, 2)
-		
+
 
 		//WebUI.verifyMatch(actual_DateOfServiceDate, DateOfService_FromDate(new SimpleDateFormat("H:mm a"), false)
 
 		WebUI.verifyMatch(date, date1, false)
-		
-		
-		
+
+
+
 
 	}
 
@@ -123,7 +123,7 @@ class SD_SupperBill {
 	@And("I click on particular patient and expand")
 	public void I_click_on_particularpatient_Expand() {
 
-		Thread.sleep(3000)		
+		Thread.sleep(3000)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_PatientClick_OpenGrid'))
 	}
 
@@ -147,11 +147,11 @@ class SD_SupperBill {
 	public void I_SelectSoapNoteStatusFromLeftFilters(String Soap_Status) {
 
 
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilter_Click'), 10)
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilter_Click'))
-		
+
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Select'), Soap_Status)
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Input'))
@@ -181,10 +181,10 @@ class SD_SupperBill {
 	@When("I select (.*) Billing status")
 	public void I_SelectBillingStatusLeftFilters(String Billing_Status) {
 
-		
-		
+
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_BillingStatusLeftFilter_Click'), 10)
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_BillingStatusLeftFilter_Click'))
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_BillingStatusLeftFilters_Select'), Billing_Status)
@@ -212,7 +212,7 @@ class SD_SupperBill {
 	public void I_ClickOnFax() {
 
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_FaxBtn'), 10)
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_FaxBtn'))
 	}
 
@@ -220,8 +220,6 @@ class SD_SupperBill {
 	public void I_Should_See_PDFFile() {
 
 		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_Verify_PDF'), 3)
-		
-		
 	}
 
 	@And("I click on PDF file and Logout")
@@ -234,10 +232,5 @@ class SD_SupperBill {
 	public void I_ClickOnCLoseButtonT() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_Close_PDF'))
-
 	}
-
-
-
-
 }
