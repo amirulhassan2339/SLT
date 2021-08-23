@@ -223,6 +223,23 @@ class SD_PatientTimer {
 
 
 	}
+	
+	@And("I verify Non_billable checkbox is checked")
+	public void VerifyNonBillableCheckbox() {
+
+
+
+
+		if(WebUI.verifyElementNotChecked(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_NonBillableCheckbox'), 5, FailureHandling.OPTIONAL)) {
+
+			println('Checked')
+		}else
+		{
+			println('Not Checked')
+		}
+
+
+	}
 
 	@And("I select (.*) as diagnosis code")
 	public void SelectDiagnosisCode(String Diagnosis) {
@@ -273,6 +290,14 @@ class SD_PatientTimer {
 
 	}
 
+	@And("I checked non billable checkbox")
+	public void selectNonBillableCheckbox() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_NonBillableCheckbox'))
+
+
+	}
 
 
 }
