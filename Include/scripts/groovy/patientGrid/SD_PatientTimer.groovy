@@ -32,6 +32,17 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn'))
 		Thread.sleep(2000)
 	}
+	
+	@And("I click on patient timer button_WFB")
+	public void click_On_PatientTimer_Button_WFB() {
+
+
+		Thread.sleep(4000)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_WFB'), 30)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_WFB'))
+		Thread.sleep(2000)
+	}
 
 	@And("I click on encounter tab")
 	public void click_On_Encounter_Tab() {
@@ -52,7 +63,7 @@ class SD_PatientTimer {
 
 	}
 
-	@And("I click on start button")
+	@And("I click on start timer button")
 	public void click_On_start_Button() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_StartBTN'))
@@ -80,8 +91,17 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_Again'))
 		Thread.sleep(2000)
 	}
+	
+	
+	@And("I click on patient timer button again_WFB")
+	public void click_On_PatientTimer_Button_again_WFB() {
 
-	@And("I click on stop button")
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_Again_WFB'))
+		Thread.sleep(2000)
+	}
+
+	@And("I click on stop timer button")
 	public void click_On_PatientTimer_StopButton() {
 
 
@@ -104,6 +124,18 @@ class SD_PatientTimer {
 
 		String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
 		String TimeSpent = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'))
+		
+		WebUI.verifyEqual(Actual_Duration, TimeSpent)
+		
+
+	}
+	
+	@And("I should see patient timer history_WFB")
+	public void History_WFB() {
+
+
+		String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
+		String TimeSpent = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent_WFB'))
 		
 		WebUI.verifyEqual(Actual_Duration, TimeSpent)
 		
@@ -157,11 +189,20 @@ class SD_PatientTimer {
 
 	}
 
-	@And("I slect patient timer program")
+	@And("I select patient timer program")
 	public void selectProgram() {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_selectProgram'))
+
+
+	}
+	
+	@And("I select patient timer program_WFB")
+	public void selectProgram_WFB() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_selectProgram_WFB'))
 
 
 	}
@@ -206,7 +247,31 @@ class SD_PatientTimer {
 
 	}
 
+	@And("I verify patient is selected")
+	public void VerifyPatientIsSelectedCheckbox() {
 
+
+
+
+		if(WebUI.verifyElementNotChecked(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_IsPatientSelect'), 5, FailureHandling.OPTIONAL)) {
+
+			println('Checked')
+		}else
+		{
+			println('Not Checked')
+		}
+
+
+	}
+
+	@And("I select the patient")
+	public void ClickOnPatient() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientClick'))
+
+
+	}
 
 
 
