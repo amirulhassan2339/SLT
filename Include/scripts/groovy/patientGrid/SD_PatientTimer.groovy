@@ -51,6 +51,17 @@ class SD_PatientTimer {
 		Thread.sleep(2000)
 	}
 
+	@And("I drag the popup")
+	public void DrAG() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_Drag'))
+		
+		WebUI.dragAndDropByOffset(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_Drag'), 100, 50)
+		
+		Thread.sleep(2000)
+	}
+	
+	
 	@Then("I should see patient (.*) as patient_name in timer popup")
 	public void verify_Patient_Name_TimerPopUp(String Patient) {
 
@@ -156,17 +167,18 @@ class SD_PatientTimer {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_UpdateBTN'))
+		Thread.sleep(3000)
 
 
 	}
 
 
 	@Then("I should see success message (.*) of timer")
-	public void I_should_see_intial_status_as_on_timer(String SucessMessage) {
+	public void I_should_see_intial_status_as_on_timer(String TimerSucessMessage) {
 
 		String Actual_Status = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_TimerSuccessMessage'))
 
-		WebUI.verifyEqual(Actual_Status, SucessMessage)
+		WebUI.verifyEqual(Actual_Status, TimerSucessMessage)
 	}
 
 
