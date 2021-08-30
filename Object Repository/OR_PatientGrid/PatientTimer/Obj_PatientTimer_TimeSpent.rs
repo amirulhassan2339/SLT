@@ -6,12 +6,16 @@
    <elementGuidId>60efef93-715c-4002-8994-423ff8316a85</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='k-grid-content k-auto-scrollable'])[4]//table//tr[1]//td[8]</value>
+         <value>(//div[@class='k-grid-content k-auto-scrollable'])[6]//table//tr[1]//td[8]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +25,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//div[@class='k-grid-content k-auto-scrollable'])[4]//table//tr[1]//td[8]</value>
+      <value>(//div[@class='k-grid-content k-auto-scrollable'])[6]//table//tr[1]//td[8]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

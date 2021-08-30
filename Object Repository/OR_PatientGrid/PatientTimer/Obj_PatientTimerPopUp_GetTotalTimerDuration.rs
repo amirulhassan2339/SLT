@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@id='timepicker'])</value>
+         <value>(//input[@id='timepicker'])[@type='text']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//input[@id='timepicker'])</value>
+      <value>(//input[@id='timepicker'])[@type='text']</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

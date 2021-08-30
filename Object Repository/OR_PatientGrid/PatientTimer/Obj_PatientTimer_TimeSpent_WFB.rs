@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='k-grid-content k-auto-scrollable'])[10]//tr[1]//td[8]</value>
+         <value>(//div[@class='k-grid-content k-auto-scrollable'])[10]//table//tr[1]//td[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//div[@class='k-grid-content k-auto-scrollable'])[10]//tr[1]//td[8]</value>
+      <value>(//div[@class='k-grid-content k-auto-scrollable'])[10]//table//tr[1]//td[2]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
