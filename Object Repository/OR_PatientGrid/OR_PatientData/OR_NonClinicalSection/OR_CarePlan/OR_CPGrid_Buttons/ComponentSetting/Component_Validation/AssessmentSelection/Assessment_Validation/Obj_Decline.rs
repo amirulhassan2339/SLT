@@ -6,11 +6,15 @@
    <elementGuidId>e48655d4-317f-4076-a022-60b9ca08797f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//span[contains(text(), 'Declined to answer')]/parent::td</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//span[contains(text(), 'Review concepts and goals of chronic case management program.')]//parent::td</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Most of the time' or . = 'Most of the time') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

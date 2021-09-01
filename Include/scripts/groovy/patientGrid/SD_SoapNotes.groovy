@@ -138,7 +138,7 @@ class SD_SoapNotes {
 	public void I_should_see_Already_Added_Appointment() {
 
 		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AlreadyAppointment'), 30)
-		
+
 		String actual_message = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AlreadyAppointment'))
 
 		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AlreadyAppointment'), actual_message)

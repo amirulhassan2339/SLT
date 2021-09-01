@@ -57,7 +57,7 @@ class SD_PatientTimer {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_Drag'))
 		
-		WebUI.dragAndDropByOffset(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_Drag'), 100, 50)
+		WebUI.dragAndDropByOffset(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_Drag'), 400, 500)
 		
 		Thread.sleep(2000)
 	}

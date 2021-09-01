@@ -93,6 +93,19 @@ public class SD_TelephonicOutreach {
 		
 		
 	}
+	
+	@And("I enter telephonic outreach (.*) as durations")
+	public void I_enter_as_durations(String Duration) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_Duration_Input'), Duration)
+			
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_Duration_Input'), Duration)
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_Duration_Input'), Duration)
+		
+		Thread.sleep(2000)
+		
+		
+	}
 
 
 	@And("I select outreach call type")
@@ -133,6 +146,17 @@ public class SD_TelephonicOutreach {
 
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_HaspatientgonetoERsinceplacedonTOR_Select'))
 	}
+	
+	@And("I select Has patient gone to ER since placed on TOR within last thirty daysss?")
+	public void I_select_HasPatientGoneERS() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_HaspatientgonetoERsinceplacedonTOR_Click'))
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect'))
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect'))
+		
+		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_HaspatientgonetoERsinceplacedonTOR_Select'))
+	}
 
 
 	@And("I select Was patient admittedreadmitted to acute care since placed on TOR in last thirty days?")
@@ -144,6 +168,17 @@ public class SD_TelephonicOutreach {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasPatientSelect'))
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasPatientAdmitted_Select'))
 	}
+	
+	@And("I select Was patient admittedreadmitted to acute care since placed on TOR in last thirty daysss?")
+	public void I_select_WasPatientAdmittedss() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasPatientAdmitted_Click'))
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasPatientSelect'))
+		
+		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasPatientSelect'))
+		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasPatientAdmitted_Select'))
+	}
 
 
 	@And("I select Was ER visit or Acute Admission preventable?")
@@ -151,8 +186,19 @@ public class SD_TelephonicOutreach {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasERVisit_Click'))
 
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasERSelect'))
+		
+		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasERVisit_Select'))
+	}
+	
+	@And("I select Was ER visit or Acute Admission preventabless?")
+	public void I_select_WasERVisits() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasERVisit_Click'))
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasERSelect'))
+		
+		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasERSelect'))
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasERVisit_Select'))
 	}
 

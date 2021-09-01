@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_PatientTimer_selectProgram</name>
+   <name>Obj_LOBFilterClick</name>
    <tag></tag>
-   <elementGuidId>5e5e2dba-b70d-42b3-a670-961eaddfd103</elementGuidId>
+   <elementGuidId>224ffcf4-73bf-430b-a361-d66bdacb0677</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//span[@class='k-select'])[69]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
+         <key>XPATH</key>
+         <value>(//form[@id='toc_filter_form']//div)[49]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,13 +20,13 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//span[@class='k-select'])[69]</value>
+      <value>(//form[@id='toc_filter_form']//div)[49]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame</value>
+      <value>Object Repository/OR_Telehealth/Obj_frame</value>
    </webElementProperties>
 </WebElementEntity>

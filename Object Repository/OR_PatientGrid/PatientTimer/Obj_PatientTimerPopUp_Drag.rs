@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@id='timerWnd_wnd_title'])//parent::div</value>
+         <value>//div[@id='timerWnd']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//span[@id='timerWnd_wnd_title'])//parent::div</value>
+      <value>//div[@id='timerWnd']</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

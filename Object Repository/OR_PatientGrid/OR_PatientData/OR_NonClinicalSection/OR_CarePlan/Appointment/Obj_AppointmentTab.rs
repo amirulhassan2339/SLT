@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_ClearBeforeDate</name>
+   <name>Obj_AppointmentTab</name>
    <tag></tag>
-   <elementGuidId>5bddd01e-997a-452d-ab75-723c60f9d852</elementGuidId>
+   <elementGuidId>baed70e7-7ade-4c1d-b8ba-5ff1f67d0085</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>span.k-dropdown-wrap.k-state-default.k-state-hover.k-state-focused</value>
+         <value>li.k-item.k-state-default.k-state-hover > span.k-link</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//form[@id='toc_filter_form']//div)[71]//input</value>
-      </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[(text() = 'Allselect' or . = 'Allselect') and @ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
+         <value>//span[contains(text(), 'Appointment')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -30,64 +26,71 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>unselectable</name>
-      <type>Main</type>
-      <value>on</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>k-dropdown-wrap k-state-default k-state-hover k-state-focused</value>
+      <value>k-link</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Allselect</value>
+      <value>Care Plan</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;patientFilters&quot;)/div[@class=&quot;panel-body&quot;]/form[@class=&quot;form-horizontal no-padding-right&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-12&quot;]/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-md-7 no-padding&quot;]/span[@class=&quot;k-widget k-dropdown k-header form-control&quot;]/span[@class=&quot;k-dropdown-wrap k-state-default k-state-hover k-state-focused&quot;]</value>
+      <value>id(&quot;patient-grid&quot;)/div[@class=&quot;k-grid-content k-auto-scrollable&quot;]/table[1]/tbody[1]/tr[@class=&quot;k-detail-row&quot;]/td[@class=&quot;k-detail-cell&quot;]/div[@class=&quot;k-tabstrip-wrapper&quot;]/div[@class=&quot;pwb tabstrip k-widget k-header k-tabstrip k-floatwrap k-tabstrip-top&quot;]/ul[@class=&quot;k-tabstrip-items k-reset&quot;]/li[@class=&quot;k-item k-state-default k-state-hover&quot;]/span[@class=&quot;k-link&quot;]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame</value>
+      <value>Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPButtons/Obj_CCMFrame</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='patientFilters']/div/form/div/div[7]/div/div/span/span</value>
+      <value>//div[@id='patient-grid']/div[3]/table/tbody/tr[2]/td[2]/div/div/ul/li[15]/span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Program'])[1]/following::span[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Appointments'])[1]/following::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='All'])[5]/following::span[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Tasks'])[2]/following::span[4]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Notes'])[2]/preceding::span[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Documentation'])[1]/preceding::span[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[7]/div/div/span/span</value>
+      <value>//li[15]/span[2]</value>
    </webElementXpaths>
 </WebElementEntity>

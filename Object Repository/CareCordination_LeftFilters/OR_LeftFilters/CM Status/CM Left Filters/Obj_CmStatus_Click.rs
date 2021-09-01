@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_PatientTimer_selectProgram</name>
+   <name>Obj_CmStatus_Click</name>
    <tag></tag>
-   <elementGuidId>5e5e2dba-b70d-42b3-a670-961eaddfd103</elementGuidId>
+   <elementGuidId>9b1e69aa-c6a7-4e4a-99da-e1c6e3ac9c6b</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>span.k-dropdown-wrap.k-state-default.k-state-hover.k-state-focused</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>(//span[@class='k-select'])[69]</value>
+         <value>(//span[@class='k-dropdown-wrap k-state-default'])[32]//span[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
+         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
-   <useRalativeImagePath>false</useRalativeImagePath>
+   <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//span[@class='k-select'])[69]</value>
+      <value>(//span[@class='k-dropdown-wrap k-state-default'])[32]//span[2]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame</value>
+      <value>Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame</value>
    </webElementProperties>
 </WebElementEntity>

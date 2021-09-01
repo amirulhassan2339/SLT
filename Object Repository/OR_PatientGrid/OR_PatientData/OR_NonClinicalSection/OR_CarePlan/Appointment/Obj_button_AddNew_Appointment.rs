@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_HasPatientSelect</name>
+   <name>Obj_button_AddNew_Appointment</name>
    <tag></tag>
-   <elementGuidId>ef8c3527-51b0-4c9a-a236-bfd635b87a2b</elementGuidId>
+   <elementGuidId>b9a7d69c-30f0-439a-8eae-ae53f21b8d3f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#3bcd5911-733d-46e5-89e8-9c71fac27b81</value>
+         <value>#carePlan</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='k-list-scroller']//ul)[79]//li[1]</value>
-      </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[@role = 'option' and @unselectable = 'on' and @data-offset-index = '0' and @aria-selected = 'true' and (text() = 'Poineer practice' or . = 'Poineer practice') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/iframe_SignOut_appCCM']</value>
+         <value>(//button[@class='k-button k-button-icontext k-grid-add'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -25,125 +21,111 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>li</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>tabindex</name>
-      <type>Main</type>
-      <value>-1</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>role</name>
-      <type>Main</type>
-      <value>option</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>unselectable</name>
-      <type>Main</type>
-      <value>on</value>
+      <value>button</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>k-item k-state-focused k-state-hover</value>
+      <value>k-button k-button-i-context dropdown-toggle</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>data-offset-index</name>
+      <name>type</name>
       <type>Main</type>
-      <value>0</value>
+      <value>button</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>carePlan</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>id</name>
+      <name>data-toggle</name>
       <type>Main</type>
-      <value>3bcd5911-733d-46e5-89e8-9c71fac27b81</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>aria-selected</name>
-      <type>Main</type>
-      <value>true</value>
+      <value>dropdown</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Poineer practice</value>
+      <value>New Care Plan</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;3bcd5911-733d-46e5-89e8-9c71fac27b81&quot;)</value>
+      <value>id(&quot;carePlan&quot;)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/iframe_SignOut_appCCM</value>
+      <value>Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPButtons/Obj_CCMFrame</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//li[@id='3bcd5911-733d-46e5-89e8-9c71fac27b81']</value>
+      <value>//button[@id='carePlan']</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='3917c46f-a8dd-485a-ac8e-d6d6e026df41-15']/div/div/div/button</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Two, Kumar'])[4]/following::li[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Period'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Two, Kamran'])[4]/following::li[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Health Concern'])[1]/following::button[7]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Support Test Fac'])[2]/preceding::li[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Based on Patient Medical Record'])[1]/preceding::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Support Test Prac1'])[1]/preceding::li[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='From Previous Care Plan'])[1]/preceding::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Support Test Fac'])[2]/preceding::li[1]</value>
+      <value>//*/text()[normalize-space(.)='New Care Plan']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[144]/div/div[2]/ul/li</value>
+      <value>//div/div[15]/div/div/div/button</value>
    </webElementXpaths>
 </WebElementEntity>
