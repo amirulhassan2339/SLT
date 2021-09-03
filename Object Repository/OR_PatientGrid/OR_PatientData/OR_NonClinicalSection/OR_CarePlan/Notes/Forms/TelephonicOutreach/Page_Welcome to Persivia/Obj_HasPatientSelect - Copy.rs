@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_HasPatientSelect</name>
+   <name>Obj_HasPatientSelect - Copy</name>
    <tag></tag>
-   <elementGuidId>ef8c3527-51b0-4c9a-a236-bfd635b87a2b</elementGuidId>
+   <elementGuidId>c0096dba-acdb-481b-a466-24eca054f4c0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>

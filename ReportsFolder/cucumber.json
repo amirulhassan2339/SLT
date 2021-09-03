@@ -3,129 +3,344 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "",
+        "line": 18,
+        "name": "CM Status Left Filters Verification",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 15211258200,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "I navigate to patient grid",
-            "match": {
-              "location": "SD_PatientGrid.I_navigate_to_patient_grid()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 7643905100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "SD_Login.Browser()"
-            }
-          }
-        ],
-        "line": 15,
-        "name": "Verify Existing Approved Care Plan",
-        "description": "",
-        "id": "existing-care-plan;verify-existing-approved-care-plan;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 7015950800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "SD_Login.Logout()"
-            }
-          }
-        ],
+        "id": "cm-status---care-coordination;cm-status-left-filters-verification;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 9263060300,
+              "duration": 3029446600,
               "status": "passed"
             },
             "line": 8,
-            "name": "I search Dermo505, Mac505 using global search",
+            "name": "I click on care cordination",
             "match": {
-              "arguments": [
-                {
-                  "val": "Dermo505, Mac505",
-                  "offset": 9
-                }
-              ],
-              "location": "SD_SearchPatient.search_Patient(String)"
+              "location": "SD_CareCordination_LeftFilters.I_click_on_carecordination()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 465915900,
+              "duration": 938855700,
               "status": "passed"
             },
             "line": 9,
-            "name": "I am on PWB",
+            "name": "I clear before and after dates",
             "match": {
-              "location": "SD_BOPMR.I_am_on_PWB()"
+              "location": "SD_CareCordination_LeftFilters.ClearDates()"
             },
-            "keyword": "Then "
+            "keyword": "* "
           },
           {
             "result": {
-              "duration": 6956957900,
+              "duration": 2963327100,
               "status": "passed"
             },
             "line": 10,
-            "name": "I click on care plan tab",
+            "name": "I click on care cordination reset button",
             "match": {
-              "location": "SD_BOPMR.click_On_Care_Plan_Tab()"
+              "location": "SD_CareCordination_LeftFilters.click_On_Reset_Button()"
             },
-            "keyword": "And "
+            "keyword": "* "
           },
           {
             "result": {
-              "duration": 451315800,
+              "duration": 923264500,
               "status": "passed"
             },
             "line": 11,
-            "name": "I shoule see approved care plan as TestApproved",
+            "name": "I clear before and after dates",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.ClearDates()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 6080925900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I select Eligible as cm status",
             "match": {
               "arguments": [
                 {
-                  "val": "TestApproved",
-                  "offset": 35
+                  "val": "Eligible",
+                  "offset": 9
                 }
               ],
-              "location": "SD_Existing_CarePlan.I_shoule_see_approved_existing_care_plan(String)"
+              "location": "SD_CMStatus_CareCoordination.selectStatus(String)"
             },
             "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 3963005700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on care cordination apply button",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.click_On_CareCordination_Apply_Button()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 469664200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I should see care cordination cm status Eligible filters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Eligible",
+                  "offset": 40
+                }
+              ],
+              "location": "SD_CMStatus_CareCoordination.I_should_see_care_cordination_LOB_filters(String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@SmokeUSMM_ExistingApproved"
+            "name": "@Smoke_USMM"
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "CM Status Left Filters Verification",
+        "description": "",
+        "id": "cm-status---care-coordination;cm-status-left-filters-verification;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3309551200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on care cordination",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.I_click_on_carecordination()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 880346600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I clear before and after dates",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.ClearDates()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 2974153800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on care cordination reset button",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.click_On_Reset_Button()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 882913100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I clear before and after dates",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.ClearDates()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 6066360600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I select Active as cm status",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Active",
+                  "offset": 9
+                }
+              ],
+              "location": "SD_CMStatus_CareCoordination.selectStatus(String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 3956978400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on care cordination apply button",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.click_On_CareCordination_Apply_Button()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 460868500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I should see care cordination cm status Active filters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Active",
+                  "offset": 40
+                }
+              ],
+              "location": "SD_CMStatus_CareCoordination.I_should_see_care_cordination_LOB_filters(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke_USMM"
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "CM Status Left Filters Verification",
+        "description": "",
+        "id": "cm-status---care-coordination;cm-status-left-filters-verification;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2919908900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on care cordination",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.I_click_on_carecordination()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 834086400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I clear before and after dates",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.ClearDates()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 2951955400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on care cordination reset button",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.click_On_Reset_Button()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 892365900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I clear before and after dates",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.ClearDates()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 6019538000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I select Completed as cm status",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Completed",
+                  "offset": 9
+                }
+              ],
+              "location": "SD_CMStatus_CareCoordination.selectStatus(String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 3938665600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on care cordination apply button",
+            "match": {
+              "location": "SD_CareCordination_LeftFilters.click_On_CareCordination_Apply_Button()"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 425637200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I should see care cordination cm status Completed filters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Completed",
+                  "offset": 40
+                }
+              ],
+              "location": "SD_CMStatus_CareCoordination.I_should_see_care_cordination_LOB_filters(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke_USMM"
           }
         ]
       }
     ],
-    "name": "Existing Care Plan",
+    "name": "CM Status - Care Coordination",
     "description": "",
-    "id": "existing-care-plan",
+    "id": "cm-status---care-coordination",
     "keyword": "Feature",
-    "uri": "Include/features/PatientGrid/CarePlan/ExistingCarePlan.feature",
+    "uri": "Include/features/PatientGrid/CarePlan/Care Coordination Left Filters/CMStatusLeftFilters.feature",
     "tags": []
   }
 ]

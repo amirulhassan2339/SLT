@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_CmStatus_select</name>
+   <name>Obj_VerifyCMStatus</name>
    <tag></tag>
-   <elementGuidId>147c412a-06b5-4c8e-b0da-156cc49ad9a3</elementGuidId>
+   <elementGuidId>8661f25c-6dc2-4c73-b198-8c50a49d4f54</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>li.k-item.k-state-hover</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>(//ul[@id=&quot;toc_filter_pgm_status_listbox&quot;])//li[contains(text(), 'Eligible')]</value>
+         <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[58]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
-   <useRalativeImagePath>true</useRalativeImagePath>
+   <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//ul[@id=&quot;toc_filter_pgm_status_listbox&quot;])//li[contains(text(), 'Eligible')]</value>
+      <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[58]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame</value>
+      <value>Object Repository/OR_Telehealth/Obj_frame</value>
    </webElementProperties>
 </WebElementEntity>

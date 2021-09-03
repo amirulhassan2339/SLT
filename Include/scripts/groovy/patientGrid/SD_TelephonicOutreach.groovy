@@ -4,6 +4,7 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import org.openqa.selenium.Keys
 
+import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import cucumber.api.java.en.And
@@ -75,7 +76,9 @@ public class SD_TelephonicOutreach {
 	@And("I select outreach spoke with")
 	public void I_select_SpokeWith() {
 
+		Thread.sleep(3000)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_SpokeWith_Click'))
+		
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_SpokeWithSelecttion'))
 
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_SpokeWith_Select'))
@@ -150,12 +153,17 @@ public class SD_TelephonicOutreach {
 	@And("I select Has patient gone to ER since placed on TOR within last thirty daysss?")
 	public void I_select_HasPatientGoneERS() {
 
+		Thread.sleep(5000)
+		
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_HaspatientgonetoERsinceplacedonTOR_Click'))
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect'))
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect'))
+		Thread.sleep(5000)
 		
-		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_HaspatientgonetoERsinceplacedonTOR_Select'))
+		
+		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect - Copy'))
+		
+				WebUI.check(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect - Copy'))
+				
 	}
 
 
@@ -169,7 +177,7 @@ public class SD_TelephonicOutreach {
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasPatientAdmitted_Select'))
 	}
 	
-	@And("I select Was patient admittedreadmitted to acute care since placed on TOR in last thirty daysss?")
+	@And("I select Was patient admittedreadmitted to acute care since placed on TOR in last thirty dayss?")
 	public void I_select_WasPatientAdmittedss() {
 
 

@@ -2,21 +2,19 @@ package patientGrid
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import org.openqa.selenium.Keys
-import org.openqa.selenium.WebDriver
 
-import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import cucumber.api.java.en.And
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import internal.GlobalVariable
 
 
 
 
 class SD_CareCordination_LeftFilters {
 
-	WebDriver driver = DriverFactory.getWebDriver()
 
 
 	@When("I click on care cordination")

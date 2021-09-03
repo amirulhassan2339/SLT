@@ -1,34 +1,46 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Include/features/PatientGrid/CarePlan/ExistingCarePlan.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Include/features/PatientGrid/CarePlan/Care Coordination Left Filters/CMStatusLeftFilters.feature");
 formatter.feature({
-  "name": "Existing Care Plan",
+  "name": "CM Status - Care Coordination",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Verify Existing Approved Care Plan",
+  "name": "CM Status Left Filters Verification",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@SmokeUSMM_ExistingApproved"
+      "name": "@Smoke_USMM"
     }
   ]
 });
 formatter.step({
-  "name": "I search \u003cPatient\u003e using global search",
+  "name": "I click on care cordination",
   "keyword": "When "
 });
 formatter.step({
-  "name": "I am on PWB",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "I click on care plan tab",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I shoule see approved care plan as \u003cExistingCarePlan\u003e",
+  "name": "I clear before and after dates",
   "keyword": "* "
+});
+formatter.step({
+  "name": "I click on care cordination reset button",
+  "keyword": "* "
+});
+formatter.step({
+  "name": "I clear before and after dates",
+  "keyword": "* "
+});
+formatter.step({
+  "name": "I select \u003cCM_Status\u003e as cm status",
+  "keyword": "* "
+});
+formatter.step({
+  "name": "I click on care cordination apply button",
+  "keyword": "* "
+});
+formatter.step({
+  "name": "I should see care cordination cm status \u003cCM_Status\u003e filters",
+  "keyword": "Then "
 });
 formatter.examples({
   "name": "",
@@ -37,87 +49,264 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Patient",
-        "ExistingCarePlan"
+        "CM_Status"
       ]
     },
     {
       "cells": [
-        "Dermo505, Mac505",
-        "TestApproved"
+        "Eligible"
+      ]
+    },
+    {
+      "cells": [
+        "Active"
+      ]
+    },
+    {
+      "cells": [
+        "Completed"
       ]
     }
   ]
 });
-formatter.background({
-  "name": "",
+formatter.scenario({
+  "name": "CM Status Left Filters Verification",
   "description": "",
-  "keyword": "Background"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Smoke_USMM"
+    }
+  ]
 });
-formatter.before({
+formatter.step({
+  "name": "I click on care cordination",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.I_click_on_carecordination()"
+});
+formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I navigate to patient grid",
-  "keyword": "Given "
+  "name": "I clear before and after dates",
+  "keyword": "* "
 });
 formatter.match({
-  "location": "SD_PatientGrid.I_navigate_to_patient_grid()"
+  "location": "SD_CareCordination_LeftFilters.ClearDates()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on care cordination reset button",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.click_On_Reset_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I clear before and after dates",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.ClearDates()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I select Eligible as cm status",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CMStatus_CareCoordination.selectStatus(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on care cordination apply button",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.click_On_CareCordination_Apply_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should see care cordination cm status Eligible filters",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SD_CMStatus_CareCoordination.I_should_see_care_cordination_LOB_filters(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Verify Existing Approved Care Plan",
+  "name": "CM Status Left Filters Verification",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@SmokeUSMM_ExistingApproved"
+      "name": "@Smoke_USMM"
     }
   ]
 });
 formatter.step({
-  "name": "I search Dermo505, Mac505 using global search",
+  "name": "I click on care cordination",
   "keyword": "When "
 });
 formatter.match({
-  "location": "SD_SearchPatient.search_Patient(String)"
+  "location": "SD_CareCordination_LeftFilters.I_click_on_carecordination()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I am on PWB",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "SD_BOPMR.I_am_on_PWB()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click on care plan tab",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "SD_BOPMR.click_On_Care_Plan_Tab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I shoule see approved care plan as TestApproved",
+  "name": "I clear before and after dates",
   "keyword": "* "
 });
 formatter.match({
-  "location": "SD_Existing_CarePlan.I_shoule_see_approved_existing_care_plan(String)"
+  "location": "SD_CareCordination_LeftFilters.ClearDates()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.after({
+formatter.step({
+  "name": "I click on care cordination reset button",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.click_On_Reset_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I clear before and after dates",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.ClearDates()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I select Active as cm status",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CMStatus_CareCoordination.selectStatus(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on care cordination apply button",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.click_On_CareCordination_Apply_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should see care cordination cm status Active filters",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SD_CMStatus_CareCoordination.I_should_see_care_cordination_LOB_filters(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "CM Status Left Filters Verification",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Smoke_USMM"
+    }
+  ]
+});
+formatter.step({
+  "name": "I click on care cordination",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.I_click_on_carecordination()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I clear before and after dates",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.ClearDates()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on care cordination reset button",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.click_On_Reset_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I clear before and after dates",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.ClearDates()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I select Completed as cm status",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CMStatus_CareCoordination.selectStatus(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on care cordination apply button",
+  "keyword": "* "
+});
+formatter.match({
+  "location": "SD_CareCordination_LeftFilters.click_On_CareCordination_Apply_Button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should see care cordination cm status Completed filters",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SD_CMStatus_CareCoordination.I_should_see_care_cordination_LOB_filters(String)"
+});
+formatter.result({
   "status": "passed"
 });
 });
