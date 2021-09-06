@@ -22,7 +22,7 @@ import cucumber.api.java.en.Then
 class SD_PatientTimer {
 
 
-	
+
 	@And("I click on patient timer button")
 	public void click_On_PatientTimer_Button() {
 
@@ -33,7 +33,7 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn'))
 		Thread.sleep(2000)
 	}
-	
+
 	@And("I click on patient timer button_WFB")
 	public void click_On_PatientTimer_Button_WFB() {
 
@@ -56,13 +56,13 @@ class SD_PatientTimer {
 	public void DrAG() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_Drag'))
-		
+
 		WebUI.dragAndDropByOffset(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_Drag'), 400, 500)
-		
+
 		Thread.sleep(2000)
 	}
-	
-	
+
+
 	@Then("I should see patient (.*) as patient_name in timer popup")
 	public void verify_Patient_Name_TimerPopUp(String Patient) {
 
@@ -71,8 +71,6 @@ class SD_PatientTimer {
 
 		String ActualName = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_PatientNameVerify'))
 		WebUI.verifyEqual(ActualName, Patient)
-
-
 	}
 
 	@And("I click on start timer button")
@@ -93,7 +91,6 @@ class SD_PatientTimer {
 	public void verify_PatientTimer_ShouldNotShow() {
 
 		WebUI.verifyElementNotVisible(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_PatientNameVerify'))
-
 	}
 
 	@And("I click on patient timer button again")
@@ -103,8 +100,8 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_Again'))
 		Thread.sleep(2000)
 	}
-	
-	
+
+
 	@And("I click on patient timer button again_WFB")
 	public void click_On_PatientTimer_Button_again_WFB() {
 
@@ -126,8 +123,6 @@ class SD_PatientTimer {
 
 
 		String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
-
-
 	}
 
 	@And("I should see patient timer history")
@@ -137,28 +132,28 @@ class SD_PatientTimer {
 		//String Actual_Duration = WebUI.getAttribute(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'), 'Value')
 		//String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
 		//String TimeSpent = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'))
-		
+
 		//WebUI.verifyMatch(Actual_Duration, TimeSpent, false)
 		//WebUI.verifyEqual(Actual_Duration, TimeSpent)
-		
+
 		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'), 3)
-		
-		
+
+
 
 	}
-	
+
 	@And("I should see patient timer history_WFB")
 	public void History_WFB() {
 
 
-//		String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
-//		String TimeSpent = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent_WFB'))
-//		
-//		WebUI.verifyEqual(Actual_Duration, TimeSpent)
-		
+		//		String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
+		//		String TimeSpent = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent_WFB'))
+		//
+		//		WebUI.verifyEqual(Actual_Duration, TimeSpent)
+
 		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent_WFB'), 5)
-		
-		
+
+
 
 	}
 
@@ -167,8 +162,6 @@ class SD_PatientTimer {
 
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_Comment'), Comment)
-
-
 	}
 
 	@And("I click on update button")
@@ -177,8 +170,6 @@ class SD_PatientTimer {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_UpdateBTN'))
 		Thread.sleep(3000)
-
-
 	}
 
 
@@ -205,9 +196,6 @@ class SD_PatientTimer {
 		System.out.println("Current date and time is " +date1);
 
 		WebUI.getAttribute(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_CurrentDate'), date1)
-
-
-
 	}
 
 	@And("I select patient timer program")
@@ -215,17 +203,13 @@ class SD_PatientTimer {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_selectProgram'))
-
-
 	}
-	
+
 	@And("I select patient timer program_WFB")
 	public void selectProgram_WFB() {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_selectProgram_WFB'))
-
-
 	}
 
 	@And("I verify billable checkbox")
@@ -237,14 +221,11 @@ class SD_PatientTimer {
 		if(WebUI.verifyElementNotChecked(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_BillableCheckbox'), 5, FailureHandling.OPTIONAL)) {
 
 			println('Checked')
-		}else
-		{
+		}else {
 			println('Not Checked')
 		}
-
-
 	}
-	
+
 	@And("I verify Non_billable checkbox is checked")
 	public void VerifyNonBillableCheckbox() {
 
@@ -254,12 +235,9 @@ class SD_PatientTimer {
 		if(WebUI.verifyElementNotChecked(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_NonBillableCheckbox'), 5, FailureHandling.OPTIONAL)) {
 
 			println('Checked')
-		}else
-		{
+		}else {
 			println('Not Checked')
 		}
-
-
 	}
 
 	@And("I select (.*) as diagnosis code")
@@ -275,7 +253,7 @@ class SD_PatientTimer {
 
 
 	}
-	
+
 	@And("I click on history tab")
 	public void HistoryTab() {
 
@@ -283,7 +261,6 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_HistoryTab'))
 
 		Thread.sleep(8000)
-
 	}
 
 	@And("I verify patient is selected")
@@ -295,12 +272,9 @@ class SD_PatientTimer {
 		if(WebUI.verifyElementNotChecked(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_IsPatientSelect'), 5, FailureHandling.OPTIONAL)) {
 
 			println('Checked')
-		}else
-		{
+		}else {
 			println('Not Checked')
 		}
-
-
 	}
 
 	@And("I select the patient")
@@ -308,8 +282,6 @@ class SD_PatientTimer {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientClick'))
-
-
 	}
 
 	@And("I checked non billable checkbox")
@@ -317,10 +289,6 @@ class SD_PatientTimer {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_NonBillableCheckbox'))
-
-
 	}
-
-
 }
 

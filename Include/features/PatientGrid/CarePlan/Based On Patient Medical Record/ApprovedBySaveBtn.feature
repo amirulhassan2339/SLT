@@ -6,7 +6,6 @@ Feature: Care Plan - Approved Using Save Button
 	@Smoke_USMM
 	Scenario Outline: Verify Approve Status Function Using Save Button
 		When I search <Patient> using global search
-		Then I am on PWB
 		 And I click on care plan tab
 		 And I click on add new care plan button
 		 And I click on basedonpatientmedicalrecord

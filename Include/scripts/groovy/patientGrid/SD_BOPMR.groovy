@@ -219,11 +219,11 @@ class SD_BOPMR {
 
 		Thread.sleep(5000)
 	}
-	
+
 	@And("Close CP Popup")
 	public void CloseCP() {
 
-		
+
 
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGridInput/Obj_CrossCP'))
 
@@ -786,7 +786,7 @@ class SD_BOPMR {
 				AssesmentTitle)
 		Thread.sleep(2000)
 	}
-	
+
 	@And("I enter (.*) title")
 	public void I_enter_assessment_title(String Title) {
 
@@ -799,7 +799,7 @@ class SD_BOPMR {
 				Title)
 		Thread.sleep(2000)
 	}
-	
+
 	@And("I enter (.*) as cpt code")
 	public void I_enter_CPTCode(String CPTCode) {
 
@@ -823,10 +823,10 @@ class SD_BOPMR {
 
 
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_Dropdown_FirstClick'))
-		
-		
+
+
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_question1_selection'))
-		
+
 		//		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_Dropdown_ThirdClick'))
 		//
 		//		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_question2_select'))
@@ -839,17 +839,17 @@ class SD_BOPMR {
 		//
 		//			WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_question4_selection'))
 	}
-	
+
 	@And("I select the dropdown values")
 	public void I_select_thedropdown_values() {
 
 
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_Dropdown_FirstClick'))
-		
+
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_question1_selection'))
-		
+
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_question1_selection'))
-		
+
 		//		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_Dropdown_ThirdClick'))
 		//
 		//		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_question2_select'))
@@ -869,7 +869,7 @@ class SD_BOPMR {
 
 		WebUI.setText(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Assessment/OR_Assessment/Obj_textarea_select_notes'), Comment)
 	}
-	
+
 	@And("I enter the (.*) as the assessmentcomment")
 	public void I_enter_AssessmentComment(String AssesmentComment) {
 
@@ -913,10 +913,10 @@ class SD_BOPMR {
 	public void I_click_on_OK_button() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/ComponentSetting/Component_Validation/AssessmentSelection/Obj_AssessmentOK'))
-	
+
 		Thread.sleep(5000)
-		
-		}
+
+	}
 
 	@When("I should see assessment data")
 	public void I_should_see_assessment_data() {
@@ -928,7 +928,7 @@ class SD_BOPMR {
 
 
 		Thread.sleep(4000)
-		
+
 		//		String PublicTransport = WebUI.getText(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/ComponentSetting/Component_Validation/AssessmentSelection/Assessment_Validation/Obj_PublicTransport'))
 		//		WebUI.verifyEqual(PublicTransport, 'Public transport')
 		//
