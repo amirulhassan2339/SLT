@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class=&quot;k-multiselect-wrap k-floatwrap&quot;])[32]/input</value>
+         <value>(//div[@class=&quot;k-multiselect-wrap k-floatwrap&quot;])[33]/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//div[@class=&quot;k-multiselect-wrap k-floatwrap&quot;])[32]/input</value>
+      <value>(//div[@class=&quot;k-multiselect-wrap k-floatwrap&quot;])[33]/input</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='k-event k-event-inverse']/span[2]</value>
+         <value>(//div[@class='k-event k-event-inverse'])/span[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[@class='k-event k-event-inverse']/span[2]</value>
+      <value>(//div[@class='k-event k-event-inverse'])/span[2]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

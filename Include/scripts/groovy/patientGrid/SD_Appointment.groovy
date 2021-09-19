@@ -70,6 +70,21 @@ public class SD_Appointment {
 		Thread.sleep(2000)
 
 	}
+	
+	@And("I enter appointment (.*) as timess")
+	public void I_enter_as_appointmentTimess(String Time) {
+
+
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentTime'), Time)
+
+		Thread.sleep(2000)
+		
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentCacle'))
+		
+				Thread.sleep(3000)
+
+	}
 
 	@And("I select appointment status")
 
@@ -128,6 +143,8 @@ public class SD_Appointment {
 			Thread.sleep(3000)
 	
 		}
+		
+		
 	@Then("I should see appoitment success message (.*) of appointment")
 	public void AppointmentSuccessMessage(String SucessMessage) {
 		

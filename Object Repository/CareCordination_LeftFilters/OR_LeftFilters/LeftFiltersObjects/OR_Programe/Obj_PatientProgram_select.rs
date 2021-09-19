@@ -6,12 +6,12 @@
    <elementGuidId>ef4e95f6-116f-4a4b-a27f-c7d7b1c80471</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>li.k-item.k-state-hover</value>
+         <key>XPATH</key>
+         <value>(//input[@aria-owns='toc_filter_program_taglist toc_filter_program_listbox'])</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//ul[@id=&quot;toc_filter_program_listbox&quot;]/li[1]</value>
+         <key>CSS</key>
+         <value>li.k-item.k-state-hover</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

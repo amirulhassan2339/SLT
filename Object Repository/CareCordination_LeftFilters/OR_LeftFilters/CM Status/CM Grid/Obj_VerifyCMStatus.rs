@@ -6,12 +6,12 @@
    <elementGuidId>8661f25c-6dc2-4c73-b198-8c50a49d4f54</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[58]</value>
+         <key>BASIC</key>
+         <value>//*[@ref_element = 'Object Repository/OR_Telehealth/Obj_frame']</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[57]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[58]</value>
+      <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[57]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

@@ -7,7 +7,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_Blank
   Scenario Outline: Blank
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -23,7 +22,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_ApprovedSaveBtn_Blank
   Scenario Outline: Verify Approve Status Function Using Save Button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -51,7 +49,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_ApprovedSaveCloseBtn_Blank
   Scenario Outline: Verify Approve Status Function Using Save & Close Button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -81,7 +78,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_DraftSaveBtn_Blank
   Scenario Outline: Verify Draft status function using save button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -102,7 +98,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_DraftSaveCloseBtn_Blank
   Scenario Outline: Verify draft status function using save & close button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -124,7 +119,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_WIPSaveBtn_Blank
   Scenario Outline: Verify WIP status function using save button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -147,7 +141,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_WIPSaveCloseBtn_Blank
   Scenario Outline: Verify WIP status function using save & close button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -168,7 +161,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_RejectedSaveBtn_Blank
   Scenario Outline: Verify reject status function using save button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -197,7 +189,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_RejectedSaveCloseBtn_Blank
   Scenario Outline: Verify reject status function using save & close button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -226,7 +217,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_ExportWhileWIP_Blank
   Scenario Outline: Verify Export function while WIP status
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -246,7 +236,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_ExportWhileDraft_Blank
   Scenario Outline: Verify export function while draft status
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -268,7 +257,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_Print_Patient_WIP_Blank
   Scenario Outline: Verify Print Button Using Patient Care Plan While WIP Status
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -289,7 +277,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_Print_Provide_WIP_Blank
   Scenario Outline: Verify Print Button Using Provide Care Plan While WIP Status
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -310,7 +297,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_Print_Patient_Draft_Blank
   Scenario Outline: Verify Print Button Using Patient Care Plan While Draft Status
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -333,7 +319,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_Print_Provide_Draft_Blank
   Scenario Outline: Verify Print Button Using Provide Care Plan While Draft Status
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank
@@ -356,7 +341,6 @@ Feature: Care Plan - Blank
   @SmokeUSMM_EmergencyContact_Blank
   Scenario Outline: Add New Emergency Contact While Show & Hide multiple Components
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on blank

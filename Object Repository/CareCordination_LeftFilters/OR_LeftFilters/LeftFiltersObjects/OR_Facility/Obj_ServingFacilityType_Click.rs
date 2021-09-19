@@ -6,12 +6,12 @@
    <elementGuidId>a066700d-93df-4749-b0fc-593cf4952e59</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>id(&quot;patientFilters&quot;)/div[@class=&quot;panel-body&quot;]/form[@class=&quot;form-horizontal no-padding-right&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-12&quot;]/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-md-7 no-padding&quot;]/div[@class=&quot;k-widget k-multiselect k-header form-control k-state-hover k-state-focused k-state-border-down&quot;]/div[@class=&quot;k-multiselect-wrap k-floatwrap&quot;][count(. | //*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']) = count(//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame'])]</value>
+         <key>XPATH</key>
+         <value>(//ul[@id='toc_filter_serving_practice_type_taglist'])//parent::div</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//form[@id='toc_filter_form']//div)[22]</value>
+         <key>BASIC</key>
+         <value>id(&quot;patientFilters&quot;)/div[@class=&quot;panel-body&quot;]/form[@class=&quot;form-horizontal no-padding-right&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-12&quot;]/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-md-7 no-padding&quot;]/div[@class=&quot;k-widget k-multiselect k-header form-control k-state-hover k-state-focused k-state-border-down&quot;]/div[@class=&quot;k-multiselect-wrap k-floatwrap&quot;][count(. | //*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']) = count(//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame'])]</value>
       </entry>
       <entry>
          <key>CSS</key>

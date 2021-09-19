@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//ul[@data-role=&quot;staticlist&quot;])[80]/li[2]</value>
+         <value>(//ul[@data-role=&quot;staticlist&quot;])[81]/li[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//ul[@data-role=&quot;staticlist&quot;])[80]/li[2]</value>
+      <value>(//ul[@data-role=&quot;staticlist&quot;])[81]/li[2]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

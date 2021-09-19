@@ -12,11 +12,13 @@ public class SD_Blank {
 	@And("I click on blank")
 	public void I_click_on_blank() {
 
-		
+
 		if (WebUI.verifyElementPresent(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPButtons/OR_Blank/Obj_Blank'), 2)) {
 			WebUI.waitForElementClickable(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPButtons/OR_Blank/Obj_Blank'), 10)
-			
+
 			WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPButtons/OR_Blank/Obj_Blank'))
+
+			Thread.sleep(3000)
 		} else {
 			WebUI.takeFullPageScreenshot()
 		}
@@ -27,7 +29,7 @@ public class SD_Blank {
 	@And("I click on reject button_Blank")
 	public void I_click_on_reject_button() {
 
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_buttonReject'))
 
 		//		Thread.sleep(1000)

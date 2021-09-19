@@ -29,6 +29,46 @@
       "proposedLocatorMethod": "XPATH",
       "recoveryMethod": "XPATH",
       "pathToScreenshot": "Reports/Self-healing/Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid/Obj_Name_neighbor.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/LOB_LOBType/Obj_LOB_CP",
+      "brokenLocator": "//*[@id\u003d\"carePlanPatientInfoDiv_562978\"]/div[4]/text()",
+      "brokenLocatorMethod": "XPATH",
+      "proposedLocator": "//*[@type \u003d \u0027button\u0027 and (text() \u003d \u0027\n\t\t\t\tSave\n\t\t\t\u0027 or . \u003d \u0027\n\t\t\t\tSave\n\t\t\t\u0027)]",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/LOB_LOBType/Obj_LOB_CP_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/UnCheck_Assessments/Obj_CancelBTN",
+      "brokenLocator": "//button[contains(@id, \u0027assessmentListSelect\u0027) and contains(text(), \u0027Cancel\u0027)]",
+      "brokenLocatorMethod": "XPATH",
+      "proposedLocator": "//*[@type \u003d \u0027button\u0027 and (text() \u003d \u0027\n\t\t\t\tSave\n\t\t\t\u0027 or . \u003d \u0027\n\t\t\t\tSave\n\t\t\t\u0027)]",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/UnCheck_Assessments/Obj_CancelBTN_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/UnCheck_Assessments/Obj_AssessmentName_AssessmentSection_CP",
+      "brokenLocator": "(//strong[contains(text(), \u0027Assessment TestingName\u0027)])",
+      "brokenLocatorMethod": "XPATH",
+      "proposedLocator": "button.btn.btn-sm.btn-primary.patientCarePlanTabSaveAndCloseBtn",
+      "proposedLocatorMethod": "CSS",
+      "recoveryMethod": "CSS",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/UnCheck_Assessments/Obj_AssessmentName_AssessmentSection_CP_CSS.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPButtons/OR_CarePlanTab/span_Care Plan",
+      "brokenLocator": "//span[contains(text(), \u0027Care Plan\u0027)]",
+      "brokenLocatorMethod": "XPATH",
+      "proposedLocator": "(.//*[normalize-space(text()) and normalize-space(.)\u003d\u0027Notes\u0027])[2]/preceding::span[2]",
+      "proposedLocatorMethod": "XPATH",
+      "recoveryMethod": "XPATH",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPButtons/OR_CarePlanTab/span_Care Plan_neighbor.png"
     }
   ]
 }

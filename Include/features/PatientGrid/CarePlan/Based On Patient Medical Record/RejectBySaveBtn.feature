@@ -7,7 +7,6 @@ Feature: Care Plan - Reject Status Using Save Button
   @Smoke_USMM
   Scenario Outline: Verify reject status function using save button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on basedonpatientmedicalrecord

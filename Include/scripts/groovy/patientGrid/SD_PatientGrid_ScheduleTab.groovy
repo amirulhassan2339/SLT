@@ -12,7 +12,7 @@ public class SD_PatientGrid_ScheduleTab {
 
 
 
-	@Given("I navigate to patient grid With Schedule")
+	@Given("I navigate to CMR_Schedule")
 	public void I_navigate_to_patient_grid_Schedule() {
 
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_HomePage/Obj_Enterprise'), 10)

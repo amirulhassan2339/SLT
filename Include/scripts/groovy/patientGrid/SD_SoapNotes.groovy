@@ -137,12 +137,12 @@ class SD_SoapNotes {
 	@Then("I should see already scheduled appointment")
 	public void I_should_see_Already_Added_Appointment() {
 
-		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AlreadyAppointment'), 30)
+		//WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AlreadyAppointment'), 30)
 
 		String actual_message = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AlreadyAppointment'))
 
-		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AlreadyAppointment'), actual_message)
-		//WebUI.verifyEqual(actual_message, "Dermo505, Mac505 - Back pain Amir, Hafiz")
+		//WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AlreadyAppointment'), actual_message)
+		WebUI.verifyEqual(actual_message, "Dermo505, Mac505 - Back pain Amir, Hafiz")
 	}
 
 	@When("I click on three dots")
@@ -673,9 +673,9 @@ class SD_SoapNotes {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SaveBTN_SOAPNote'))
 
-		Thread.sleep(5000)
+		Thread.sleep(4000)
 
-		//WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
+		WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
 
 
 	}
@@ -687,7 +687,7 @@ class SD_SoapNotes {
 
 		Thread.sleep(4000)
 
-		//WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
+		WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
 
 
 	}

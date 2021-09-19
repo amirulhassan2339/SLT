@@ -6,7 +6,6 @@ Feature: Care Plan - Add Ashtma Assessment
 	@Smoke_USMM2
 	Scenario Outline: Add Assessments Asthma
 		When I search <Patient> using global search
-		Then I am on PWB
 		 And I click on assessment
 		   * I click on add
 		   * I click on other assessment tempelate
@@ -29,4 +28,4 @@ Feature: Care Plan - Add Ashtma Assessment
 
 		Examples: 
 			| Patient          | Title              | Comment                                                                    |CPTCode|
-			| Dermo505, Mac505 | Assessment Testing | Lorem Ipsum is simply dummy text of the printing and typesetting industry. |Test Code|
+			| Dermo505, Mac505 | Assessment TestingName | Lorem Ipsum is simply dummy text of the printing and typesetting industry. |Test Code|

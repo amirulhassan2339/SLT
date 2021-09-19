@@ -25,53 +25,53 @@ class SD_Login {
 	WebDriver driver;
 
 
-		@Before
-		public void Browser() {
-	
-	
-			WebUI.openBrowser('')
-	
-			WebUI.maximizeWindow()
-	
-			GlobalVariable.url
-			GlobalVariable.username
-			GlobalVariable.password
-	
-	
-			PerformLogin(GlobalVariable.url, GlobalVariable.username, GlobalVariable.password )
-		}
-	
-	
-		@After()
-		public void Logout() throws Throwable {
-	
-	
-			Thread.sleep(7000)
-	
-	
-	
-	
-			WebUI.click(findTestObject('OR_LogoutPage/Obj_Logout'))
-	
-			WebUI.click(findTestObject('OR_LogoutPage/Obj_Sign Out'))
-	
-			WebUI.closeBrowser()
-		}
-	
-	
-		public void PerformLogin(String URL, String Email, String Password) {
-	
-	
-			WebUI.navigateToUrl(URL)
-	
-			WebUI.setText(findTestObject('Object Repository/OR_LoginPage/Obj_Username'), Email)
-	
-			WebUI.setText(findTestObject('Object Repository/OR_LoginPage/Obj_Password'), Password)
-	
-	
-			WebUI.click(findTestObject('Object Repository/OR_LoginPage/Obj_Signin'))
-	
-	
-			WebUI.verifyElementPresent(findTestObject('Object Repository/OR_HomePage/Obj_Logo'), 3)
-		}
+	@Before
+	public void Browser() {
+
+
+		WebUI.openBrowser('')
+
+		WebUI.maximizeWindow()
+
+		GlobalVariable.url
+		GlobalVariable.username
+		GlobalVariable.password
+
+
+		PerformLogin(GlobalVariable.url, GlobalVariable.username, GlobalVariable.password )
+	}
+
+
+	@After()
+	public void Logout() throws Throwable {
+
+
+		Thread.sleep(7000)
+
+
+
+
+		WebUI.click(findTestObject('OR_LogoutPage/Obj_Logout'))
+
+		WebUI.click(findTestObject('OR_LogoutPage/Obj_Sign Out'))
+
+		WebUI.closeBrowser()
+	}
+
+
+	public void PerformLogin(String URL, String Email, String Password) {
+
+
+		WebUI.navigateToUrl(URL)
+
+		WebUI.setText(findTestObject('Object Repository/OR_LoginPage/Obj_Username'), Email)
+
+		WebUI.setText(findTestObject('Object Repository/OR_LoginPage/Obj_Password'), Password)
+
+
+		WebUI.click(findTestObject('Object Repository/OR_LoginPage/Obj_Signin'))
+
+
+		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_HomePage/Obj_Logo'), 3)
+	}
 }

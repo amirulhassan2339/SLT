@@ -115,7 +115,7 @@ class SD_PatientTimer {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_StopBTN'))
-		Thread.sleep(2000)
+		Thread.sleep(4000)
 	}
 
 	@And("I get total timer duratoin")
@@ -201,6 +201,7 @@ class SD_PatientTimer {
 	@And("I select patient timer program")
 	public void selectProgram() {
 
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_selectProgram'))
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_selectProgram'))
 	}

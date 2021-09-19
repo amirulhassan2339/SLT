@@ -6,7 +6,6 @@ Feature: Care Plan - Draft Status Using SaveClose Button
   @Smoke_USMM
   Scenario Outline: Verify draft status function using save & close button
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on care plan tab
     And I click on add new care plan button
     And I click on basedonpatientmedicalrecord

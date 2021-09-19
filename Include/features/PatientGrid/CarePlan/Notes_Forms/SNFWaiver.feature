@@ -5,7 +5,6 @@ Feature: Care Plan - Notes - Forms
 
   Scenario Outline: Verify SNF Waiver
     When I search <Patient> using global search
-    Then I am on PWB
     And I click on notes tab
     * I click on plus form
     * I click on SNF Waiver

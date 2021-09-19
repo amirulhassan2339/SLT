@@ -1,14 +1,15 @@
 package patientGrid
+
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import org.openqa.selenium.Keys
+import org.openqa.selenium.WebDriver
 
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import cucumber.api.java.en.And
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
-import internal.GlobalVariable
 
 
 
@@ -16,6 +17,7 @@ import internal.GlobalVariable
 class SD_CareCordination_LeftFilters {
 
 
+	WebDriver driver = null;
 
 	@When("I click on care cordination")
 	public void I_click_on_carecordination() {
@@ -173,34 +175,35 @@ class SD_CareCordination_LeftFilters {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Click'), 10)
 
 		WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Click'))
+		WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Select'))
 
 
 
-		if(NotificationType== 'Presenting') {
-
-			Thread.sleep(2000)
-			WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Select'))
-
-		}
-
-		if(NotificationType== 'Admitting') {
-
-			Thread.sleep(2000)
-			WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Select2'))
-
-		}
-
-		if(NotificationType== 'Discharge') {
-
-			Thread.sleep(2000)
-			WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Select3'))
-
-		}
-
-		else {
-
-			throw new NoSuchElementException("Can't find " + NotificationType + " in dropdown");
-		}
+		//		if(NotificationType== 'Presenting') {
+		//
+		//			Thread.sleep(2000)
+		//			WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Select'))
+		//
+		//		}
+		//
+		//		if(NotificationType== 'Admitting') {
+		//
+		//			Thread.sleep(2000)
+		//			WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Select2'))
+		//
+		//		}
+		//
+		//		if(NotificationType== 'Discharge') {
+		//
+		//			Thread.sleep(2000)
+		//			WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_NotificationType/Obj_NotificationType_Select3'))
+		//
+		//		}
+		//
+		//		else {
+		//
+		//			throw new NoSuchElementException("Can't find " + NotificationType + " in dropdown");
+		//		}
 	}
 
 	@And("I select (.*) as LOB")

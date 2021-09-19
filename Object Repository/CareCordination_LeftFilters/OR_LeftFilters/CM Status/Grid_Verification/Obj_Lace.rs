@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[49]/span[1]</value>
+         <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[48]/span[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[49]/span[1]</value>
+      <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[48]/span[1]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
