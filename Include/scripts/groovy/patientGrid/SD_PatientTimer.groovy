@@ -44,6 +44,13 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_WFB'))
 		Thread.sleep(2000)
 	}
+	
+	@Then("I should see patient timer button is disabled")
+	public void PatientTimerBTN_Disabled() {
+
+		WebUI.verifyElementNotClickable(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_WFB'))
+		
+	}
 
 	@And("I click on encounter tab")
 	public void click_On_Encounter_Tab() {
@@ -91,6 +98,13 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_StartBTN'))
 		Thread.sleep(5000)
 	}
+	
+	@And("I click on WFB cross button")
+	public void click_On_WFBCROSS_Button() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_WFN_CrossBTN'))
+		Thread.sleep(10000)
+	}
 
 	@And("I click on minimize button")
 	public void click_Minimize_Button() {
@@ -110,6 +124,14 @@ class SD_PatientTimer {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_Again'))
+		Thread.sleep(2000)
+	}
+	
+	@And("I click on patient timerBTN")
+	public void click_On_PatientTimerBTN() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_Button'))
 		Thread.sleep(2000)
 	}
 

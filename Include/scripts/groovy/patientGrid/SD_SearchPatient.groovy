@@ -35,6 +35,25 @@ class SD_SearchPatient {
 //		WebUI.click(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/Select_Filters/Select_Search'))
 		Thread.sleep(14000)
 	}
+	
+	
+	@When("I search this patient (.*) as second patient")
+	public void search_SecondPatient(String SecondPatient) {
+
+
+		WebUI.click(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/OR_Input_Search_Field/Obj_inputSearch'))
+
+		WebUI.clearText(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/OR_Input_Search_Field/Obj_inputSearch'))
+		
+		
+		WebUI.setText(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/OR_Input_Search_Field/Obj_inputSearch'), SecondPatient)
+		
+		Thread.sleep(4000)
+
+		WebUI.sendKeys(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/OR_Input_Search_Field/Obj_inputSearch'), Keys.chord(Keys.ENTER))
+		
+		Thread.sleep(14000)
+	}
 
 
 
@@ -77,5 +96,7 @@ class SD_SearchPatient {
 		//		String Actual_Status = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_SearchPatient/SearchPatientGrid/OR_Status/Obj_PatientStatus'))
 		//		WebUI.verifyEqual(Actual_Status, Patient_Status)
 	}
+	
+	
 }
 
