@@ -25,7 +25,7 @@ class SD_SearchPatient {
 
 		WebUI.setText(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/OR_Input_Search_Field/Obj_inputSearch'), Patient)
 		
-		Thread.sleep(2000)
+		Thread.sleep(4000)
 
 		WebUI.sendKeys(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/OR_Input_Search_Field/Obj_inputSearch'), Keys.chord(Keys.ENTER))
 		
@@ -33,7 +33,7 @@ class SD_SearchPatient {
 //		WebUI.waitForElementClickable(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/Select_Filters/Select_Search'), 10)
 //
 //		WebUI.click(findTestObject('OR_PatientGrid/OR_SearchPatient/OR_Search/Select_Filters/Select_Search'))
-		Thread.sleep(8000)
+		Thread.sleep(14000)
 	}
 
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_PatientTimerPopUp_GetTotalTimerDuration</name>
+   <name>Obj_PatientTimer_CrossBTN</name>
    <tag></tag>
-   <elementGuidId>f065b414-8194-451b-8705-95259226b57b</elementGuidId>
+   <elementGuidId>5821137b-7cf1-4932-8f44-0b43148e3492</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@id='timepicker'])</value>
+         <value>(//div[@class='k-window-actions'])[2]//a[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//input[@id='timepicker'])</value>
+      <value>(//div[@class='k-window-actions'])[2]//a[2]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

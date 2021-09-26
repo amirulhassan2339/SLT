@@ -293,12 +293,12 @@ class SD_BOPMR {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_SaveApprove'))
 
-		Thread.sleep(1000)
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_Review'))
-
-		Thread.sleep(1000)
-
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_SaveApprove'))
+		//		Thread.sleep(1000)
+		//		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_Review'))
+		//
+		//		Thread.sleep(1000)
+		//
+		//		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_SaveApprove'))
 
 	}
 
@@ -343,7 +343,7 @@ class SD_BOPMR {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Title/Obj_Title'))
 
-		Thread.sleep(3000)
+		Thread.sleep(5000)
 	}
 
 	@And("I should see patient data as read only")
@@ -498,6 +498,32 @@ class SD_BOPMR {
 
 		Thread.sleep(3000)
 	}
+
+	@And("I should see export button and click")
+	public void I_click_on_export_button_Click() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_buttonExport'))
+
+		Thread.sleep(10000)
+	}
+
+	@And("I should see exported file with (.*) as name")
+	public void I_should_see_exportedFile(String Title) {
+
+
+		File downloadFolder = new File("C:\\Users\\hafiz.amir\\Downloads")
+		List namesOfFiles = Arrays.asList(downloadFolder.list())
+		if(namesOfFiles.contains(Title))
+		{
+			println "Success"
+		}
+		else {
+			println "Failure"
+
+		}
+	}
+
 
 	@When("I click on print button")
 	public void I_click_on_print_button() {
@@ -929,7 +955,7 @@ class SD_BOPMR {
 		String Actual_Title = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/UnCheck_Assessments/Obj_AssessmentName_AssessmentSection_CP'))
 		WebUI.verifyEqual(Actual_Title, 'Assessment TestingName')
 
-		
+
 		Thread.sleep(4000)
 
 		//		String PublicTransport = WebUI.getText(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/ComponentSetting/Component_Validation/AssessmentSelection/Assessment_Validation/Obj_PublicTransport'))

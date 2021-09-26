@@ -72,6 +72,18 @@ class SD_PatientTimer {
 		String ActualName = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_PatientNameVerify'))
 		WebUI.verifyEqual(ActualName, Patient)
 	}
+	
+	@Then("I click on cross button")
+	public void ClickOnCrossBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_CrossBTN'))
+	}
+	
+	@Then("I click on no discard button")
+	public void ClickOnDiscardBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_NoDiscardBTNTimer'))
+	}
 
 	@And("I click on start timer button")
 	public void click_On_start_Button() {
@@ -139,6 +151,60 @@ class SD_PatientTimer {
 		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'), 3)
 
 
+
+	}
+	
+	
+	@And("I should see patient timer history data")
+	public void HistoryData() {
+
+
+//		String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
+//		String TimeSpent = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'))
+//
+//		WebUI.verifyMatch(Actual_Duration, TimeSpent, false)
+		
+		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'), 3)
+		
+
+
+
+
+	}
+	
+	
+	@And("I should not see patient timer history data")
+	public void HistoryNotData() {
+
+
+//		String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
+//		String TimeSpent = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'))
+//
+//		WebUI.verifyMatch(Actual_Duration, TimeSpent, false)
+		
+		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'), 3)
+		
+
+	}
+	
+	
+	@And("I should see timer warning message")
+	public void WarningMessageTimer() {
+
+
+				String Actual_WarningMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_WarningMessage'))
+				String Expected_WarningMessage = "It appears there is an unsaved data. Do you want to save before closing?"
+		
+				WebUI.verifyEqual(Actual_WarningMessage, Expected_WarningMessage)
+
+
+	}
+	
+	@And("I click on timer save close button")
+	public void ClickTimerSaveCloseBTN() {
+
+
+				WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_SaveCloseBTNTimer'))
 
 	}
 

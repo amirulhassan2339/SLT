@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_PatientTimerPopUp_GetTotalTimerDuration</name>
+   <name>Obj_WarningMessage</name>
    <tag></tag>
-   <elementGuidId>f065b414-8194-451b-8705-95259226b57b</elementGuidId>
+   <elementGuidId>f15522fd-403b-4e7e-a76a-6940c22b6bf0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@id='timepicker'])</value>
+         <value>(//p[contains(text(), 'It appears there is an unsaved data. Do you want to save before closing?')])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//input[@id='timepicker'])</value>
+      <value>(//p[contains(text(), 'It appears there is an unsaved data. Do you want to save before closing?')])</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

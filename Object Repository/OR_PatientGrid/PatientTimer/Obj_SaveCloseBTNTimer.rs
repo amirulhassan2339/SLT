@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_PatientTimerPopUp_GetTotalTimerDuration</name>
+   <name>Obj_SaveCloseBTNTimer</name>
    <tag></tag>
-   <elementGuidId>f065b414-8194-451b-8705-95259226b57b</elementGuidId>
+   <elementGuidId>b62bc4b5-832c-403c-8d94-4b37d5c516ab</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@id='timepicker'])</value>
+         <value>(//button[@id='save_and_close_timer'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//input[@id='timepicker'])</value>
+      <value>(//button[@id='save_and_close_timer'])</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
