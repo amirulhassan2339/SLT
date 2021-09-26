@@ -49,7 +49,20 @@ class SD_PatientTimer {
 	public void PatientTimerBTN_Disabled() {
 
 		WebUI.verifyElementNotClickable(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_WFB'))
+		Thread.sleep(5000)
+	}
+	
+	@Then("I should see patient timer disable button tooltip text")
+	public void PatientTimerBTN_Disabled_TooltipText() {
+
+		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerBtn_MouseOver'))
+		Thread.sleep(2000)
 		
+		String actualText = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_patientTimer_MouseOverText'))
+		
+		WebUI.verifyEqual(actualText, "Patient Timer is already running for Dermo505, Mac505. Please update previous timer to start a new one!")
+		
+		Thread.sleep(2000)
 	}
 
 	@And("I click on encounter tab")

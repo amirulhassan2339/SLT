@@ -14,6 +14,7 @@ Feature: Patient Timer
 		   * I search this patient <SecondPatient> as second patient
 		   * I select the patient
 		   * I should see patient timer button is disabled
+		   * I should see patient timer disable button tooltip text
 		   * I click on WFB cross button
 		   * I click on patient timerBTN
 		   * I click on cross button
