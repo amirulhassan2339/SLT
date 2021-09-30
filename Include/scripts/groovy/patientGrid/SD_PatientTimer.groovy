@@ -1,21 +1,15 @@
 package patientGrid
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static org.junit.Assert.assertTrue
 
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 
-import org.openqa.selenium.By
-import org.openqa.selenium.Keys
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
-
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 
 import cucumber.api.java.en.And
 import cucumber.api.java.en.Then
+import cucumber.api.java.en.When
 
 
 
@@ -118,6 +112,13 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_WFN_CrossBTN'))
 		Thread.sleep(10000)
 	}
+	
+	@And("I click on WFB cross button from schedule")
+	public void click_On_WFBCROSS_Buttons() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_WFN_CrossBTN2'))
+		Thread.sleep(10000)
+	}
 
 	@And("I click on minimize button")
 	public void click_Minimize_Button() {
@@ -125,6 +126,145 @@ class SD_PatientTimer {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_mimimize'))
 		Thread.sleep(2000)
 	}
+	
+	
+	
+	
+	
+	
+	@When("I click on message tab")
+	public void click_message_Tab() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_ClickOnMessageTab'))
+		
+		Thread.sleep(2000)
+	}
+	
+	
+	@When("I search patient (.*) in message field")
+	public void Search_Message(String Patient) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_MessageInput'), Patient)
+		Thread.sleep(2000)
+	}
+	
+	@When("I select searched patient")
+	public void SelectMessagePatient() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_Click_MessagePatient'))
+		Thread.sleep(2000)
+	}
+	
+	@When("I click on patient from message box")
+	public void Click_MessagePatient_Box() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_click_PatientFromMessageBox'))
+		Thread.sleep(2000)
+	}
+	
+	
+	@When("I click on scheduleTab")
+	public void Click_scheduleTab() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_Click_ScheduleTab'))
+		Thread.sleep(12000)
+	}
+	
+	@When("I click on view patient record")
+	public void Click_ViewPatientRecord() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_Schedule_ViewRecord'))
+		Thread.sleep(2000)
+	}
+	
+	@When("I click on supberbill tab")
+	public void click_superbill_Tab() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_Click_superbillTab'))
+		
+		Thread.sleep(12000)
+	}
+	
+	
+	@When("I select patient from super bill grid")
+	public void click_superbill_SelectPatient() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_Click_superbillTab_SelectPatientFromGrid'))
+		
+		Thread.sleep(4000)
+	}
+	
+	
+	@When("I click on analytics tab")
+	public void click_analyticsTab() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_Click_AnalyticsTab'))
+		
+		Thread.sleep(1000)
+	}
+	
+	
+	@When("I click on from option")
+	public void click_onFormOption() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_AnalyticsTab_FormClick'))
+		
+		Thread.sleep(12000)
+	}
+	
+	
+	@When("I select the patient from analytics grid")
+	public void click_analytics_SelectPatient() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_AnalyticsTab_SelectPatient'))
+		
+		Thread.sleep(4000)
+	}
+	
+	
+	@When("I click on task tab")
+	public void click_tasktab() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_Click_TaskTab'))
+		
+		Thread.sleep(12000)
+	}
+	@When("I select the patient from task grid")
+	public void click_task_SelectPatient() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_TaskTab_SelectPatientFromGrid'))
+		
+		Thread.sleep(8000)
+	}
+	
+	
+	@When("I select the patient from care coordination grid")
+	public void click_CC_SelectPatient() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_CareCoordination_SelectPatient'))
+		
+		Thread.sleep(8000)
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@Then("I should not see patient timer popup")
 	public void verify_PatientTimer_ShouldNotShow() {

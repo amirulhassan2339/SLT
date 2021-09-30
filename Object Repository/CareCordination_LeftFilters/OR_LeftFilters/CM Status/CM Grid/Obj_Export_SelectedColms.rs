@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_CMStatus_Updated_SelectActive</name>
+   <name>Obj_Export_SelectedColms</name>
    <tag></tag>
-   <elementGuidId>6c005799-c13f-46ea-ab6b-9a1f3232c42d</elementGuidId>
+   <elementGuidId>8ea952dd-f453-4a12-8c7e-a33d73c5d6bb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//ul[@data-role=&quot;staticlist&quot;])[77]//li[2]</value>
+         <value>(//div[@class='k-header k-grid-toolbar'])[3]/div//li[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//ul[@data-role=&quot;staticlist&quot;])[77]//li[2]</value>
+      <value>(//div[@class='k-header k-grid-toolbar'])[3]/div//li[2]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

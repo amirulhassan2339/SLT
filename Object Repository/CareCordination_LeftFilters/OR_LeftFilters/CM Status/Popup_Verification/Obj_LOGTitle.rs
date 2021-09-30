@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_CMStatus_Updated_SelectActive</name>
+   <name>Obj_LOGTitle</name>
    <tag></tag>
-   <elementGuidId>6c005799-c13f-46ea-ab6b-9a1f3232c42d</elementGuidId>
+   <elementGuidId>51aec83c-b6cf-4934-9008-55eed8587d5e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//ul[@data-role=&quot;staticlist&quot;])[77]//li[2]</value>
+         <value>(//span[contains(text(), 'CM Status Change Log')])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>(//ul[@data-role=&quot;staticlist&quot;])[77]//li[2]</value>
+      <value>(//span[contains(text(), 'CM Status Change Log')])</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

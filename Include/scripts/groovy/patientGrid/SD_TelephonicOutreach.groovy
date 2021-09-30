@@ -78,7 +78,7 @@ public class SD_TelephonicOutreach {
 
 		Thread.sleep(3000)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_SpokeWith_Click'))
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_SpokeWithSelecttion'))
 
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_SpokeWith_Select'))
@@ -89,25 +89,25 @@ public class SD_TelephonicOutreach {
 	public void I_enter_as_duration(String Duration) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_Duration_Input'), Duration)
-			
+
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_Duration_Input'), Duration)
-		
+
 		Thread.sleep(2000)
-		
-		
+
+
 	}
-	
+
 	@And("I enter telephonic outreach (.*) as durations")
 	public void I_enter_as_durations(String Duration) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_Duration_Input'), Duration)
-			
+
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_Duration_Input'), Duration)
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_Duration_Input'), Duration)
-		
+
 		Thread.sleep(2000)
-		
-		
+
+
 	}
 
 
@@ -116,7 +116,7 @@ public class SD_TelephonicOutreach {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_CallType_Click'))
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_CallType_Click'))
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_CallType_Select'))
 	}
 
@@ -138,20 +138,20 @@ public class SD_TelephonicOutreach {
 
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_FollowUpPlan_Input'), Keys.chord(Keys.ENTER))
 	}
-	
+
 	@And("I enter telephonic outreach (.*) as follow up planss")
 	public void I_enter_as_followupPlanss(String Follow_Up_Plan) {
 
-//		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_FollowUpPlan_Click'))
-//
-//		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_FollowUpPlan_Input'), Follow_Up_Plan)
-//
-//		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_FollowUpPlan_Input'), Keys.chord(Keys.ENTER))
-//	
+		//		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_FollowUpPlan_Click'))
+		//
+		//		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_FollowUpPlan_Input'), Follow_Up_Plan)
+		//
+		//		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_FollowUpPlan_Input'), Keys.chord(Keys.ENTER))
+		//
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_CacelBTN_outreachNotes'))
-		
-		
-		}
+
+
+	}
 
 
 	@And("I select Has patient gone to ER since placed on TOR within last thirty days?")
@@ -163,21 +163,21 @@ public class SD_TelephonicOutreach {
 
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_HaspatientgonetoERsinceplacedonTOR_Select'))
 	}
-	
+
 	@And("I select Has patient gone to ER since placed on TOR within last thirty daysss?")
 	public void I_select_HasPatientGoneERS() {
 
 		Thread.sleep(5000)
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_HaspatientgonetoERsinceplacedonTOR_Click'))
 
 		Thread.sleep(5000)
-		
-		
+
+
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect - Copy'))
-		
-				WebUI.check(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect - Copy'))
-				
+
+		WebUI.check(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_HasPatientSelect - Copy'))
+
 	}
 
 
@@ -190,14 +190,14 @@ public class SD_TelephonicOutreach {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasPatientSelect'))
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasPatientAdmitted_Select'))
 	}
-	
+
 	@And("I select Was patient admittedreadmitted to acute care since placed on TOR in last thirty dayss?")
 	public void I_select_WasPatientAdmittedss() {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasPatientAdmitted_Click'))
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasPatientSelect'))
-		
+
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasPatientSelect'))
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasPatientAdmitted_Select'))
 	}
@@ -209,17 +209,17 @@ public class SD_TelephonicOutreach {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasERVisit_Click'))
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasERSelect'))
-		
+
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasERVisit_Select'))
 	}
-	
+
 	@And("I select Was ER visit or Acute Admission preventabless?")
 	public void I_select_WasERVisits() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasERVisit_Click'))
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasERSelect'))
-		
+
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Page_Welcome to Persivia/Obj_WasERSelect'))
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TelephonicOutreach/Obj_WasERVisit_Select'))
 	}

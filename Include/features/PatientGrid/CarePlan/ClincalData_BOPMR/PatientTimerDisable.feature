@@ -21,6 +21,7 @@ Feature: Patient Timer
 		   * I should see timer warning message
 		   * I click on no discard button
 
+
 		Examples: 
 			| Patient          | SecondPatient      |
 			| Dermo505, Mac505 | Cameroon, Cameroon |
