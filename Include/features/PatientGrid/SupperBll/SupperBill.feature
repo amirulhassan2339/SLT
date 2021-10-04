@@ -32,7 +32,7 @@ Feature: Supper Bill flows
   Scenario Outline: Verify that patients are filtered against the selected soap status signed
   When I click on schedule tab
   And I double click on screen to add appointment
-  Then I should see schedule appointment popup
+  #Then I should see schedule appointment popup
   When I enter <Patient> as appointment patient
   And I enter <Reason> as appointment reason
   * I should see <Patient> as actual patient name

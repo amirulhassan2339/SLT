@@ -25,6 +25,8 @@ class SD_SupperBill {
 		WebUI.enableSmartWait()
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'))
 
+		Thread.sleep(12000)
+		
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'), 10)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'))
 
@@ -56,7 +58,7 @@ class SD_SupperBill {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ApplyBTN'), 15)
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ApplyBTN'))
-		Thread.sleep(4000)
+		Thread.sleep(10000)
 	}
 
 	@Then("I should see particualar patient data in (.*) as selected date")

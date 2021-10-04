@@ -1,62 +1,26 @@
 package patientGrid
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.checkpoint.CheckpointFactory
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testcase.TestCaseFactory
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testdata.TestDataFactory
-import com.kms.katalon.core.testobject.ObjectRepository
 import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
-import internal.GlobalVariable
-
-import org.openqa.selenium.WebElement
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By
-
-import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
-import com.kms.katalon.core.webui.driver.DriverFactory
-
-import com.kms.katalon.core.testobject.RequestObject
-import com.kms.katalon.core.testobject.ResponseObject
-import com.kms.katalon.core.testobject.ConditionType
-import com.kms.katalon.core.testobject.TestObjectProperty
-
-import com.kms.katalon.core.mobile.helper.MobileElementCommonHelper
-import com.kms.katalon.core.util.KeywordUtil
-
-import com.kms.katalon.core.webui.exception.WebElementNotFoundException
-
-
-import cucumber.api.java.After
-import cucumber.api.java.Before
 import cucumber.api.java.en.And
-import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import utility_Functions.UtilityFunctions
 
 
 public class SD_SaveNotes {
-
+	
+	UtilityFunctions obj=new UtilityFunctions();
 
 	@Then("I click on notes tab")
 	public void i_click_on_notes_tab() {
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/span_Notes'))
-	
+
 		Thread.sleep(8000)
-		
-		}
+	}
 
 	@Then("I click on plus notes button")
 	public void i_click_on_plus_notes_button() {
@@ -78,7 +42,7 @@ public class SD_SaveNotes {
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Privacy'))
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Privacy'))
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Privacy'))
-		
+
 		//WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/li_Private'))
 	}
 
@@ -88,7 +52,7 @@ public class SD_SaveNotes {
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
-		
+
 		//WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/li_Medium'))
 	}
 
@@ -134,6 +98,23 @@ public class SD_SaveNotes {
 		WebUI.verifyElementPresent(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Grid/Obj_Privacy'), 3)
 
 		WebUI.verifyElementPresent(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Grid/Obj_Type'), 3)
+	}
+
+	@And("I verify that the record exists in the notes section having date:(.*),Note Type:(.*),username:(.*) and priority:(.*)")
+
+	void verification(String date,String type,String username,String priority) {
+		
+		String datexpath='//td[@role="gridcell"]//span[@class="priority-container"]//span[text()="'+priority+'"]//following-sibling::span//span[text()="'+type+'"]//preceding::strong//span[@class="modified-date"]'
+		TestObject frame=findTestObject('Object Repository/ProgramEnrollment/frameObject')
+		obj.customVerify(frame,datexpath,date)
+
+		String userxpath='//td[@role="gridcell"]//span[@class="priority-container"]//span[text()="'+priority+'"]//following-sibling::span//span[text()="'+type+'"]//preceding::strong//span[@class="modified-date"]//following-sibling::span[@class="provider"]'
+		obj.customVerify(frame,userxpath,username)
+
+		String typexpath='//td[@role="gridcell"]//descendant::span[text()="'+date+'"]//following-sibling::span[text()="'+username+'"]//ancestor::td//span[@class="priority-container"]//*[text()="'+type+'"]'
+		obj.customVerify(frame,typexpath,type)
+		String priorityxpath='//td[@role="gridcell"]//descendant::span[text()="'+date+'"]//following-sibling::span[text()="'+username+'"]//ancestor::td//span[@class="priority-container"]//span[text()="'+priority+'"]'
+		obj.customVerify(frame,priorityxpath,priority)
 	}
 }
 
