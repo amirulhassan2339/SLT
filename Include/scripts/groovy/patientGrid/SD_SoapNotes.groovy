@@ -1,19 +1,23 @@
 package patientGrid
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import org.openqa.selenium.By
 import org.openqa.selenium.Keys
 import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
 
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import cucumber.api.java.en.And
+import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import utility_Functions.UtilityFunctions
 
 class SD_SoapNotes {
+
+	UtilityFunctions obj=new UtilityFunctions();
+	TestObject frame=findTestObject('Object Repository/OR_OpenPatient/frame')
 
 	WebDriver driver;
 
@@ -23,6 +27,7 @@ class SD_SoapNotes {
 
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_ScheduleTab'), 15)
 
+		Thread.sleep(10000)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_ScheduleTab'))
 		Thread.sleep(8000)
 	}
@@ -246,7 +251,7 @@ class SD_SoapNotes {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/Obj_Add_HRA_Plus'))
 
-		Thread.sleep(5000)
+		Thread.sleep(10000)
 	}
 
 	@Then("I should see HRA popup with all tabs")
@@ -322,6 +327,25 @@ class SD_SoapNotes {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Click'))
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Select'),LocationOfVisit)
+
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Select'), Keys.chord(Keys.ENTER))
+	}
+
+	@Then("I enter (.*) as location of visit1")
+	public void i_enter_as_location_of_visit1(String LocationOfVisit1) {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Click'))
+		Thread.sleep(2000)
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Select'),LocationOfVisit1)
+
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Select'), Keys.chord(Keys.ENTER))
+	}
+
+	@Then("I enter (.*) as location of visit2")
+	public void i_enter_as_location_of_visit2(String LocationOfVisit2) {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Click'))
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Select'),LocationOfVisit2)
 
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HistoryTab/Obj_LocationOfVisit_Select'), Keys.chord(Keys.ENTER))
 	}
@@ -455,6 +479,8 @@ class SD_SoapNotes {
 	public void I_click_examandrecomendation() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/ExamAndRecomendation/Obj_ExamAndRecomendation'))
+
+		Thread.sleep(5000)
 	}
 
 	@Then("I enter (.*) as constitutional")
@@ -466,10 +492,86 @@ class SD_SoapNotes {
 
 	}
 
+	@Then("I enter (.*) as pad test today")
+	public void i_enter_padTest(String PADTestToday) {
+
+
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestInput'),
+				PADTestToday)
+		WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestInput'), Keys.chord(Keys.ENTER))
+
+	}
+
+	@Then("I enter (.*) as reason or conditon test")
+	public void i_enter_Reason(String ReasonTest) {
+
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTest_ReasonInput'),ReasonTest)
+
+		WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTest_ReasonInput'), Keys.chord(Keys.ENTER))
+
+	}
+
+	@Then("I enter (.*) as left results")
+	public void i_enter_leftResults(String LeftResults) {
+
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTest_LeftResultsClick'))
+
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTest_LeftResulsInupt'),LeftResults)
+
+		WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTest_LeftResulsInupt'), Keys.chord(Keys.ENTER))
+
+	}
+
+	@Then("I enter (.*) as right result")
+	public void i_enter_RightResults(String RightResults) {
+
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTest_RightResultsClick'))
+
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTest_RightResultsInput'),RightResults)
+
+		WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTest_RightResultsInput'), Keys.chord(Keys.ENTER))
+
+	}
+
 	@Then("I enter (.*) as ExamAndRecomendation_Comment")
 	public void i_enter_ExamAndRecomendation_Comment(String ExamAndRecomendation_Comment) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/ExamAndRecomendation/Obj_ExamAndRecomendation'),ExamAndRecomendation_Comment)
+	}
+
+	@Then("I select on Referral required")
+	public void i_enter_referral() {
+
+
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReferralClick'))
+
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReferralInput'),
+				'Yes')
+		WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReferralInput'), Keys.chord(Keys.ENTER))
+
+	}
+
+	@Then("I select urgency status as referral")
+	public void i_select_ReferralStatus() {
+
+
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReferralStatusClick'))
+
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReferralStatusInput'),"Non-Urgent")
+
+		WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReferralStatusInput'), Keys.chord(Keys.ENTER))
+
+	}
+
+	@Then("I enter reason of referralreason")
+	public void i_select_ReferralReason() {
+
+
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReasonReferral'),"Test by amir")
+
+
 	}
 
 	@Then("I click on cross icon to close the popup")
@@ -804,6 +906,8 @@ class SD_SoapNotes {
 
 	}
 
+
+
 	@And("I click on billing information OK button")
 	public void I_click_On_BillingInfoBTN() {
 
@@ -822,6 +926,54 @@ class SD_SoapNotes {
 		String Actual_EnteredValue = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/BillingInformation_DataVerification/Obj_Entered_BillingInfomation'))
 
 		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/BillingInformation_DataVerification/Obj_Entered_BillingInfomation'), Actual_EnteredValue, FailureHandling.STOP_ON_FAILURE)
+
+	}
+
+	@Then("I should see (.*) in Billing Information1")
+	public void I_should_see_BillingInformation_Table1(Code1) {
+
+		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/Obj_BillingInformation_Hover'), 30)
+
+
+		String Actual_EnteredValue = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/BillingInformation_DataVerification/Obj_Entered_BillingInfomation'))
+
+		if(Actual_EnteredValue.contains(Code1)) {
+
+			WebUI.verifyMatch(Actual_EnteredValue, Code1, false)
+
+		}
+
+	}
+
+	@Then("I should see (.*) in Billing Information2")
+	public void I_should_see_BillingInformation_2(Code2) {
+
+		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/Obj_BillingInformation_Hover'), 30)
+
+
+		String Actual_EnteredValue = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/BillingInformation_DataVerification/Obj_Entered_BillingInfomation'))
+
+		if(Actual_EnteredValue.contains(Code2)) {
+
+			WebUI.verifyMatch(Actual_EnteredValue, Code2, false)
+
+		}
+
+	}
+
+	@Then("I should see (.*) in Diagnosis section")
+	public void I_should_see_Diagnosis(DiagnosisCode) {
+
+		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_DiagnosisSection'), 30)
+
+
+		String Actual_Diagnosis = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_Diagnosis_Validation'))
+
+		if(Actual_Diagnosis.contains(DiagnosisCode)) {
+
+			WebUI.verifyMatch(Actual_Diagnosis, DiagnosisCode, false)
+
+		}
 
 	}
 
@@ -906,7 +1058,171 @@ class SD_SoapNotes {
 	}
 
 
+	@When("I click on Addendum button")
+	public void I_click_On_AddendumBTN() {
 
+
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+		Thread.sleep(1000)
+	}
+
+
+	@And("I enter (.*) as addendumNotes")
+	public void I_enter_addendumNotes(String AddendumNotes) {
+
+
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'),AddendumNotes)
+		Thread.sleep(2000)
+		WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'), Keys.chord(Keys.ENTER))
+
+	}
+	@When("I click on addendum save button to save addendum")
+	public void I_click_On_AddendumSaveBTN() {
+
+
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+		Thread.sleep(1000)
+	}
+
+	@Then("I should see (.*) as addendum in addendumsection")
+	public void I_should_see_addendumsection(String AddendumNotes) {
+
+
+		String Actual_SignMessage = WebUI.getText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+
+		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+
+	}
+
+	@Then("I should see signed status icon on appointment ui page")
+	public void I_should_see_SignedStatusinUI() {
+
+
+		Thread.sleep(3000)
+
+		WebUI.scrollToElement(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'), 5)
+
+		WebUI.verifyElementPresent(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'), 5)
+
+
+	}
+
+	@Given("I open Patient using (.*) on superbill screen")
+	void open_Care_Coordination(String MRN) {
+		String xpath='//span[@data-mrn="'+MRN+'"]//preceding::td[@class="patient-name-cell"]//span//span'
+
+
+		Thread.sleep(2000)
+		'click on arrow'
+		WebUI.waitForElementPresent(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'), 0)
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+
+		'move to the filter label'
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/OR_OpenPatient/filterlabel'))
+
+		'Input the patient name'
+		Thread.sleep(2000)
+		WebUI.sendKeys(findTestObject('Object Repository/OR_OpenPatient/inputPatient'),MRN)
+
+		'Click on filter button'
+		WebUI.click(findTestObject('Object Repository/OR_OpenPatient/filterbutton'))
+
+
+		Thread.sleep(2000)
+	}
+
+	@Then("I should see (.*) on superbill grid")
+	public void I_should_see_MRNsuperbillGrid(String MRN) {
+
+
+		String Actual_SignMessage = WebUI.getText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+
+		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+
+	}
+
+	@When("I click on referral status three lines")
+	public void I_click_On_referralStatus() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		Thread.sleep(1000)
+	}
+	@Then("I should see case management popup")
+	public void I_should_see_caseManagementPopup() {
+
+
+		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
+
+		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+
+	}
+	@Then("I should see case management popup data is showing")
+	public void I_should_see_caseManagementPopupData() {
+
+
+		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
+
+		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+
+	}
+	@When("I click on patient tab")
+	public void I_click_On_patientTab() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		Thread.sleep(1000)
+	}
+	@Then("I should see signed status on encounter grid")
+	public void I_should_see_SignedStatusOnEncounterGrid() {
+
+
+		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
+
+		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+
+	}
+
+	@When("I click on view soap note")
+	public void I_click_On_ViewSoapNoteLink() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		Thread.sleep(1000)
+	}
+
+	@When("I click on Unsign button")
+	public void I_click_On_UnSignBTN() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		Thread.sleep(1000)
+	}
+
+	@When("I click on yes button to unsign")
+	public void I_click_On_yesbtntounsign() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		Thread.sleep(1000)
+	}
+
+	@When("I should see unsigned message")
+	public void I_should_see_UnsignedMessage() {
+
+
+		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
+
+		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+	}
+	@When("I click on print soap note button")
+	public void I_click_On_PrintSoapNote() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		Thread.sleep(1000)
+	}
 
 
 }

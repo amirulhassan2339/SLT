@@ -9,7 +9,6 @@ Feature: Soap Note Creation from Schedule flow
     Then I should see schedule appointment popup
     When I enter <Patient> as appointment patient
     And I enter <Reason> as appointment reason
-    * I should see patient information
     * I drag chat list
     * I click create button to save appointment
     * I click on yes button

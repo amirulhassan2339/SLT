@@ -110,7 +110,7 @@ Feature: Supper Bill flows
   #| DateOfService_FromDate |MRN|
   #|               12012020 |PE05E6ECEF0E46443B887BA108B24D9049|
   #
-  #
+  
   @SmokeUSMM_SupperBill_ScheduleAppointmentDelete
   Scenario: Verify deleting Scheduled Appointment
     When I click on schedule tab
