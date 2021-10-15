@@ -26,7 +26,7 @@ class SD_SupperBill {
 		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'))
 
 		Thread.sleep(12000)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'), 10)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ResetBTN'))
 
@@ -97,6 +97,13 @@ class SD_SupperBill {
 
 		Thread.sleep(3000)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_PatientClick_OpenGrid'))
+	}
+
+	@And("I click on particular patient and expandPatient")
+	public void I_click_on_particularpatient_expandPatient() {
+
+		Thread.sleep(3000)
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_PatientClick_OpenGrid - Copy'))
 	}
 
 	@Then("I should see (.*) particualar patient practice facility")
@@ -179,6 +186,15 @@ class SD_SupperBill {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_PatientName_Checkbox_Click'))
 	}
+
+
+	@And("I checked the patient checkboxs")
+	public void I_CheckedThePatientCheckboxs() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_PatientName_Checkbox_Click - Copy'))
+	}
+
+
 
 	@And("I click on Fax button")
 	public void I_ClickOnFax() {

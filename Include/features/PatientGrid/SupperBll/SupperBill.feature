@@ -87,7 +87,6 @@ Feature: Supper Bill flows
     * I checked the patient checkbox
     * I click on Fax button
     Then I should see PDF file in Fax popup
-
   * I click on PDF file and Logout
   #* I click on close button to close PDF popup
   

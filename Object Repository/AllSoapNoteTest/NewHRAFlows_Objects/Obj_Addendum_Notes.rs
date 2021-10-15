@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@type='search'])[17]</value>
+         <value>(//textarea[@class='form-control required-field'])</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -56,7 +56,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/AllSoapNoteTest/NewHRAFlows_Objects/iframe_(EntMerging505)_hraIframe</value>
+      <value>Object Repository/OR_Telehealth/Obj_frame</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

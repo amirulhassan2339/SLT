@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//th[@data-field=&quot;mrn&quot;]//a//span)</value>
+         <value>(//th[@data-field=&quot;mrn&quot;])[2]//a[1]//span</value>
       </entry>
       <entry>
          <key>CSS</key>

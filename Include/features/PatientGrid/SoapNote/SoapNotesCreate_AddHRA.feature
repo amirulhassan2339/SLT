@@ -20,6 +20,8 @@ Feature: Soap Note Creation from Schedule flow
     Examples: 
       | Patient          | Reason    |
       | Dermo505, Mac505 | Back pain |
+      
+      
 
   @Smoke_USMM_VerifyPatientData
   Scenario Outline: Verify That Patient Data Are Showing

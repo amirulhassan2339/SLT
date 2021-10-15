@@ -10,12 +10,12 @@
          <value>//*[(text() = 'successCare Plan Saved SuccessfullyHide' or . = 'successCare Plan Saved SuccessfullyHide')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(text(), 'SOAP Note Signed')]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>div.k-notification-wrap</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[contains(text(), 'SOAP Note Signed')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

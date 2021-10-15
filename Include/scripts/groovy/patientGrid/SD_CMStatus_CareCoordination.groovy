@@ -336,7 +336,6 @@ public class SD_CMStatus_CareCoordination {
 		WebUI.verifyEqual(Actual_CM_Status, Expected_CM_Status)
 
 		WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/Popup_Verification/Obj_LOG_Popup_Close'))
-
 	}
 
 
@@ -375,9 +374,8 @@ public class SD_CMStatus_CareCoordination {
 		WebUI.verifyEqual(Actual_CM_Status, Expected_CM_Status)
 
 		WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/Popup_Verification/Obj_LOG_Popup_Close'))
-
 	}
-	
+
 	@When("I click on care cordination tab")
 	public void I_click_on_carecordinationtab() {
 
@@ -385,23 +383,20 @@ public class SD_CMStatus_CareCoordination {
 
 		WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/Obj_CareCoordination'))
 		Thread.sleep(2000)
-		
+
 		'Search Patient'
-		
-				WebUI.waitForElementClickable(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Left Filters/Obj_inputSearchCareCooridnation'), 20)
-		
-				WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Left Filters/Obj_inputSearchCareCooridnation'))
-		
-				WebUI.setText(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Left Filters/Obj_inputSearchCareCooridnation'), "Xsah829, Axir829")
-		
-				Thread.sleep(4000)
-		
-				WebUI.sendKeys(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Left Filters/Obj_inputSearchCareCooridnation'), Keys.chord(Keys.ENTER))
-		
-				Thread.sleep(10000)
-		
-		
-		
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Left Filters/Obj_inputSearchCareCooridnation'), 20)
+
+		WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Left Filters/Obj_inputSearchCareCooridnation'))
+
+		WebUI.setText(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Left Filters/Obj_inputSearchCareCooridnation'), "Xsah829, Axir829")
+
+		Thread.sleep(4000)
+
+		WebUI.sendKeys(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Left Filters/Obj_inputSearchCareCooridnation'), Keys.chord(Keys.ENTER))
+
+		Thread.sleep(10000)
 	}
 
 	@Then("I select (.*) as export")
@@ -415,26 +410,18 @@ public class SD_CMStatus_CareCoordination {
 
 			WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Grid/Obj_Export_AllColms'))
 			Thread.sleep(5000)
-
 		}
 
 		if(Export== "Export (Selected Columns)") {
 
 			WebUI.click(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Grid/Obj_Export_SelectedColms'))
 			Thread.sleep(5000)
-
 		}
-
-
 	}
 
 	@Then("I verify that exported file downloaded successfully")
 	public void VerifyExportedFileDownloaded() {
 
 		Methods.verifyDownloadedfile("C:\\Users\\hafiz.amir\\Downloads", ".xls")
-		
 	}
-
-	
-	
 }

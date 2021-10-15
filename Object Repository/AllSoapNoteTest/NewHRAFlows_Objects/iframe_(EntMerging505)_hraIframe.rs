@@ -6,12 +6,12 @@
    <elementGuidId>0777d761-c80a-4cb1-839a-c57941fbde54</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#hraIframe</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//iframe[@id='hraIframe']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#hraIframe</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

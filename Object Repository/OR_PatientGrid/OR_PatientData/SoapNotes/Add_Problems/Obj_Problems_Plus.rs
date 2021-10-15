@@ -11,7 +11,9 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='clinical problem k-grid has-wizard mz-widget k-widget k-editable editable']/div[1]/div/button[1]</value>
+         <value>//div[@class='clinical problem k-grid has-wizard mz-widget k-widget k-editable editable']/div[1]/div/button[1]
+
+</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

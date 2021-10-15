@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='Un-Sign'])[1]/following::button[1]</value>
+         <value>(//button[@class='btn btn-sm btn-info btn-addendum'])</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -56,7 +56,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/AllSoapNoteTest/NewHRAFlows_Objects/iframe_(EntMerging505)_hraIframe</value>
+      <value>Object Repository/AllSoapNoteTest/NewHRAFlows_Objects/iframe_SignOut_appCCM</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

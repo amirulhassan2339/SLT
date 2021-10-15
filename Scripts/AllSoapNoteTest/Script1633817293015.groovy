@@ -21,81 +21,81 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://slt-int.solitontechnologies.com/PersiviaPortal/invalid')
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_Welcome to_username'), 'amir@slt.com')
+WebUI.setText(findTestObject('null'), 'amir@slt.com')
 
-WebUI.setEncryptedText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_Welcome to_userpwd'), 
+WebUI.setEncryptedText(findTestObject('null'), 
     'em0u++r5ZmAQM4xIcDgVLQ==')
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Sign in'))
 
-WebUI.selectOptionByValue(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/select_Aprima Enterprise_1MHPNPrime Healthcare'), 
+WebUI.selectOptionByValue(findTestObject('null'), 
     'mhpn', true)
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Schedule'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/div_11'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/td_'))
+WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_verifyMRN'))
 
 WebUI.doubleClick(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/td__1'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Cancel'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/div_10'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/i_Dermo505, Mac505 -Back painAmir, Hafiz_fa_c948ff'))
+WebUI.click(findTestObject('null'))
 
 WebUI.doubleClick(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/td__1'))
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_Patient_patientId_input'), 
+WebUI.setText(findTestObject('null'), 
     'dermo')
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_Patient_patientId_input'))
+WebUI.click(findTestObject('null'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Dermo505, Mac505MRN EntMerging505'))
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_Patient_patientId_input'), 
+WebUI.setText(findTestObject('null'), 
     'Dermo505, Mac505')
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/div_Reason_k-multiselect-wrap k-floatwrap'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/li_Back pain'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Create'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Yes'))
+WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_button_Yes_unsign'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Proceed'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/i_Dermo505, Mac505 -Back painAmir, Hafiz_fa_c948ff_1'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/a_Based on patients medical record'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_HRA_k-button k-button-i-context k-gr_23bb3e'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/a_Exam and Recommendations'))
+WebUI.click(findTestObject('null'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Select'))
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input__form-control ui-select-search ng-unt_599ce5'), 
+WebUI.setText(findTestObject('null'), 
     'Non-Urgent')
 
 WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReasonReferral'), 
     'Referral')
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/div_Text must be a valid email.    Text is _207523'))
+WebUI.click(findTestObject('null'))
 
 WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_ReasonReferral'), 
     'Referral Reason')
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Select'))
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input__form-control ui-select-search ng-unt_599ce5'), 
+WebUI.setText(findTestObject('null'), 
     '0.99')
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Select'))
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input__form-control ui-select-search ng-unt_599ce5'), 
+WebUI.setText(findTestObject('null'), 
     '0.89')
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/a_Save'))
@@ -106,34 +106,34 @@ WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Sign'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Selectselect'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/li_MHPN2'))
+WebUI.click(findTestObject('null'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Select'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/li_Bpci, Provider'))
+WebUI.click(findTestObject('null'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Sign'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Create_1'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/canvas_Create New Signature_sig-canvas'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Addendum'))
+WebUI.click(findTestObject('null'))
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_addendum_Textarea'), 
+WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_addendum_validation'), 
     'addendum notes test')
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Save'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Close'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/a_Superbill'))
+WebUI.click(findTestObject('null'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_MRNArrowClick'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_select_k-textbox'))
+WebUI.click(findTestObject('null'))
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_select_k-textbox'), 'EntMerging505')
+WebUI.setText(findTestObject('null'), 'EntMerging505')
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Filter'))
 
@@ -143,33 +143,33 @@ WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/caption_CASE MAN
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Done'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/div_successReferral status marked as done s_0b06d1'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/a_Patients'))
+WebUI.click(findTestObject('null'))
 
-WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_Care Coordination_query'), 
+WebUI.setText(findTestObject('null'), 
     'dermo')
 
-WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/input_Care Coordination_query'), 
+WebUI.sendKeys(findTestObject('null'), 
     Keys.chord(Keys.ENTER))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Encounter'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Add SOAP Note'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/a_Based on patients medical record_1'))
+WebUI.click(findTestObject('null'))
 
 WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_Close'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/a_Schedule'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/i_Dermo505, Mac505 -Back painAmir, Hafiz_fa_c948ff_1'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/span_View SOAP Note'))
+WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_span_ViewSOAPNote'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Un-Sign'))
+WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_button_Un-Sign'))
 
-WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/button_Yes'))
+WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_button_Yes_unsign'))
 
 WebUI.switchToWindowTitle('Welcome to Persivia!')
 

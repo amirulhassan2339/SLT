@@ -18,6 +18,9 @@ class SD_SoapNotes {
 
 	UtilityFunctions obj=new UtilityFunctions();
 	TestObject frame=findTestObject('Object Repository/OR_OpenPatient/frame')
+	TestObject VisitTypeObj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_TelehealthClick')
+	TestObject SourceObj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_SourceClick')
+
 
 	WebDriver driver;
 
@@ -73,11 +76,48 @@ class SD_SoapNotes {
 		Thread.sleep(2000)
 	}
 
+	@And("I select Visit Type:(.*)")
+	public void i_select_VisitType(String VisitType) {
+		'I click on privacy field'
+		WebUI.click(VisitTypeObj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='(//div[@id="Appointment-type-list"])[2]//ul//li[text()="'+VisitType+'"]'
+
+		obj.selectdropdown(frame,xpath)
+	}
+
+	@And("I should see VisitType Link")
+	public void I_should_see_VisitTypeLink() {
+
+
+		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_TelehealthLink'),3)
+
+
+	}
+
+	@And("I should see Send SMS button")
+	public void I_should_see_SendSMS() {
+
+		String actual_SMSBTN = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_TelehealthSMSBTN'))
+		WebUI.verifyEqual(actual_SMSBTN, "Send SMS")
+	}
+
+
+	@And("I should see Copy button")
+	public void I_should_see_CopyBTN() {
+
+		String actual_SMSBTN = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_TelehealthCopyBTN'))
+		WebUI.verifyEqual(actual_SMSBTN, "Copy")
+	}
+
 	@Then("I should see (.*) as actual patient name")
 	public void I_should_see_patient_Information(String Patient) {
 
 		String actual_patient = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/patient_Info/Obj_Name'))
 		WebUI.verifyEqual(actual_patient, Patient)
+
+
 	}
 
 	@And("I drag chat list")
@@ -201,6 +241,17 @@ class SD_SoapNotes {
 
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Click_BasedOnPatientMedicalRecord'), 5)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Click_BasedOnPatientMedicalRecord'))
+
+		Thread.sleep(5000)
+	}
+
+	@And("I click on blankSoapNote")
+	public void I_click_kon_BlankTab() {
+
+		Thread.sleep(3000)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Click_blank'), 5)
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Click_blank'))
 
 		Thread.sleep(4000)
 	}
@@ -628,6 +679,33 @@ class SD_SoapNotes {
 		Thread.sleep(2000)
 
 	}
+	
+	@Then("I click on add Medication existing button")
+	public void I_click_On_Medication_existing() {
+
+		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medicatoin_Hover'))
+
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing'), 20)
+
+		Thread.sleep(5000)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing'))
+
+		Thread.sleep(2000)
+
+	}
+	
+	@Then("I select the medication checkbox")
+	public void SelectMedicationCheckbox() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing_UniqueCheckbox'))
+		
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing_Checkbox'))
+
+
+	}
+
 
 	@Then("I enter (.*) as the medication code")
 	public void i_enter_MedicationCode(String MedicationCode) {
@@ -685,8 +763,28 @@ class SD_SoapNotes {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medications_SaveClose'))
 
 	}
+	
+	@Then("I click on saveclose button to save allergy")
+	public void I_click_On_SaveCloseBTN_allergy() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medications_SaveClose'))
+
+		Thread.sleep(2000)
+	}
 
 
+	@Then("I should see medications existing data in grid")
+	public void I_should_see_medication_data_Grid() {
+
+
+		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_ExistingMedicationRow_Grid'), 20)
+
+		String Actual_Medication = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_ExistingMedicationRow_Grid'))
+		
+		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_ExistingMedicationRow_Grid'), Actual_Medication, FailureHandling.STOP_ON_FAILURE)
+
+	}
+	
 	@Then("I should see medications data in soap note popup")
 	public void I_should_see_medication_data_soapNote() {
 
@@ -861,6 +959,69 @@ class SD_SoapNotes {
 	}
 
 
+
+	@And("I click on add diagnosis plus button")
+	public void I_click_Add_diagnosis() {
+
+
+		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Diagnosis/Obj_Diagnosis_Hover'), 25)
+
+		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Diagnosis/Obj_Diagnosis_Hover'))
+
+		Thread.sleep(5000)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Diagnosis/Obj_Diagnosis_Plus'), 10)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Diagnosis/Obj_Diagnosis_Plus'))
+
+		Thread.sleep(2000)
+	}
+
+	@And("I enter (.*) as diagnosis")
+	public void I_enter_diagnosis(String Diagnosis) {
+
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Diagnosis/Obj_diagnosis_Input'),Diagnosis)
+		Thread.sleep(2000)
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Diagnosis/Obj_diagnosis_Input'), Keys.chord(Keys.ENTER))
+
+	}
+
+	@And("I click on diagnosisSave button")
+	public void I_click_On_dianosisSaveBTN() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Diagnosis/Obj_diagnosisSave_BTN'))
+
+		Thread.sleep(3000)
+	}
+
+	@And("I click on super bill edit button")
+	public void I_click_On_dianosisEditBTN() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_EditBTN'))
+
+		Thread.sleep(3000)
+	}
+	@And("I click on diagnosisSaveClose button")
+	public void I_click_On_diagnosisSupberSaveClose() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_Diagnosis_SaveClose'))
+
+		Thread.sleep(3000)
+	}
+
+	@Then("I should see (.*) as diagnosis data in superbill grid")
+	public void I_should_see_diagnosisdatainsuperbillgrid(String Diagnosis) {
+
+
+		String Actual_EnteredValue = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_DiagnosisValidation'))
+
+		WebUI.verifyEqual(Actual_EnteredValue, Diagnosis)
+	}
+
 	@And("I click on Billing Information Edit button")
 	public void I_click_On_BillingInformation_EditBTN() {
 
@@ -935,11 +1096,11 @@ class SD_SoapNotes {
 		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/Obj_BillingInformation_Hover'), 30)
 
 
-		String Actual_EnteredValue = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/BillingInformation_DataVerification/Obj_Entered_BillingInfomation'))
+		String Actual_Billing1 = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/BillingInformation_DataVerification/Obj_Entered_BillingInfomation'))
 
-		if(Actual_EnteredValue.contains(Code1)) {
+		if(!Actual_Billing1.contains(Code1)){
 
-			WebUI.verifyMatch(Actual_EnteredValue, Code1, false)
+			WebUI.verifyMatch(Actual_Billing1, Code1, false)
 
 		}
 
@@ -951,11 +1112,11 @@ class SD_SoapNotes {
 		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/Obj_BillingInformation_Hover'), 30)
 
 
-		String Actual_EnteredValue = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/BillingInformation_DataVerification/Obj_Entered_BillingInfomation'))
+		String Actual_Billing2 = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_BillingInformation/BillingInformation_DataVerification/Obj_Entered_BillingInfomation'))
 
-		if(Actual_EnteredValue.contains(Code2)) {
+		if(!Actual_Billing2.contains(Code2)) {
 
-			WebUI.verifyMatch(Actual_EnteredValue, Code2, false)
+			WebUI.verifyMatch(Actual_Billing2, Code2, false)
 
 		}
 
@@ -969,7 +1130,7 @@ class SD_SoapNotes {
 
 		String Actual_Diagnosis = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_Diagnosis_Validation'))
 
-		if(Actual_Diagnosis.contains(DiagnosisCode)) {
+		if(!Actual_Diagnosis.contains(DiagnosisCode)) {
 
 			WebUI.verifyMatch(Actual_Diagnosis, DiagnosisCode, false)
 
@@ -1062,7 +1223,7 @@ class SD_SoapNotes {
 	public void I_click_On_AddendumBTN() {
 
 
-		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_AddendumBTNClick'))
 		Thread.sleep(1000)
 	}
 
@@ -1071,16 +1232,14 @@ class SD_SoapNotes {
 	public void I_enter_addendumNotes(String AddendumNotes) {
 
 
-		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'),AddendumNotes)
-		Thread.sleep(2000)
-		WebUI.sendKeys(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'), Keys.chord(Keys.ENTER))
+		WebUI.setText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_Addendum_Notes'),AddendumNotes)
 
 	}
 	@When("I click on addendum save button to save addendum")
 	public void I_click_On_AddendumSaveBTN() {
 
 
-		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_AddendumSaveBTN'))
 		Thread.sleep(1000)
 	}
 
@@ -1088,9 +1247,9 @@ class SD_SoapNotes {
 	public void I_should_see_addendumsection(String AddendumNotes) {
 
 
-		String Actual_SignMessage = WebUI.getText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+		String Actual_AddendumText = WebUI.getText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_addendum_validation'))
 
-		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+		WebUI.verifyEqual(Actual_AddendumText, AddendumNotes)
 
 	}
 
@@ -1098,11 +1257,6 @@ class SD_SoapNotes {
 	public void I_should_see_SignedStatusinUI() {
 
 
-		Thread.sleep(3000)
-
-		WebUI.scrollToElement(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'), 5)
-
-		WebUI.verifyElementPresent(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'), 5)
 
 
 	}
@@ -1114,8 +1268,8 @@ class SD_SoapNotes {
 
 		Thread.sleep(2000)
 		'click on arrow'
-		WebUI.waitForElementPresent(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'), 0)
-		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+		WebUI.waitForElementPresent(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_MRNArrowClick'), 0)
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_MRNArrowClick'))
 
 		'move to the filter label'
 		Thread.sleep(2000)
@@ -1123,6 +1277,8 @@ class SD_SoapNotes {
 
 		'Input the patient name'
 		Thread.sleep(2000)
+		WebUI.clearText(findTestObject('Object Repository/OR_OpenPatient/inputPatient'))
+
 		WebUI.sendKeys(findTestObject('Object Repository/OR_OpenPatient/inputPatient'),MRN)
 
 		'Click on filter button'
@@ -1136,51 +1292,66 @@ class SD_SoapNotes {
 	public void I_should_see_MRNsuperbillGrid(String MRN) {
 
 
-		String Actual_SignMessage = WebUI.getText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_PadTestClick'))
+		String Actual_SignMessage = WebUI.getText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_verifyMRN'))
 
-		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+		WebUI.verifyEqual(Actual_SignMessage, "EntMerging505")
+
+		Thread.sleep(6000)
 
 	}
 
 	@When("I click on referral status three lines")
 	public void I_click_On_referralStatus() {
 
+		Thread.sleep(6000)
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		//WebUI.click(findTestObject('Object Repository/aaaaaaaaaaaaaaaaaaaaaaaaaa/Page_Welcome to Persivia/img_Yes_patientAlert show-mrn'))
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_Referral_ClickThreeLines'))
 		Thread.sleep(1000)
 	}
 	@Then("I should see case management popup")
 	public void I_should_see_caseManagementPopup() {
 
 
-		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
+		String Actual_Text = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_Referral_CaseManagementPopup'))
 
-		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+		WebUI.verifyEqual(Actual_Text, "CASE MANAGEMENT")
 
 	}
 	@Then("I should see case management popup data is showing")
 	public void I_should_see_caseManagementPopupData() {
 
 
-		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
+		String Actual_Status = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_Referral_CaseManagementPopup_Data'))
 
-		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+		WebUI.verifyEqual(Actual_Status, "Non-Urgent")
 
 	}
+
+	@When("I click on Done button")
+	public void I_click_On_DoneBTN() {
+
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_Referral_ClickDoneBTN'))
+		Thread.sleep(1000)
+	}
+
+
 	@When("I click on patient tab")
 	public void I_click_On_patientTab() {
 
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_PatientTabClick'))
 		Thread.sleep(1000)
 	}
 	@Then("I should see signed status on encounter grid")
 	public void I_should_see_SignedStatusOnEncounterGrid() {
 
 
-		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
+		String Actual_Status = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_EncounterGrid_ValidationSignedStatus'))
 
-		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+		WebUI.verifyEqual(Actual_Status, "Signed")
 
 	}
 
@@ -1188,7 +1359,7 @@ class SD_SoapNotes {
 	public void I_click_On_ViewSoapNoteLink() {
 
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_span_ViewSOAPNote'))
 		Thread.sleep(1000)
 	}
 
@@ -1196,7 +1367,7 @@ class SD_SoapNotes {
 	public void I_click_On_UnSignBTN() {
 
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_button_Un-Sign'))
 		Thread.sleep(1000)
 	}
 
@@ -1204,25 +1375,318 @@ class SD_SoapNotes {
 	public void I_click_On_yesbtntounsign() {
 
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
-		Thread.sleep(1000)
+		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_button_Yes_unsign'))
+		Thread.sleep(3000)
 	}
 
 	@When("I should see unsigned message")
 	public void I_should_see_UnsignedMessage() {
 
 
-		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
+		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_UnsignedMessage'))
 
-		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+		WebUI.verifyEqual(Actual_SignMessage, "SuccessSOAP note unsigned successfullyHide")
 	}
 	@When("I click on print soap note button")
 	public void I_click_On_PrintSoapNote() {
 
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignatureCreateBtn'))
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/HRA New Cases/Obj_PrintBTN'))
 		Thread.sleep(1000)
 	}
 
+	@Then("I should see success message (.*) of non billable")
+	public void Close_and_Verify_nonbillablemessage(String SucessMessage) {
+
+
+		String actual_Message  = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_SuccessMessage'))
+
+		WebUI.verifyEqual(actual_Message, SucessMessage)
+	}
+	@Then("I should see success message (.*) of reverted")
+	public void Close_and_Verify_Revertedemessage(String RevertedSucessMessage) {
+
+
+		String actual_Message  = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_RevertSuccessMessage'))
+
+		WebUI.verifyEqual(actual_Message, RevertedSucessMessage)
+	}
+
+
+	@And("I select (.*) as Billing status from leftFilters")
+	public void I_SelectBillingStatusFromLeftFilters(String Billing_Status) {
+
+
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_LeftFilterClick'), 10)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_LeftFilterClick'))
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_LeftFiltersInput'), Billing_Status)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_LeftFiltersSelect'))
+
+
+		//		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Select'), Keys.chord(Keys.ENTER))
+
+		Thread.sleep(5000)
+	}
+
+	@And("I select (.*) as Billing status from leftFilterss")
+	public void I_SelectBillingStatusFromLeftFilterss(String Billing_Status2) {
+
+
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_LeftFilterClick'), 10)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_LeftFilterClick'))
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_LeftFiltersInput'), Billing_Status2)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_NonBillable_LeftFiltersSelect'))
+
+
+		//		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Select'), Keys.chord(Keys.ENTER))
+
+		Thread.sleep(5000)
+	}
+
+	@And("I should see (.*) NonBillable as billing status")
+	public void I_should_see_NonBillable_as_billing_status(String Billing_Status) {
+
+		String actual_Status = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_NonBillableValidationStatus'))
+
+		WebUI.verifyEqual(actual_Status, Billing_Status)
+	}
+
+	@Then("I should see Non_Billable button is visible on superbill screen")
+	public void Close_and_see_NonBillableBTN() {
+
+		WebUI.verifyElementVisible(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_NonBillableBTN'))
+
+		Thread.sleep(1000)
+	}
+
+	@Then("I click on Non billable superbill button")
+	public void ClickNonBillableBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_NonBillableBTN'))
+
+
+	}
+
+	@Then("I click on yes non billable button")
+	public void ClickNonBillableYESBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_NonBillable_YESBTN'))
+
+
+	}
+
+
+	@Then("I should not see edit and complete buttons")
+	public void ShouldNotSee_BTNs() {
+
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_NonBillable_YESBTN'), 3)
+	}
+
+	@Then("I click on revert to incomplete button")
+	public void ClickOnRevertBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_RevertToIncomplete'))
+
+
+	}
+
+	@Then("I should see Non billable status in grid")
+	public void ShouldNotSee_BillableStatus() {
+
+		String actual_billableStatus = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/NewSubperBill_Objects/Obj_SuperBill_NonBillableValidationStatus'))
+		WebUI.verifyEqual(actual_billableStatus, "Non-Billable")
+	}
+
+	@Then("I click on add Allergies plus button")
+	public void ClickOnallergyPlusBTN() {
+
+		Thread.sleep(12000)
+
+
+		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_Hover'), 30)
+
+		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_Hover'))
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_Plus'))
+
+		Thread.sleep(1000)
+
+	}
+
+	@Then("I enter (.*) as allergyCode")
+	public void i_enter_allergyCode(String Allergy) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_Input'),Allergy)
+
+		Thread.sleep(3000)
+
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_Input'), Keys.chord(Keys.ENTER))
+
+	}
+	@Then("I enter (.*) as allergy_StartDate")
+	public void i_enter_allergystartdate(String Allergy_Start_Date) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_tartDate'),Allergy_Start_Date)
+
+	}
+
+	@Then("I enter (.*) as allergy_EndDate")
+	public void i_enter_allergyEndDate(String Allergy_End_Date) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_EndDate'),Allergy_End_Date)
+
+
+	}
+
+	@Then("I should see (.*) and (.*) and (.*) as allergy data in soap note grid")
+	public void ShouldNotSee_AllergyData(String Allergy, String Allergy_Start_Date, String Allergy_End_Date) {
+
+
+		'Allergy'
+
+
+		String Actual_Allergy = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Allergies_DataVerification/Obj_Entered_Allergies'))
+
+		if(!Actual_Allergy.contains(Allergy)){
+
+			WebUI.verifyMatch(Actual_Allergy, Allergy, false)
+
+		}
+
+
+		'Verify Start Date'
+		String date = Allergy_Start_Date.substring(0, 8)
+
+		String actual_StartDate = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Allergies_DataVerification/Obj_Entered_Allergies_StartDate'))
+
+		String date1 = Allergy_Start_Date.substring(0, 8)
+
+		WebUI.verifyMatch(date, date1, false)
+
+
+		'Verify End Date'
+		String dateE = Allergy_End_Date.substring(0, 8)
+
+		String actual_EndDate = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Allergies_DataVerification/Obj_Entered_Allergies_EndDate'))
+
+		String date3 = Allergy_End_Date.substring(0, 8)
+
+		WebUI.verifyMatch(dateE, date3, false)
+
+
+		Thread.sleep(2000)
+
+
+	}
+
+	@Then("I click on delete button to delete allergy")
+	public void ClickdeleteBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_DeleteBTN'))
+
+
+	}
+
+	@Then("I click on Yes button to delete")
+	public void ClickYesBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_YesBTN'))
+
+
+	}
+
+	@Then("I should see delete message")
+	public void ShouldSeeDeleteAllergyMessage() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_EndDate'))
+
+
+	}
+
+	@Then("I click on select existing allergies button")
+	public void SelectExistingAllergy() {
+
+		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_HoverExisting'))
+		
+		
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_SelectBTN'))
+
+
+	}
+
+	@Then("I select the existing allergy checkbox")
+	public void SelectAllergyCheckbox() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_Checkbox'))
+
+
+	}
+
+	@Then("I click on procced button")
+	public void ClickOnAllergyProceedBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_ProccedBTN'))
+
+
+		Thread.sleep(3000)
+	}
+
+	@Then("I should see exiting success message")
+	public void ShouldSeeExistingAllergyMessage() {
+
+		String Actual_Message = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Allergies_DataVerification/Obj_AllergiesSuccessMessage'))
+		WebUI.verifyEqual(Actual_Message, "successSaved successfully.Hide")
+
+
+	}
+
+	@And("I select Source as:(.*)")
+	public void i_select_Source(String Source) {
+		
+//		Thread.sleep(3000)
+//		
+//		'I click on Souece field'
+//		WebUI.click(SourceObj)
+//		Thread.sleep(2000)
+//		
+//		WebUI.click(SourceObj)
+//		
+//		'I select value from the dropdown'
+//		Thread.sleep(2000);
+//		String xpath='(//div[@class="k-list-container k-popup k-group k-reset"])[33]//div[2]//ul//li[text()="'+Source+'"]'
+//
+//		obj.selectdropdown(frame,xpath)
+	}
+
+	@Then("I enter (.*) as encountercode")
+	public void i_enter_encounter(String Encounter) {
+
+		WebUI.clearText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_EncounterInput'))
+		
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_EncounterInput'),Encounter)
+
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_EncounterInput'), Keys.chord(Keys.ENTER))
+		
+
+	}
+	@Then("I verified billable checkbox as checked")
+	public void i_VerifiedBillableCheckbox() {
+
+		if(WebUI.verifyElementChecked(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_BillableCheckbox_Checked'), 3)) {
+
+			WebUI.check(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_BillableCheckbox_Checked'))
+		}else {
+			println("Sorry")
+		}
+
+	}
 
 }

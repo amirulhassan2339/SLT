@@ -6,6 +6,10 @@
    <elementGuidId>2fa9fa15-3fa1-49fb-b480-d078de61446d</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'successCare Plan Saved SuccessfullyHide' or . = 'successCare Plan Saved SuccessfullyHide')]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value>div.k-notification-wrap</value>
       </entry>

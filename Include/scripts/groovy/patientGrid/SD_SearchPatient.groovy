@@ -14,11 +14,11 @@ import utility_Functions.UtilityFunctions
 
 
 class SD_SearchPatient {
-	
+
 	UtilityFunctions obj=new UtilityFunctions();
 	TestObject frame=findTestObject('Object Repository/OR_OpenPatient/frame')
-	
-	
+
+
 	@When("I search (.*) using global search")
 	public void search_Patient(String Patient) {
 
@@ -103,8 +103,8 @@ class SD_SearchPatient {
 		//		String Actual_Status = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_SearchPatient/SearchPatientGrid/OR_Status/Obj_PatientStatus'))
 		//		WebUI.verifyEqual(Actual_Status, Patient_Status)
 	}
-	
-	
+
+
 	@Given("I search (.*) using global search and verify dob:(.*),mrn:(.*) and facility:(.*)")
 	public void search_Patient_plus_verify(String Patient,String dob,String mrn,String facility) {
 
@@ -160,7 +160,7 @@ class SD_SearchPatient {
 
 		Thread.sleep(2000)
 	}
-	
+
 	@Given("I open Patient using (.*) on care coordination screen")
 	void open_Care_Coordination(String MRN) {
 		String xpath='//span[@data-mrn="'+MRN+'"]//preceding::td[@class="patient-name-cell"]//span//span'
