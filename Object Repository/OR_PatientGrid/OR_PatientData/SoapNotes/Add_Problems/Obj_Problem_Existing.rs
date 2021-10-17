@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_Problems_Plus</name>
+   <name>Obj_Problem_Existing</name>
    <tag></tag>
-   <elementGuidId>4aabc834-838d-43bd-af2c-504e74b4a3c0</elementGuidId>
+   <elementGuidId>77d8425f-1309-4846-9318-519c7b1207d7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='clinical problem k-grid has-wizard mz-widget k-widget k-editable editable']/div[1]/div/button[1]</value>
+         <value>//div[@class='clinical problem k-grid has-wizard mz-widget k-widget k-editable editable']/div[1]/div/button[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -21,7 +21,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[@class='clinical problem k-grid has-wizard mz-widget k-widget k-editable editable']/div[1]/div/button[1]</value>
+      <value>(//div[contains(@class, 'clinical medication k-grid has-wizard mz-widget k-widget k-editable')]//div)[3]//button[1]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

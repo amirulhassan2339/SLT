@@ -1,52 +1,26 @@
 package patientGrid
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.checkpoint.CheckpointFactory
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testcase.TestCaseFactory
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testdata.TestDataFactory
-import com.kms.katalon.core.testobject.ObjectRepository
+import org.openqa.selenium.Keys
+
 import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
-import internal.GlobalVariable
-import io.cucumber.datatable.DataTable
-import org.openqa.selenium.WebElement
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.By
-
-import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
-import com.kms.katalon.core.webui.driver.DriverFactory
-
-import com.kms.katalon.core.testobject.RequestObject
-import com.kms.katalon.core.testobject.ResponseObject
-import com.kms.katalon.core.testobject.ConditionType
-import com.kms.katalon.core.testobject.TestObjectProperty
-
-import com.kms.katalon.core.mobile.helper.MobileElementCommonHelper
-import com.kms.katalon.core.util.KeywordUtil
-
-import com.kms.katalon.core.webui.exception.WebElementNotFoundException
-
-import cucumber.api.java.After
-import cucumber.api.java.Before
 import cucumber.api.java.en.And
-import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import utility_Functions.UtilityFunctions
+
+
 
 class SD_BOPMR {
 
+	UtilityFunctions obj=new UtilityFunctions();
+	TestObject frame=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/CareManagementForm/Obj_CCMFrame')
+	TestObject activeProblemobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_ActiveProblemArrowClick')
+	TestObject AllergySubstancesobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_AllergiesSubstanceArrowClick')
+	
 
 	//	@When("I search (.*) using global search")
 	//	public void Search_Patient(String Patient) {
@@ -985,4 +959,265 @@ class SD_BOPMR {
 		//		//
 
 	}
+
+	@And("I click on problem plus button")
+	public void I_click_ProblemPlus_button() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_Plus'))
+
+	}
+
+	@And("I hover over on problem")
+	public void I_HoverOver_Problem() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_Hover'))
+
+	}
+
+
+
+	@And("I select activeproblem as:(.*)")
+	public void i_select_ActiveProblem(String ActiveProblem) {
+		'I click on ActiveProblem field'
+		WebUI.click(activeProblemobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='//li[text()="'+ActiveProblem+'"]'
+		obj.selectdropdown(frame,xpath)
+	}
+
+
+	@And("I enter (.*) as problemcode")
+	public void EnterProblemCode(String ProblemCode) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_Code'), ProblemCode)
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_Code'), Keys.chord(Keys.ENTER))
+		
+	}
+
+
+	@And("I enter (.*) as problemStartDate")
+	public void I_EnterProblemStartDate(String StartDate) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_startDate'),StartDate)
+		
+	}
+
+
+	@And("I click on updated button")
+	public void I_click_Update_button() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_UpdatedBTN'))
+		
+	}
+
+
+	@And("I should see (.*) and (.*) as updated problem")
+	public void I_click_ShouldSeeProblemData(String ProblemCode, String StartDate) {
+
+
+		String Actual_Problem = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_ProblemValidation_Code'))
+
+		if(!Actual_Problem.contains(ProblemCode)){
+
+			WebUI.verifyMatch(Actual_Problem, ProblemCode, false)
+
+		}
+
+
+		String date = StartDate.substring(0, 2)
+
+		String actual_DateOfServiceDate = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_ProblemValidation_StartDate'))
+
+		String date1 = StartDate.substring(0, 2)
+
+
+		//WebUI.verifyMatch(actual_DateOfServiceDate, DateOfService_FromDate(new SimpleDateFormat("H:mm a"), false)
+
+		WebUI.verifyMatch(date, date1, false)
+
+	}
+
+	
+	@And("I click on allergies plus button")
+	public void I_click_AllergyPlus_button() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_Allergies_Plus'))
+
+	}
+
+	@And("I hover over on allergies")
+	public void I_HoverOver_Allergy() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_Allergies_Hover'))
+
+	}
+
+
+
+	@And("I select allergyType as:(.*)")
+	public void i_select_substances(String AllergySubstances) {
+		'I click on ActiveProblem field'
+		WebUI.click(AllergySubstancesobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='//li[text()="'+AllergySubstances+'"]'
+		obj.selectdropdown(frame,xpath)
+	}
+
+
+	@And("I enter (.*) as allergycode")
+	public void EnterAllergyCode(String AllergyCode) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_Allergies_Code'), AllergyCode)
+		Thread.sleep(2000)
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_Allergies_Code'), Keys.chord(Keys.ENTER))
+		
+	}
+
+
+	@And("I enter (.*) as allergyStartDate")
+	public void I_EnterAllergyStartDate(String StartDate) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_Allergies_startDate'),StartDate)
+		
+	}
+
+	@And("I should see (.*) and (.*) and (.*) as updated allergies")
+	public void I_ShouldSeeAllergyData(String AllergySubstances, String AllergyCode, String StartDate) {
+
+		'Verify Substances'
+		String actualSubstance = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_AllergiesValidation_Substance'))
+		
+		WebUI.verifyEqual(AllergySubstances, AllergySubstances)
+		
+
+		'Verify Allergy Code'
+		String Actual_Allergy = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_AllergiesValidation_Code'))
+
+		if(!Actual_Allergy.contains(AllergyCode)){
+
+			WebUI.verifyMatch(Actual_Allergy, AllergyCode, false)
+
+		}
+
+
+		'Verify Start Date'
+		String date = StartDate.substring(0, 2)
+
+		String date1 = StartDate.substring(0, 2)
+
+		WebUI.verifyMatch(date, date1, false)
+
+	}
+
+	
+	@And("I click on medication as per patient plus button")
+	public void I_click_medicationPlus_button() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Plus'))
+
+	}
+
+	@And("I hover over on medication as per patient")
+	public void I_HoverOver_medication() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Hover'))
+
+	}
+
+
+	@And("I enter (.*) as medication as per patient Code")
+	public void Entermedicationcode(String MedicationCode) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Code'), MedicationCode)
+		Thread.sleep(2000)
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Code'), Keys.chord(Keys.ENTER))
+		
+	}
+
+
+	@And("I enter (.*) as medication as per patient")
+	public void I_EntermedicationStart_Date(String StartDate) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_startDate'),StartDate)
+		
+	}
+
+
+	@And("I should see (.*) and (.*) as updated medication as perpatient")
+	public void I_click_ShouldSeeMedicationData(String MedicationCode, String StartDate) {
+
+
+		String Actual_Medication = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_MedicationValidation_Code'))
+
+		if(!Actual_Medication.contains(MedicationCode)){
+
+			WebUI.verifyMatch(Actual_Medication, MedicationCode, false)
+
+		}
+
+
+		String date = StartDate.substring(0, 2)
+
+		String date1 = StartDate.substring(0, 2)
+
+		WebUI.verifyMatch(date, date1, false)
+
+	}
+	
+	@And("I click on medication as per EHR plus button")
+	public void I_click_medicationEHRPlus_button() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per EHR/Obj_Medication_Plus'))
+
+	}
+
+	@And("I hover over on medication as per EHR")
+	public void I_HoverOver_medicationEHR() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per EHR/Obj_Medication_Hover'))
+
+	}
+
+
+	@And("I enter (.*) as medication as per EHR Code")
+	public void EntermedicationcodeEHR(String MedicationCode) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Code'), MedicationCode)
+		Thread.sleep(2000)
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Code'), Keys.chord(Keys.ENTER))
+		
+	}
+
+
+	@And("I enter (.*) as medication as per EHR")
+	public void I_EntermedicationStart_DateEHR(String StartDate) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_startDate'),StartDate)
+		
+	}
+
+
+	@And("I should see (.*) and (.*) as updated medication as PerEHR")
+	public void I_click_ShouldSeeMedicationDataPerEHR(String MedicationCode, String StartDate) {
+
+
+		String Actual_Medication = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per EHR/Obj_MedicationValidation_Code'))
+
+		if(!Actual_Medication.contains(MedicationCode)){
+
+			WebUI.verifyMatch(Actual_Medication, MedicationCode, false)
+
+		}
+
+
+		String date = StartDate.substring(0, 2)
+
+		String date1 = StartDate.substring(0, 2)
+
+		WebUI.verifyMatch(date, date1, false)
+
+	}
+
 }

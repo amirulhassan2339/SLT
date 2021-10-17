@@ -92,8 +92,6 @@ class SD_SoapNotes {
 
 
 		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_TelehealthLink'),3)
-
-
 	}
 
 	@And("I should see Send SMS button")
@@ -116,8 +114,6 @@ class SD_SoapNotes {
 
 		String actual_patient = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/patient_Info/Obj_Name'))
 		WebUI.verifyEqual(actual_patient, Patient)
-
-
 	}
 
 	@And("I drag chat list")
@@ -679,7 +675,7 @@ class SD_SoapNotes {
 		Thread.sleep(2000)
 
 	}
-	
+
 	@Then("I click on add Medication existing button")
 	public void I_click_On_Medication_existing() {
 
@@ -695,12 +691,12 @@ class SD_SoapNotes {
 		Thread.sleep(2000)
 
 	}
-	
+
 	@Then("I select the medication checkbox")
 	public void SelectMedicationCheckbox() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing_UniqueCheckbox'))
-		
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing_Checkbox'))
 
 
@@ -763,7 +759,7 @@ class SD_SoapNotes {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medications_SaveClose'))
 
 	}
-	
+
 	@Then("I click on saveclose button to save allergy")
 	public void I_click_On_SaveCloseBTN_allergy() {
 
@@ -780,11 +776,11 @@ class SD_SoapNotes {
 		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_ExistingMedicationRow_Grid'), 20)
 
 		String Actual_Medication = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_ExistingMedicationRow_Grid'))
-		
+
 		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_ExistingMedicationRow_Grid'), Actual_Medication, FailureHandling.STOP_ON_FAILURE)
 
 	}
-	
+
 	@Then("I should see medications data in soap note popup")
 	public void I_should_see_medication_data_soapNote() {
 
@@ -814,6 +810,20 @@ class SD_SoapNotes {
 
 	@Then("I click on add Problems plus button")
 	public void I_click_On_Problems_PlusBTN() {
+
+		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Obj_Problems_Hover'))
+
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Obj_Problems_Plus'), 10)
+
+		Thread.sleep(5000)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Obj_Problems_Plus'))
+
+	}
+
+	@Then("I click on add Problem existing button")
+	public void I_click_On_Problems_ExistingBTN() {
 
 		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Obj_Problems_Hover'))
 
@@ -1615,8 +1625,8 @@ class SD_SoapNotes {
 	public void SelectExistingAllergy() {
 
 		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_HoverExisting'))
-		
-		
+
+
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Allergies_SelectBTN'))
 
 
@@ -1650,31 +1660,31 @@ class SD_SoapNotes {
 
 	@And("I select Source as:(.*)")
 	public void i_select_Source(String Source) {
-		
-//		Thread.sleep(3000)
-//		
-//		'I click on Souece field'
-//		WebUI.click(SourceObj)
-//		Thread.sleep(2000)
-//		
-//		WebUI.click(SourceObj)
-//		
-//		'I select value from the dropdown'
-//		Thread.sleep(2000);
-//		String xpath='(//div[@class="k-list-container k-popup k-group k-reset"])[33]//div[2]//ul//li[text()="'+Source+'"]'
-//
-//		obj.selectdropdown(frame,xpath)
+
+		//		Thread.sleep(3000)
+		//
+		//		'I click on Souece field'
+		//		WebUI.click(SourceObj)
+		//		Thread.sleep(2000)
+		//
+		//		WebUI.click(SourceObj)
+		//
+		//		'I select value from the dropdown'
+		//		Thread.sleep(2000);
+		//		String xpath='(//div[@class="k-list-container k-popup k-group k-reset"])[33]//div[2]//ul//li[text()="'+Source+'"]'
+		//
+		//		obj.selectdropdown(frame,xpath)
 	}
 
 	@Then("I enter (.*) as encountercode")
 	public void i_enter_encounter(String Encounter) {
 
 		WebUI.clearText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_EncounterInput'))
-		
+
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_EncounterInput'),Encounter)
 
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_EncounterInput'), Keys.chord(Keys.ENTER))
-		
+
 
 	}
 	@Then("I verified billable checkbox as checked")
