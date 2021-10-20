@@ -20,7 +20,7 @@ class SD_BOPMR {
 	TestObject frame=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/CareManagementForm/Obj_CCMFrame')
 	TestObject activeProblemobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_ActiveProblemArrowClick')
 	TestObject AllergySubstancesobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_AllergiesSubstanceArrowClick')
-	
+
 
 	//	@When("I search (.*) using global search")
 	//	public void Search_Patient(String Patient) {
@@ -992,7 +992,7 @@ class SD_BOPMR {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_Code'), ProblemCode)
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_Code'), Keys.chord(Keys.ENTER))
-		
+
 	}
 
 
@@ -1000,7 +1000,7 @@ class SD_BOPMR {
 	public void I_EnterProblemStartDate(String StartDate) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_startDate'),StartDate)
-		
+
 	}
 
 
@@ -1008,7 +1008,7 @@ class SD_BOPMR {
 	public void I_click_Update_button() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDProblem/Obj_Problem_UpdatedBTN'))
-		
+
 	}
 
 
@@ -1038,7 +1038,7 @@ class SD_BOPMR {
 
 	}
 
-	
+
 	@And("I click on allergies plus button")
 	public void I_click_AllergyPlus_button() {
 
@@ -1072,7 +1072,7 @@ class SD_BOPMR {
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_Allergies_Code'), AllergyCode)
 		Thread.sleep(2000)
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_Allergies_Code'), Keys.chord(Keys.ENTER))
-		
+
 	}
 
 
@@ -1080,7 +1080,7 @@ class SD_BOPMR {
 	public void I_EnterAllergyStartDate(String StartDate) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_Allergies_startDate'),StartDate)
-		
+
 	}
 
 	@And("I should see (.*) and (.*) and (.*) as updated allergies")
@@ -1088,9 +1088,9 @@ class SD_BOPMR {
 
 		'Verify Substances'
 		String actualSubstance = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_AllergiesValidation_Substance'))
-		
+
 		WebUI.verifyEqual(AllergySubstances, AllergySubstances)
-		
+
 
 		'Verify Allergy Code'
 		String Actual_Allergy = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDAllergies/Obj_AllergiesValidation_Code'))
@@ -1111,7 +1111,7 @@ class SD_BOPMR {
 
 	}
 
-	
+
 	@And("I click on medication as per patient plus button")
 	public void I_click_medicationPlus_button() {
 
@@ -1133,7 +1133,7 @@ class SD_BOPMR {
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Code'), MedicationCode)
 		Thread.sleep(2000)
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Code'), Keys.chord(Keys.ENTER))
-		
+
 	}
 
 
@@ -1141,7 +1141,7 @@ class SD_BOPMR {
 	public void I_EntermedicationStart_Date(String StartDate) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_startDate'),StartDate)
-		
+
 	}
 
 
@@ -1165,7 +1165,7 @@ class SD_BOPMR {
 		WebUI.verifyMatch(date, date1, false)
 
 	}
-	
+
 	@And("I click on medication as per EHR plus button")
 	public void I_click_medicationEHRPlus_button() {
 
@@ -1187,7 +1187,7 @@ class SD_BOPMR {
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Code'), MedicationCode)
 		Thread.sleep(2000)
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_Code'), Keys.chord(Keys.ENTER))
-		
+
 	}
 
 
@@ -1195,7 +1195,7 @@ class SD_BOPMR {
 	public void I_EntermedicationStart_DateEHR(String StartDate) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/CP_ADDMedications/As Per Medication/Obj_Medication_startDate'),StartDate)
-		
+
 	}
 
 

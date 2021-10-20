@@ -109,6 +109,28 @@ class SD_SoapNotes {
 		WebUI.verifyEqual(actual_SMSBTN, "Copy")
 	}
 
+
+	@And("I should not see VisitType Link")
+	public void I_should_Notsee_VisitTypeLink() {
+
+
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_TelehealthLink'),3)
+	}
+
+	@And("I should not see Send SMS button")
+	public void I_should_Notsee_SendSMS() {
+
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_TelehealthSMSBTN'),3)
+	}
+
+
+	@And("I should not see Copy button")
+	public void I_should_Notsee_CopyBTN() {
+
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_TelehealthCopyBTN'),3)
+	}
+
+
 	@Then("I should see (.*) as actual patient name")
 	public void I_should_see_patient_Information(String Patient) {
 
@@ -170,6 +192,16 @@ class SD_SoapNotes {
 
 		String actual_message = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AppointmentSuccess_Message'))
 		WebUI.verifyEqual(actual_message, "successAppointment created successfully.Hide")
+		Thread.sleep(1000)
+
+		WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
+	}
+
+	@Then("I should see appointment updated message")
+	public void I_should_see_appointment_UpdatedMessage() {
+
+		String actual_message = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_AppointmentUpdated_Message'))
+		WebUI.verifyEqual(actual_message, "successAppointment updated successfully.Hide")
 		Thread.sleep(1000)
 
 		WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))

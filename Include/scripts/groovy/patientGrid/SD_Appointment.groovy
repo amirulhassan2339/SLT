@@ -32,7 +32,6 @@ public class SD_Appointment {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_button_AddNew_Appointment'), 20)
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_button_AddNew_Appointment'))
-
 	}
 
 	@Then("I should see add appointment title")
@@ -68,9 +67,8 @@ public class SD_Appointment {
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentTime'), Time)
 
 		Thread.sleep(2000)
-
 	}
-	
+
 	@And("I enter appointment (.*) as timess")
 	public void I_enter_as_appointmentTimess(String Time) {
 
@@ -79,11 +77,10 @@ public class SD_Appointment {
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentTime'), Time)
 
 		Thread.sleep(2000)
-		
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentCacle'))
-		
-				Thread.sleep(3000)
 
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentCacle'))
+
+		Thread.sleep(3000)
 	}
 
 	@And("I select appointment status")
@@ -93,26 +90,25 @@ public class SD_Appointment {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Click'))
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Select'))
+	}
+
+	@And("I select the appointment status")
+
+	public void I_Select_theStatus() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Click'))
+
+		Thread.sleep(2000)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Select'))
+		//
+		//
+		//			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Click'))
+		//
+		//			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Select'))
+		//			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Select'))
 
 	}
-	
-	@And("I select the appointment status")
-	
-		public void I_Select_theStatus() {
-	
-			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Click'))
-	
-			Thread.sleep(2000)
-			
-			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Select'))
-//			
-//			
-//			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Click'))
-//			
-//			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Select'))
-//			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentStatus_Select'))
-			
-		}
 
 	@And("I enter appointment (.*) as appointmentcomment")
 	public void I_enter__as_appointmentComment(String Comment) {
@@ -120,43 +116,38 @@ public class SD_Appointment {
 
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentComment'), Comment)
-
-
 	}
-	
+
 	@And("I enter appointmentComment (.*) as appointmentcomment")
 	public void I_enteras_appointmentComment(String AppointmentComment) {
 
 
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentComment'), AppointmentComment)
-
-
 	}
-	
+
 	@And("I click on save button to save appointment")
-	
-		public void I_ClickOnSaveBTN() {
-	
-			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentSave'))
-	
-			Thread.sleep(3000)
-	
-		}
-		
-		
+
+	public void I_ClickOnSaveBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Appointment/Obj_AppointmentSave'))
+
+		Thread.sleep(3000)
+	}
+
+
 	@Then("I should see appoitment success message (.*) of appointment")
 	public void AppointmentSuccessMessage(String SucessMessage) {
-		
+
 		String actual_Message  = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_ValidationMessage/Obj_recordSaveSuccessfully'))
 
 		WebUI.verifyEqual(actual_Message, SucessMessage)
 	}
-	
-	
+
+
 	@Then("I should see appoitment_success (.*) of appointmentSuccess")
 	public void AppointmentMessage(String AppointmentSucessMessage) {
-		
+
 		String actual_Message  = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_ValidationMessage/Obj_recordSaveSuccessfully'))
 
 		WebUI.verifyEqual(actual_Message, AppointmentSucessMessage)

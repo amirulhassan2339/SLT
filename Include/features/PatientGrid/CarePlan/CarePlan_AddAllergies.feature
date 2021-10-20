@@ -1,10 +1,10 @@
-Feature: Care Plan - ADD Problem
+Feature: Care Plan - ADD Allergies
 
 	Background: 
 		Given I navigate to patient grid
 
 	@Smoke_USMM
-	Scenario Outline: Verify That User Is Able To Add Problem
+	Scenario Outline: Verify That User Is Able To Add Allergies
 		When I search <Patient> using global search
 		 And I click on care plan tab
 		   * I click on add new care plan button

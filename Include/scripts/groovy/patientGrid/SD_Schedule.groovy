@@ -1,20 +1,23 @@
 package patientGrid
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import com.kms.katalon.core.testdata.TestData as TestData
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import org.openqa.selenium.Keys
 
+import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import cucumber.api.java.en.And
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
+import internal.GlobalVariable
+import utility_Functions.UtilityFunctions
 
 class SD_Schedule {
 
+	UtilityFunctions obj=new UtilityFunctions();
+	TestObject frame=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/CareManagementForm/Obj_CCMFrame')
+	TestObject ApptStatusClickobj=findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ApptStatusClick')
 
 
 
@@ -107,6 +110,7 @@ class SD_Schedule {
 	}
 
 
+
 	@When("I click on schedule apply button")
 	public void I_click_on_schedule_apply_button() {
 
@@ -142,4 +146,203 @@ class SD_Schedule {
 		String actual_Gender = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_VerifyGender'))
 		WebUI.verifyEqual(actual_Gender, findTestData('DF_CMRData/TD_SUI').getValue(7, 1))
 	}
+
+	@Then("I should see (.*) as apptStatus")
+	public void I_should_see_appointmentStatus_Data(String ApptStatus) {
+
+		String actual_Status = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_VerifyStatus'))
+		WebUI.verifyEqual(actual_Status, ApptStatus)
+	}
+
+	@When("I click on current appointment")
+	public void I_click_on_currentAppt_button() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ApptStatus_CurrentApptBtn'))
+	}
+
+	@And("I select Appt Status as:(.*)")
+	public void i_select_ApptStatus(String ApptStatus) {
+		'I click on ActiveProblem field'
+		WebUI.click(ApptStatusClickobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='//li[text()="'+ApptStatus+'"]'
+		obj.selectdropdown(frame,xpath)
+	}
+
+	@When("I click on specific date")
+	public void I_click_on_date() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_SpecificDate'))
+	}
+
+	@When("I should see record is showing")
+	public void RecordByDate() {
+
+		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Click_ThreeDots'),3)
+	}
+
+
+	@When("I click on week button")
+	public void WeekBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_WeekBtn'))
+	}
+
+
+	@When("I should see record as per weekView")
+	public void RecordWeekView() {
+
+		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Click_ThreeDots'),3)
+	}
+
+
+	@When("I click on month button")
+	public void MonthBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_MonthBtn'))
+	}
+
+	@When("I should see record as per monthView")
+	public void RecordMonthView() {
+
+		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Click_ThreeDots'),3)
+	}
+
+	@When("I click on checkIn button")
+	public void CheckInBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckInBtn'))
+	}
+
+
+	@When("I should see checkIn title")
+	public void CheckInTitle() {
+
+		String actual_checkTitle = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckIn_Title'))
+		WebUI.verifyEqual(actual_checkTitle, "Check-In")
+
+	}
+
+	@When("I enter (.*) as CheckInComment")
+	public void CheckInComment(String CheckIn_Comment) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_scheduleComment'), CheckIn_Comment)
+	}
+	@When("I click on appointment update button")
+	public void UpdatedAppoitnemtnBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_UpdatedBtn'))
+	}
+	@When("I click on check edit button")
+	public void CheckEditBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckInBtn'))
+	}
+	@When("I should see check edit title")
+	public void CheckEditTitle() {
+
+		String actual_checkTitle = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckIn_Title'))
+		WebUI.verifyEqual(actual_checkTitle, "Edit Check-In")
+
+	}
+
+	@When("I click on check out button")
+	public void CheckOutBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckOutBtn'))
+	}
+	@When("I should see check out title")
+	public void CheckOutTitle() {
+
+		String actual_checkTitle = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckIn_Title'))
+		WebUI.verifyEqual(actual_checkTitle, "Check-Out")
+
+	}
+	@When("I enter (.*) as CheckOutComment")
+	public void CheckOutComment(String CheckOut_Comment) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_scheduleComment'), CheckOut_Comment)
+	}
+
+	@When("I enter (.*) as CheckEditComment")
+	public void CheckEditComment(String CheckEdit_Comment) {
+
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_scheduleComment'), CheckEdit_Comment)
+	}
+
+	@When("I click on cancel appointment button")
+	public void CancelBTN() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CancelBTN'))
+	}
+
+
+	@When("I click on logout button")
+	public void Logout() {
+
+		WebUI.click(findTestObject('OR_LogoutPage/Obj_Logout'))
+
+		WebUI.click(findTestObject('OR_LogoutPage/Obj_Sign Out'))
+
+	}
+	
+	@When("I enter login credentials")
+	public void Login() {
+
+		String Email = "amir@slt.com"
+		String Password = "Soliton@2021"
+	
+		WebUI.setText(findTestObject('Object Repository/OR_LoginPage/Obj_Username'), Email)
+		
+		WebUI.setText(findTestObject('Object Repository/OR_LoginPage/Obj_Password'), Password)
+		
+		
+		WebUI.click(findTestObject('Object Repository/OR_LoginPage/Obj_Signin'))
+
+	}
+	
+	
+	@When("I should see (.*) and (.*) as ScheduleLeftFilters")
+	public void ScheduleLeftFilters(String VisitType, String ApptProvider) {
+
+		String actual_VisitType = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_VisitTypeValidation'))
+		WebUI.verifyEqual(actual_VisitType, VisitType)
+		
+		String actual_ApptProvider = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ApptProviderValidation'))
+		WebUI.verifyEqual(actual_ApptProvider, ApptProvider)
+		
+		
+
+	}
+	
+	@When("I should see default time")
+	public void defaultTime() {
+
+		String DefaultTime = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_defaultTime'))
+	WebUI.verifyEqual(DefaultTime, "8:00 AM")
+		
+		}
+		
+		@When("I click on ViewPatientRecord button")
+		public void ViewPatientRecord() {
+	
+			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ViewPatientRecord'))
+			
+			}
+
+			@When("I should see created appointment data is showing")
+			public void appointmentData() {
+		
+				String actualPatient = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Appointment_PatientName'))
+			WebUI.verifyEqual(actualPatient, "Dermo505, Mac505")
+			
+			String actualReason = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Appointment_Reason'))
+			WebUI.verifyEqual(actualReason, "Back pain")
+			
+			String actualProvider = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_AppointmentTab_Participant'))
+			WebUI.verifyEqual(actualProvider, "Amir, Hafiz")
+				
+				}
+
 }
