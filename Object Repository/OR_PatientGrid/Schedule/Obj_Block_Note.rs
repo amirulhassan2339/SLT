@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_attempt1Date</name>
+   <name>Obj_Block_Note</name>
    <tag></tag>
-   <elementGuidId>5eb52467-4afc-40b6-9138-7df350c1834b</elementGuidId>
+   <elementGuidId>9956da9e-9494-4b64-b1e5-e1feba8919f0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>input[name ='attemptNo1Date']</value>
+         <value>textarea[name='note']</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -25,7 +25,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[contains(@class, 'k-popup-edit-form k-window-content k-content')]/div/div[1]/div/div[2]/div[6]/div[1]/div/span</value>
+      <value>(//div[@id='schedulerFiltersContainer']//div)[217]//button[1]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

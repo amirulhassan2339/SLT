@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_TransitionOfCareFrom</name>
+   <name>Obj_CourtesyCall</name>
    <tag></tag>
    <elementGuidId>8f120c90-2935-4a9d-8db5-2b63a9bbb5a3</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//a[contains(text(),'Transition of Care Form')]/parent::li</value>
+         <key>CSS</key>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>//*[(text() = 'SNF Waiver' or . = 'SNF Waiver') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//a[contains(text(),'Courtesy Calls')]/parent::li</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

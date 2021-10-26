@@ -7,18 +7,18 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>span.fa.fa-caret-down</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//a[@id='navLogin']/span[2]</value>
+         <value>a[id='navLogin'] > img</value>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>id(&quot;navLogin&quot;)/span[@class=&quot;fa fa-caret-down&quot;]</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Obj_attempt1Date</name>
+   <name>Obj_Block_TitleVerify</name>
    <tag></tag>
-   <elementGuidId>5eb52467-4afc-40b6-9138-7df350c1834b</elementGuidId>
+   <elementGuidId>e22956ba-8806-4d2a-9f32-d58e789b0a6b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>input[name ='attemptNo1Date']</value>
+         <value>h4[id='myBlockModalLabel']</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -25,7 +25,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//div[contains(@class, 'k-popup-edit-form k-window-content k-content')]/div/div[1]/div/div[2]/div[6]/div[1]/div/span</value>
+      <value>(//div[@id='schedulerFiltersContainer']//div)[217]//button[1]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

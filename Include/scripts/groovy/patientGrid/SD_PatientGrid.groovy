@@ -13,13 +13,13 @@ import internal.GlobalVariable
 
 public class SD_PatientGrid {
 
-	
-	
+
+
 	@Given("I navigate to patient grid")
 	public void I_navigate_to_patient_grid() {
 
-			
-		
+
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_HomePage/Obj_Enterprise'), 10)
 		WebUI.click(findTestObject('Object Repository/OR_HomePage/Obj_Enterprise'))
 
@@ -69,21 +69,15 @@ public class SD_PatientGrid {
 
 		//WebUI.verifyElementPresent(findTestObject('Object Repository/OR_HomePage/Obj_Logo'), 3)
 
-		
-		
+
+
 
 
 		WebUI.enableSmartWait()
 		Thread.sleep(8000)
-		
-		
-		
+
+
+
 
 	}
-	
-	
-	
-	
-	
-
 }

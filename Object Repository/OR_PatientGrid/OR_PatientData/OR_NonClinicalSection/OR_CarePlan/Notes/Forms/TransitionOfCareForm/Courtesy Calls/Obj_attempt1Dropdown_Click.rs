@@ -7,15 +7,14 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//span[@class='k-select'])[63]</value>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//span[@class='k-select'])[49]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

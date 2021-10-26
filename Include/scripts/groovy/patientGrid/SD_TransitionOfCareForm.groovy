@@ -24,11 +24,12 @@ public class SD_TransitionOfCareForm {
 	
 	UtilityFunctions obj=new UtilityFunctions();
 
+	
 
-	@And("I click on transition of care form")
-	public void I_click_on_transition() {
+	@And("I click on Courtesy Call")
+	public void I_click_on_Courtesy() {
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_TransitionOfCareFrom'))
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_CourtesyCall'))
 	}
 
 
@@ -38,7 +39,7 @@ public class SD_TransitionOfCareForm {
 
 		String actual_Title = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/PopupValidation/Obj_TransitionOfCareFormTitle'))
 
-		WebUI.verifyEqual(actual_Title, 'Transition of Care')
+		WebUI.verifyEqual(actual_Title, 'Transition of Care - Courtesy Call')
 
 	}
 
@@ -213,6 +214,8 @@ public class SD_TransitionOfCareForm {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Surgical Follow Up Calls/Obj_TypeOfSurgery'), TypeOfSurgery)
 	}
+	
+	
 
 	
 }

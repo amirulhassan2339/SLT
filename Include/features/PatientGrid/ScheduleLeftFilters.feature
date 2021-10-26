@@ -65,43 +65,61 @@ Feature: Scheduled Left Filters flow
 	#		Examples:
 	#			| ApptStatus |  | Patient          | Reason    | VisitType  | CheckIn_Comment | CheckOut_Comment | CheckEdit_Comment |
 	#			| Checked-In |  | Dermo505, Mac505 | Back pain | Telehealth | Checking in     | Checking out     | Update            |
-	Scenario Outline: Verify Appoitnment Filters retains
-		When I click on schedule left filters reset button
-		   * I Search <VisitType> as schedule visit type
-		   * I Search <ApptProvider> as schedule appt provider
-		   * I click on schedule apply button
-		   * I click on logout button
-		   * I enter login credentials
-		   * I navigate to CMR_Schedule
-		Then I should see <VisitType> and <ApptProvider> as ScheduleLeftFilters
-		* I should see default time
-		
-
-		Examples: 
-			| ApptProvider | Patient          | VisitType  |
-			| Amir, Hafiz  | Dermo505, Mac505 | Telehealth |
-			
-			@SmokeUSMM_ScheduleAppointment
-	Scenario Outline: Verify Creating Appointment
-		When I double click on screen to add appointment
-		Then I should see schedule appointment popup
-		When I enter <Patient> as appointment patient
-		 And I enter <Reason> as appointment reason
-		   * I should see <Patient> as actual patient name
-		   * I drag chat list
-		   * I click create button to save appointment
-		   * I click on yes button
-		   * I click on proceed button to appointment
-		Then I should see appointment success message
+	#	Scenario Outline: Verify Appoitnment Filters retains
+	#		When I click on schedule left filters reset button
+	#		   * I Search <VisitType> as schedule visit type
+	#		   * I Search <ApptProvider> as schedule appt provider
+	#		   * I click on schedule apply button
+	#		   * I click on logout button
+	#		   * I enter login credentials
+	#		   * I navigate to CMR_Schedule
+	#		Then I should see <VisitType> and <ApptProvider> as ScheduleLeftFilters
+	#		* I should see default time
+	#
+	#
+	#		Examples:
+	#			| ApptProvider | Patient          | VisitType  |
+	#			| Amir, Hafiz  | Dermo505, Mac505 | Telehealth |
+	#			@SmokeUSMM_ScheduleAppointment
+	#	Scenario Outline: Verify Creating Appointment
+	#		When I double click on screen to add appointment
+	#		Then I should see schedule appointment popup
+	#		When I enter <Patient> as appointment patient
+	#		 And I enter <Reason> as appointment reason
+	#		   * I should see <Patient> as actual patient name
+	#		   * I drag chat list
+	#		   * I click create button to save appointment
+	#		   * I click on yes button
+	#		   * I click on proceed button to appointment
+	#		Then I should see appointment success message
+	#		When I click on three dots
+	#		* I click on edit appointment button
+	#		Then I should see schedule UI status
+	#		* I click on cancel appointment button
+	#		When I click on three dots
+	#		And I click on View Patient Record button
+	#		 * I click on appointment tab
+	#		Then I should see created appointment data is showing
+	#
+	#
+	#
+	#		Examples:
+	#			| Patient          | Reason    |
+	#			| Dermo505, Mac505 | Back pain |
+	@SmokeUSMM_ScheduleAppointment
+	Scenario Outline: Verify Add Block By Adding
+		When I click on Add Block button
+		Then I should see add block title
+		When I enter <BlockName> as blockname
+		 And I enter <StartDate> as block_StartDate
+		   * I enter <Time> as block_Time
+		   * I enter <Comment> as block_comment
+		   * I click on save block button
+		Then I should see block successful save message
 		When I click on three dots
-		 And I click on ViewPatientRecord button
-		 * I click on appointment tab
-		 Then I should see created appointment data is showing
+		And I click on delete block button
 		
 
 		Examples: 
-			| Patient          | Reason    |
-			| Dermo505, Mac505 | Back pain |
-			
-			
-			
+			| BlockName | Time    | StartDate |Comment|
+			| Amir      | 1:30 AM |  01072021 |Adding block notes|

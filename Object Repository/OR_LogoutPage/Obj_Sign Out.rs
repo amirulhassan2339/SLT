@@ -6,15 +6,15 @@
    <elementGuidId>a77f5169-31e1-479c-850e-f96080b8bd47</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@id='signOutButton']</value>
+         <key>CSS</key>
+         <value>button[id='signOutButton']</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#signOutButton</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
