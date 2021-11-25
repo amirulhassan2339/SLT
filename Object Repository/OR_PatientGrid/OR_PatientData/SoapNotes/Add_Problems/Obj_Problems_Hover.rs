@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='clinical problem k-grid has-wizard mz-widget k-widget k-editable editable']/div[1]/div[1]</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div[data-mz-key='clinical.problem']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

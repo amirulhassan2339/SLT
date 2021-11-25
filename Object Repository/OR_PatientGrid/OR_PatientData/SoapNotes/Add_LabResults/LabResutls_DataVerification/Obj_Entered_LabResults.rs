@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='clinical lab k-grid has-wizard list-mode-only mz-widget k-widget k-editable batch-editing editable']/div[3]/table/tbody/tr[2]/td[2]</value>
+         <value>(//div[@data-mz-key='clinical.lab'])/div[3]//tr[2]//td[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

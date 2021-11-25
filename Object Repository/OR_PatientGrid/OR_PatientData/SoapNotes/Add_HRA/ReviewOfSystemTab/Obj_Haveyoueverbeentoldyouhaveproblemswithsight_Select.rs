@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='well']/div/form/div[3]/div/div[2]/div[42]/div/div[2]/div/div/input[1]</value>
+         <value>(//div[@id='panel34Columns5Select'])//input[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

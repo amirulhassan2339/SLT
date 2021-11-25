@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='k-list-scroller']//ul)[80]//li[1]</value>
+         <value>(//ul[@id='patientAttributedToACO_listbox'])//li[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

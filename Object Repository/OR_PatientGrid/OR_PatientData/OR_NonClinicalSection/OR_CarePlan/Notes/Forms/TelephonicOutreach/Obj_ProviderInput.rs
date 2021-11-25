@@ -10,11 +10,15 @@
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
+         <key>CSS</key>
+         <value>input[aria-owns='provider_taglist provider_listbox']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class, 'k-popup-edit-form k-window-content k-content')]/div/div[1]/div/div[2]/div[2]/div/div/div/input</value>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

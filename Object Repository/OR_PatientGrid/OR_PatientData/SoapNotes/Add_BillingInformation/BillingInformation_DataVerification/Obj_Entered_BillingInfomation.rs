@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='super-bill single-bill k-grid single-mode-only mz-widget']/div[2]</value>
+         <value>//div[@data-mz-key='superBillSingle']/div[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

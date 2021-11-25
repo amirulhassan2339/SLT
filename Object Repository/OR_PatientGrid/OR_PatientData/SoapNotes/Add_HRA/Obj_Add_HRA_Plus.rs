@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='hra k-grid has-wizard hraAssessment mz-widget']/div/div[2]/button</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button[id='pwb_soap_action_add_btn']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

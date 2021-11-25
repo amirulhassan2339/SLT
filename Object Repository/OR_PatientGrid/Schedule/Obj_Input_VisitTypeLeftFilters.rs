@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@id='schedulerFiltersContainer']//div)[209]//input</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>input[aria-owns='FilterAppointment-type_taglist FilterAppointment-type_listbox']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

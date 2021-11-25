@@ -10,16 +10,17 @@ Feature: Scheduled Left Filters flow
 		When I enter <Patient> as appointment patient
 		 And I enter <Reason> as appointment reason
 		   * I should see <Patient> as actual patient name
+		   * I select Visit Type:<VisitType>
 		   * I drag chat list
 		   * I click create button to save appointment
 		   * I click on yes button
-		   * I click on proceed button to appointment
+#		   * I click on proceed button to appointment
 		Then I should see appointment success message
 
 		Examples: 
-			| Patient          | Reason    |
-			| Dermo505, Mac505 | Back pain |
-
+			| Patient          | Reason    | VisitType  |
+			| Dermo505, Mac505 | Back pain | Telehealth |
+			
 	@SmokeUSMM_VerifyVisitTypeFilter
 	Scenario Outline: Verify Visit Type Filters
 		When I click on schedule left filters reset button

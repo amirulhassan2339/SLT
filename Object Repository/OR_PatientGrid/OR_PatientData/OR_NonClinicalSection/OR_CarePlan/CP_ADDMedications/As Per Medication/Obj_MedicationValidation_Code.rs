@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>((//div[@id='ccmMedicationsAsPerPatient_564272'])//table)[2]//tr[2]//td[3]</value>
+         <value>((//div[@id='ccmMedicationsAsPerPatient_564272'])//table)[2]//tr[1]//td[3]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

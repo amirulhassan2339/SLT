@@ -59,4 +59,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/CucumberRunners/Care Coordination Left Filters/TC_CMStatus_HyperLink</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>0c25c941-2888-4aa9-80fb-c62289b3f833</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Care Coordination Left Filters/TC_Export</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

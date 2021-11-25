@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
+         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class=&quot;k-widget k-dropdown k-header form-control required-field&quot;]//span[@class=&quot;k-dropdown-wrap k-state-default&quot;])[2]</value>
+         <value>//span[@aria-owns='pwb_note_form_pmc_shareWith_listbox']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

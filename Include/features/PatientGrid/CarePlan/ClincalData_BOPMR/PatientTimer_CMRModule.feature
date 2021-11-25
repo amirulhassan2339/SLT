@@ -39,7 +39,7 @@ Feature: Patient Timer
 		   * I click on minimize button
 		   * I click on WFB cross button from schedule
 		When I click on analytics tab
-		   * I click on from option
+		   * I click on form option
 		   * I select the patient from analytics grid
 		Then I should see patient <Patient> as patient_name in timer popup
 		   * I click on minimize button
@@ -54,6 +54,10 @@ Feature: Patient Timer
 		   * I select the patient from care coordination grid
 		   * I select the patient from task grid
 		Then I should see patient <Patient> as patient_name in timer popup
+		When I click on scheduleTab
+		And I click on three dots
+		 * I click on delete appointment
+		 * I should see delete appointment message
 		   
 
 		Examples: 

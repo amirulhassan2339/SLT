@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@id, 'assessment_wrapper_14894')]/div[1]//strong</value>
+         <value>//div[contains(@id, 'assessment_wrapper')]/div[1]//strong</value>
       </entry>
       <entry>
          <key>CSS</key>

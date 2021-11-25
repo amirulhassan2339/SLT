@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='k-list-scroller']//ul)[81]//li[1]</value>
+         <value>(//div[@class='k-list-scroller']//ul)[80]//li[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

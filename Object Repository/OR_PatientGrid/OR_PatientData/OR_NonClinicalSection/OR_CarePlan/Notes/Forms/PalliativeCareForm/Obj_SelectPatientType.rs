@@ -6,12 +6,12 @@
    <elementGuidId>a36a08b6-6780-4fd7-86d3-05534b32fdaa</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//li[contains(text(), 'Well care')]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//ul[@id='palliativecareformPatientType_listbox']//li[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

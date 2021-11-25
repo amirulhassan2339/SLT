@@ -12,4 +12,4 @@ Feature: Search Patient
 		
 		Examples:
 		|Patient|
-		|Abbasi, Hamza|
+		|Dermo505, Mac505|

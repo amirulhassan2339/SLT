@@ -14,7 +14,7 @@ Feature: Care Plan - ADD Problem
 		   * I select activeproblem as:<ActiveProblem>
 		   * I enter <ProblemCode> as problemcode
 		   * I enter <StartDate> as problemStartDate
-		   * I click on problem updated button
+		   * I click on updated button
 		   * I enter title <Title>
 		   * I click on save and close button
 		   * I click on title from care plan grid

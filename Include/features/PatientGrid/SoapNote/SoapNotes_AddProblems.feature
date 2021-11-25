@@ -39,10 +39,9 @@ Feature: Soap Note Creation from Schedule flow
     When I click on Save button to save SOAP NOTE
     Then I should see soap note saved message
     When I click on SaveClose button to save SOAP NOTE
-    Then I should see soap note saved message
-    When I click on three dots 
-    Then I should see Edit Soap Note option
-    * I should see problems data in soap note popup 
+    And I click on three dots 
+    * I should see Edit Soap Note option
+    Then I should see problems data in soap note popup 
 
 
     Examples: 

@@ -6,15 +6,18 @@
    <elementGuidId>c3ddd2b7-6c2c-432a-a51d-2579a5b5af28</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(@class, 'k-popup-edit-form k-window-content k-content')]/div/div[1]/div/div[2]/div[10]/div[1]/div/span</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>CSS</key>
+         <value>span[aria-owns='palliativecareformStatus_listbox']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
          <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

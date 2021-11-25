@@ -6,16 +6,16 @@
    <elementGuidId>9a019555-b923-4da4-9e7c-f843189651e9</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>(//div[@id='tocGrid'])//div[4]//tr[1]//td[42]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//*[(text() = 'Heart Failure, CCM, Readmission' or . = 'Heart Failure, CCM, Readmission') and @ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>td.program.k-state-border-down</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[42]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

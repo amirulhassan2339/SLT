@@ -7,18 +7,18 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>div.k-header.k-grid-toolbar > div.btn-group.dropdown > button.k-button.k-button-i-context.dropdown-toggle > span.caret</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[contains(@class, 'section patient-note')]/div/div[1]/child::div/button</value>
+         <value>button[id='add_form_btn']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>id(&quot;48e94d45-2f28-42d6-879e-ca3bd9669f48-16&quot;)/div[@class=&quot;k-grid mz-widget notes k-widget k-editable editable&quot;]/div[@class=&quot;k-header k-grid-toolbar&quot;]/div[@class=&quot;btn-group dropdown&quot;]/button[@class=&quot;k-button k-button-i-context dropdown-toggle&quot;]/span[@class=&quot;caret&quot;][count(. | //*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']) = count(//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame'])]</value>
+         <value>//*[@id = 'add_form_btn']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -35,11 +35,18 @@
       <value>caret</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;48e94d45-2f28-42d6-879e-ca3bd9669f48-16&quot;)/div[@class=&quot;k-grid mz-widget notes k-widget k-editable editable&quot;]/div[@class=&quot;k-header k-grid-toolbar&quot;]/div[@class=&quot;btn-group dropdown&quot;]/button[@class=&quot;k-button k-button-i-context dropdown-toggle&quot;]/span[@class=&quot;caret&quot;]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>add_form_btn</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

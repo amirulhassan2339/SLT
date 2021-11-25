@@ -15,7 +15,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//li[contains(text(), 'Family')])[3]</value>
+         <value>(//ul[@id='spokeWith_listbox'])//li[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

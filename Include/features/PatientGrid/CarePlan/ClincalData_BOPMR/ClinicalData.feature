@@ -30,5 +30,5 @@ Feature: Care Plan - Clinical Data - Based On Patient Medical Record
 		Then I should see all clinical data <Code_Name> and <Name> and <Allergy> with <Start_Date> in care plan
 
 		Examples: 
-			| Patient          | Code_Name                   | Start_Date | Name            | Type                 | Source | Allergy          |
-			| Dermo505, Mac505 | Cholera, unspecified::A00.9 |   01072021 | ABC to Z::10287 | Allergy to substance | SNOMED | abciximab |
+			| Patient          | Code_Name                   | Start_Date | Name            | Type                 | Source | Allergy    |
+			| Dermo505, Mac505 | Cholera, unspecified::A00.9 |   01072021 | ABC to Z::10287 | Allergy to substance | SNOMED | oxitropium |

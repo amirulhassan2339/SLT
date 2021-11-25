@@ -9,11 +9,15 @@
          <key>BASIC</key>
       </entry>
       <entry>
+         <key>CSS</key>
+         <value>li[id='care_management_form']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>//a[contains(text(),'Care Management Form')]/parent::li</value>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

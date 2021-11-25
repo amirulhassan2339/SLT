@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='procedure-grid k-grid k-widget']/div[1]/div[2]/div/ul/li/button</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button[class='btn btn-primary btn-sm add-code']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

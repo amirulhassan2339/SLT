@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@name=&quot;priority&quot;]//parent::span</value>
+         <value>//span[@aria-owns='pwb_note_form_pmc_priority_listbox']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

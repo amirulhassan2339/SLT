@@ -14,7 +14,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='k-select'])[51]</value>
+         <value>//span[@aria-owns='attemptNo2DateStatus_listbox']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

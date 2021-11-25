@@ -82,7 +82,9 @@ class SD_SoapNotes {
 		WebUI.click(VisitTypeObj)
 		'I select value from the dropdown'
 		Thread.sleep(2000);
-		String xpath='(//div[@id="Appointment-type-list"])[2]//ul//li[text()="'+VisitType+'"]'
+		//String xpath='(//div[@id="Appointment-type-list"])[2]//ul//li[text()="'+VisitType+'"]'
+		String xpath='(//ul[@id="Appointment-type-list"])[3]//li[text()="'+VisitType+'"]'
+		
 
 		obj.selectdropdown(frame,xpath)
 	}
@@ -162,6 +164,14 @@ class SD_SoapNotes {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_YesBtn'))
 
+		if(WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_ProceedBtn'), 3, FailureHandling.OPTIONAL)) {
+			
+			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_ProceedBtn'))
+			
+		}else {
+			
+			print("Sorry")
+		}
 
 		//		WebElement  ProccedBTN = driver.findElement(By.xpath("//button[contains(@class, 'btn btn-primary btnProceed') and contains(text(), 'Proceed')]"));
 		//
@@ -194,7 +204,7 @@ class SD_SoapNotes {
 		WebUI.verifyEqual(actual_message, "successAppointment created successfully.Hide")
 		Thread.sleep(1000)
 
-		WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
+		//WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
 	}
 
 	@Then("I should see appointment updated message")
@@ -359,8 +369,6 @@ class SD_SoapNotes {
 
 	@Then("I enter (.*) to add signature for sign button")
 	public void I_enter_facility_to_add_signature_forSIgnBTN(String Facility) {
-
-		//WebUI.switchToFrame(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/Page_Welcome to Persivia/iframe_Assessment_hraIframe'), 0)
 
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/patient_Info/Obj_Facility_Click'))
@@ -550,6 +558,7 @@ class SD_SoapNotes {
 	public void I_select_Diagnosis() {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/ReviewOfSystemTab/Obj_Select Diagnosis_Input'),"H26.40-Unspecified")
+		Thread.sleep(1000)
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/ReviewOfSystemTab/Obj_Select Diagnosis_Input'), Keys.chord(Keys.ENTER))
 
 	}
@@ -687,7 +696,7 @@ class SD_SoapNotes {
 		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HRA_Table_Verification/Obj_Diagnosis_Question'), 20)
 
 		String Actual_Question = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HRA_Table_Verification/Obj_Diagnosis_Question'))
-		WebUI.verifyEqual(Actual_Question, "Constitutional:")
+		WebUI.verifyEqual(Actual_Question, "Have you ever been told you have  problems with sight?")
 
 
 	}
@@ -903,8 +912,8 @@ class SD_SoapNotes {
 		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Problems_DataVerification/Obj_Entered_ProblemsCode'), Actual_Problems, FailureHandling.STOP_ON_FAILURE)
 
 
-		String Actual_DispensedQuantity = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Problems_DataVerification/Obj_Entered_StartDate'))
-		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Problems_DataVerification/Obj_Entered_StartDate'), Actual_DispensedQuantity, FailureHandling.STOP_ON_FAILURE)
+//		String Actual_DispensedQuantity = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Problems_DataVerification/Obj_Entered_StartDate'))
+//		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Problems_DataVerification/Obj_Entered_StartDate'), Actual_DispensedQuantity, FailureHandling.STOP_ON_FAILURE)
 
 
 	}
@@ -1244,6 +1253,16 @@ class SD_SoapNotes {
 		String Actual_SignMessage = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_SignBtnSuccess_Message'))
 
 		WebUI.verifyEqual(Actual_SignMessage, "successSOAP Note SignedHide")
+
+	}
+	
+	@Then("I should see (.*) in Recommended Lab section")
+	public void RecommendedLabSection(String ReasonTest) {
+
+
+		String Actual_ReasonTest = WebUI.getText(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_RecommendedLabValidation'))
+
+		WebUI.verifyEqual(Actual_ReasonTest, ReasonTest)
 
 	}
 
@@ -1672,6 +1691,15 @@ class SD_SoapNotes {
 
 	}
 
+	@Then("I select the Problem checkbox")
+	public void SelectProblemCheckbox() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Allergies/Obj_Problem_Checkbox'))
+
+
+	}
+
+	
 	@Then("I click on procced button")
 	public void ClickOnAllergyProceedBTN() {
 
@@ -1693,19 +1721,17 @@ class SD_SoapNotes {
 	@And("I select Source as:(.*)")
 	public void i_select_Source(String Source) {
 
-		//		Thread.sleep(3000)
-		//
-		//		'I click on Souece field'
-		//		WebUI.click(SourceObj)
-		//		Thread.sleep(2000)
-		//
-		//		WebUI.click(SourceObj)
-		//
-		//		'I select value from the dropdown'
-		//		Thread.sleep(2000);
-		//		String xpath='(//div[@class="k-list-container k-popup k-group k-reset"])[33]//div[2]//ul//li[text()="'+Source+'"]'
-		//
-		//		obj.selectdropdown(frame,xpath)
+				Thread.sleep(3000)
+		
+				'I click on Souece field'
+				WebUI.click(SourceObj)
+				Thread.sleep(2000)
+				
+				'I select value from the dropdown'
+				Thread.sleep(2000);
+				String xpath='(//ul[@id="encounterSoapCodeSystem_listbox"])//li[text()="'+Source+'"]'
+		
+				obj.selectdropdown(frame,xpath)
 	}
 
 	@Then("I enter (.*) as encountercode")

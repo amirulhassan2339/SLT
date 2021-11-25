@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>a[id='navLogin'] > img</value>
+         <value>a[id='navLogin']</value>
       </entry>
       <entry>
          <key>BASIC</key>
@@ -15,7 +15,6 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

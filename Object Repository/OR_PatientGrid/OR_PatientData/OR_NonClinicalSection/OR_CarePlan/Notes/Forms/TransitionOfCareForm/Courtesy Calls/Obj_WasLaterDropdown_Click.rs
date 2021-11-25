@@ -14,7 +14,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='k-select'])[53]</value>
+         <value>(//span[@class='k-select'])[55]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -204,7 +204,7 @@ class SD_PatientTimer {
 	}
 	
 	
-	@When("I click on from option")
+	@When("I click on form option")
 	public void click_onFormOption() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/CMRModule_Timer/Message/Obj_AnalyticsTab_FormClick'))
@@ -220,6 +220,8 @@ class SD_PatientTimer {
 		
 		Thread.sleep(4000)
 	}
+	
+	
 	
 	
 	@When("I click on task tab")
@@ -340,10 +342,6 @@ class SD_PatientTimer {
 //		WebUI.verifyMatch(Actual_Duration, TimeSpent, false)
 		
 		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'), 3)
-		
-
-
-
 
 	}
 	
@@ -351,15 +349,8 @@ class SD_PatientTimer {
 	@And("I should not see patient timer history data")
 	public void HistoryNotData() {
 
-
-//		String Actual_Duration = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimerPopUp_GetTotalTimerDuration'))
-//		String TimeSpent = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'))
-//
-//		WebUI.verifyMatch(Actual_Duration, TimeSpent, false)
-		
 		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/PatientTimer/Obj_PatientTimer_TimeSpent'), 3)
 		
-
 	}
 	
 	

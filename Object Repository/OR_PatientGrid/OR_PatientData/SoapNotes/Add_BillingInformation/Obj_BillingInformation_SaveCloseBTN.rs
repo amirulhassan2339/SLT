@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='col-md-4 col-xs-12 soap-wizard-panel lg']/div/div[3]/button[3]</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button[id='encounterSoapBtnSaveNClose']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

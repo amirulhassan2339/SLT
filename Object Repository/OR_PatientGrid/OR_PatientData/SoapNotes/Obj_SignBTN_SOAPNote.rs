@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='k-window-content k-content has-toolbar']/div[1]/button[3]</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button[id='encounterSoap_btn_Sign']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

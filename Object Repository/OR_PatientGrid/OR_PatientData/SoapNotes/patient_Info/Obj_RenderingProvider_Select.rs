@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='soapRenderProvider-list']/div[3]/ul/li[3]</value>
+         <value>//ul[@id='soapRenderProvider_listbox']//li[1]</value>
       </entry>
       <entry>
          <key>CSS</key>

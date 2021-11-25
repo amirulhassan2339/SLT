@@ -7,14 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='col-sm-12 form form-horizontal encounter-stats']/div[5]/div[2]/div[2]/span/span</value>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#carePlanPatientInfoDiv_550910 > div</value>
+         <value>span[aria-owns='soapRenderProvider_listbox']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

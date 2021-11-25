@@ -6,12 +6,12 @@
    <elementGuidId>2e1d0be0-3e39-4b04-92e0-87aa92846653</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//li[contains(text(), 'Admitted to SNF - COVID')]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//ul[@id='pwb_note_form_snf_waiver_status_listbox'])//li[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

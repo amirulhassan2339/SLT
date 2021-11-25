@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@name=&quot;outreach&quot;]//parent::span</value>
+         <value>//span[@aria-owns='outreach_listbox']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

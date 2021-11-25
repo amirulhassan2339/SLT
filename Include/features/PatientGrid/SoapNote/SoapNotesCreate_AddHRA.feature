@@ -14,7 +14,7 @@ Feature: Soap Note Creation from Schedule flow
     * I drag chat list
     * I click create button to save appointment
     * I click on yes button
-    * I click on proceed button to appointment
+    #* I click on proceed button to appointment
     Then I should see appointment success message
 
     Examples: 
@@ -58,15 +58,10 @@ Feature: Soap Note Creation from Schedule flow
     #    * I click on based on patient medical record
     * I click on add HRA plus button
     * I enter <ThePatientUnderstands> as the patient understands
-    #    * I enter <DoesThePatientHaveAnyClinicalIssuesThatNeedToBeAddressedToday> as Does the patient have any clinical issues that need to be addressed today
-    #    * I enter <ExplainDetails1> as explain detais of Does the patient have any clinical issues that need to be addressed today
-    #    * I enter <WasTranslatorUsedDuringTodayVisit> as Was a translator used during today visit
-    #    * I enter <ExplainDetails2> as explain detais of Was a translator used during today visit
     * I enter <LocationOfVisit> as location of visit
     * I enter <PCName> as pc name
     * I enter <PC_PhoneNumber> as pc phone number
     * I enter <PatientCareTeam_Notes> as patient care team
-    #    * I select date when end of life
     * I click on Review Of System Tab
     * I enter <Temp> as temprature
     * I enter <Pulse> as pulse

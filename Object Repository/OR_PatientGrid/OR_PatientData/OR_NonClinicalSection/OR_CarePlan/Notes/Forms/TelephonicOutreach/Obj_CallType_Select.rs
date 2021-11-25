@@ -6,12 +6,12 @@
    <elementGuidId>ea0e93f0-f92b-4918-8c8d-ba50e989880f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//li[contains(text(), 'Well Check')]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//ul[@id='callType_listbox'])//li[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

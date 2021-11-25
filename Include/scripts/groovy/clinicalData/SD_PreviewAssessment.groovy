@@ -24,7 +24,6 @@ public class SD_PreviewAssessment {
 		'Check assessment from Grid'
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/PreviewAssessment/Obj_ClickAssessmentNameToPreview'))
 
-		Thread.sleep(5000)
 	}
 	
 	
@@ -33,7 +32,7 @@ public class SD_PreviewAssessment {
 
 
 		String Actual_Title = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/PreviewAssessment/Obj_AssessmentNameInPreviewWindow'))
-		Thread.sleep(2000)
+		Thread.sleep(1000)
 		
 		WebUI.verifyEqual(Actual_Title, Title)
 		

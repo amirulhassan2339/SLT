@@ -6,15 +6,15 @@
    <elementGuidId>a1ff6402-7c87-4288-8cd9-4b23267cc99f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>span.k-dropdown-wrap.k-state-default.k-state-hover > span.k-select</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='Share with Provider'])[1]/following::span[1]</value>
+         <key>CSS</key>
+         <value>span[aria-owns='pwb_note_form_template_shareWith_listbox']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

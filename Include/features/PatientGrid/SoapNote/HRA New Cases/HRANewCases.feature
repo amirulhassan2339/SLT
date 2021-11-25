@@ -14,7 +14,7 @@ Feature: Soap Note Creation from Schedule flow
 		   * I drag chat list
 		   * I click create button to save appointment
 		   * I click on yes button
-		   * I click on proceed button to appointment
+#		   * I click on proceed button to appointment
 		Then I should see appointment success message
 		   * I click on three dots
 		#		   * I click on edit soapnotes
@@ -38,7 +38,7 @@ Feature: Soap Note Creation from Schedule flow
 		   * I enter <RightResults> as right result
 		   * I click on save button to save assessment
 		   * I click on cross icon to close the popup
-		   * I should see <DiagnosisCode> in Diagnosis section
+		   * I should see <ReasonTest> in Recommended Lab section
 		When I click on add HRA plus button
 		   * I click on Exam and Recomendation Tab
 		   * I select on Referral required

@@ -6,12 +6,12 @@
    <elementGuidId>7308d03a-994d-4f3f-bf40-20e235907569</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>span.single-line-text.facility-link</value>
+         <key>XPATH</key>
+         <value>(//div[@id='tocGrid'])//div[4]//tr[1]//td[11]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[11]</value>
+         <key>CSS</key>
+         <value>span.single-line-text.facility-link</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

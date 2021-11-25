@@ -133,10 +133,9 @@ class SD_SupperBill {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Select'), Soap_Status)
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Input'))
+		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Input'))
 
-
-		//		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Select'), Keys.chord(Keys.ENTER))
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_SoapNoteStatusLeftFilters_Select'), Keys.chord(Keys.ENTER))
 
 		Thread.sleep(5000)
 	}

@@ -94,7 +94,9 @@ class SD_Schedule {
 		Thread.sleep(1000)
 
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Input_VisitTypeLeftFilters'), Keys.chord(Keys.ENTER))
-	}
+	
+		Thread.sleep(3000)
+		}
 
 	@When("I Search (.*) as schedule appt provider")
 	public void I_Search_Provider_Schedule(String ApptProvider) {
@@ -221,7 +223,6 @@ class SD_Schedule {
 
 		String actual_checkTitle = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckIn_Title'))
 		WebUI.verifyEqual(actual_checkTitle, "Check-In")
-
 	}
 
 	@When("I enter (.*) as CheckInComment")
@@ -244,7 +245,6 @@ class SD_Schedule {
 
 		String actual_checkTitle = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckIn_Title'))
 		WebUI.verifyEqual(actual_checkTitle, "Edit Check-In")
-
 	}
 
 	@When("I click on check out button")
@@ -257,7 +257,6 @@ class SD_Schedule {
 
 		String actual_checkTitle = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_CheckIn_Title'))
 		WebUI.verifyEqual(actual_checkTitle, "Check-Out")
-
 	}
 	@When("I enter (.*) as CheckOutComment")
 	public void CheckOutComment(String CheckOut_Comment) {
@@ -284,7 +283,6 @@ class SD_Schedule {
 		WebUI.click(findTestObject('OR_LogoutPage/Obj_Logout'))
 
 		WebUI.click(findTestObject('OR_LogoutPage/Obj_Sign Out'))
-
 	}
 
 	@When("I enter login credentials")
@@ -299,7 +297,6 @@ class SD_Schedule {
 
 
 		WebUI.click(findTestObject('Object Repository/OR_LoginPage/Obj_Signin'))
-
 	}
 
 
@@ -311,9 +308,6 @@ class SD_Schedule {
 
 		String actual_ApptProvider = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ApptProviderValidation'))
 		WebUI.verifyEqual(actual_ApptProvider, ApptProvider)
-
-
-
 	}
 
 	@When("I should see default time")
@@ -321,14 +315,12 @@ class SD_Schedule {
 
 		String DefaultTime = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_defaultTime'))
 		WebUI.verifyEqual(DefaultTime, "8:00 AM")
-
 	}
 
 	@When("I click on ViewPatientRecord button")
 	public void ViewPatientRecord() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ViewPatientRecord'))
-
 	}
 
 	@When("I should see created appointment data is showing")
@@ -346,16 +338,18 @@ class SD_Schedule {
 
 		String actualAppointmentStatus = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Appointment_Status'))
 		WebUI.verifyEqual(actualAppointmentStatus, "Scheduled")
-
-
-
 	}
 
 	@When("I click on View Patient Record button")
 	public void ViewPatientRecordBtn() {
 
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ViewPatientRecord'))
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ViewPatientRecord_UpdatedPath'))
+	}
 
+	@When("I click on delete icon button to delete appointment")
+	public void DeleteAppt() {
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_deleteAppointment'))
 	}
 
 	@When("I should see schedule UI status")
@@ -363,14 +357,12 @@ class SD_Schedule {
 
 		String actuaSchedulelStatus = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_ScheduleStatusValidation'))
 		WebUI.verifyEqual(actuaSchedulelStatus, "Scheduled")
-
 	}
 
 	@When("I click on Add Block button")
 	public void AddBlockBTn() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_BTN'))
-
 	}
 
 	@When("I should see add block title")
@@ -378,65 +370,53 @@ class SD_Schedule {
 
 		String actuaTitle = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_TitleVerify'))
 		WebUI.verifyEqual(actuaTitle, "Add Block")
-
 	}
 
 	@When("I enter (.*) as blockname")
 	public void SetBlockName(String BlockName) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_Name'), BlockName)
-
 	}
 
 	@When("I enter (.*) as block_StartDate")
 	public void SetBlockStartDate(String StartDate) {
 
 		WebUI.clearText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_StartDate'))
-		
-		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_StartDate'),StartDate)
 
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_StartDate'),StartDate)
 	}
 
 	@When("I enter (.*) as block_Time")
 	public void SetBlockTime(String Time) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_StartTime'),Time)
-
 	}
 	@When("I enter (.*) as block_comment")
 	public void SetBlockComment(String Comment) {
 
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_Note'),Comment)
-
 	}
 
 	@When("I click on save block button")
 	public void ClickSaveBlockBTN() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_SaveBtn'))
-
 	}
-	
+
 	@When("I click on delete block button")
 	public void ClickDeleteBlockBTN() {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_Delete'))
-
 	}
 
 	@When("I should see block successful save message")
 	public void ValidateBlockSuccessMessage() {
 
-		Thread.sleep(2000)
-		
+
 		String actual_message = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/Schedule/Obj_Block_SuccessMessage'))
 		WebUI.verifyEqual(actual_message, "successAppointment block saved successfully.Hide")
-		Thread.sleep(1000)
+		Thread.sleep(2000)
 
-		//WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
+		WebUI.click(findTestObject('Object Repository/OR_Alert/Obj_Hide'))
 	}
-	
-	
-
-
 }

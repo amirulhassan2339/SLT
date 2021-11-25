@@ -6,6 +6,10 @@
    <elementGuidId>26ed6f1b-ec1f-4308-86f2-98285e3d4390</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>button.btn.btn-sm.btn-primary.patientCarePlanTabSaveBtn</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//*[@type = 'button' and (text() = '
 				Save
@@ -14,12 +18,8 @@
 			') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_BtnFrame']</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>button.btn.btn-sm.btn-primary.patientCarePlanTabSaveBtn</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>(//div[@id='analyticsFormsTOGrid'])/div[2]//table//tbody//tr[3]//td[1]/span</value>
+         <value>(//div[@id='analyticsFormsPCGrid'])/div[2]//table//tbody//tr[1]//td[1]/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

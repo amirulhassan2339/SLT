@@ -6,15 +6,15 @@
    <elementGuidId>efc8ded3-ebcb-4a00-8e43-11a8fc2a23b3</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#panel46Columns13Text</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='panel46Columns13Text']</value>
+         <key>CSS</key>
+         <value>input[id='panel46Columns13Text']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

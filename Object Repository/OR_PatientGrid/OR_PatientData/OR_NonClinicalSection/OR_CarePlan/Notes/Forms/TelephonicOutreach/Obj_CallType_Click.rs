@@ -6,15 +6,19 @@
    <elementGuidId>8ff57da4-7afb-417e-88bf-1b186d2e67f1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(@class, 'k-popup-edit-form k-window-content k-content')]/div/div[1]/div/div[2]/div[4]/div[1]/div/span/span/span[2]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span[aria-owns='callType_listbox']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

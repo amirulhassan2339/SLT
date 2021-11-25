@@ -13,7 +13,7 @@ Feature: Soap Note Creation from Schedule flow
     * I drag chat list
     * I click create button to save appointment
     * I click on yes button
-    * I click on proceed button to appointment
+    #* I click on proceed button to appointment
     Then I should see appointment success message
 
     Examples: 
@@ -38,10 +38,10 @@ Feature: Soap Note Creation from Schedule flow
     When I click on Save button to save SOAP NOTE
     Then I should see soap note saved message
     When I click on SaveClose button to save SOAP NOTE
-    Then I should see soap note saved message
-    When I click on three dots
-    Then I should see Edit Soap Note option
-    #* I should see Lab Resultss data in soap note popup
+    And I should see soap note saved message
+    * I click on three dots
+    * I should see Edit Soap Note option
+    * I should see Lab Resultss data in soap note popup
     
     Examples: 
       | LabResults |Patient          |

@@ -6,21 +6,21 @@ Feature: Care Plan - Preview Assessment - Based On Patient Medical Record
 	@Smoke_USMM
 	Scenario Outline: Preview assessment by clicking name of assessment when we are on careplan and selecting assessments
 		When I search <Patient> using global search
-		#		 And I click on assessment
-		#		   * I click on add
-		#		   * I click on other assessment tempelate
-		#		   * I click Asthma
-		#		   * I click on procced
-		#		   * I enter <Title> title
-		#		   * I click billable radio button
-		#		   * I enter <CPTCode> as cpt code
-		#		   * I select dropdown values
-		#		   * I enter <Comment> comment
-		#		   * I click save button
+				 And I click on assessment
+				   * I click on add
+				   * I click on other assessment tempelate
+				   * I click Asthma
+				   * I click on procced
+				   * I enter <Title> title
+				   * I click billable radio button
+				   * I enter <CPTCode> as cpt code
+				   * I select dropdown values
+				   * I enter <Comment> comment
+				   * I click save button
 		   * I click on care plan tab
 		   * I click on add new care plan button
 		   * I click on basedonpatientmedicalrecord
-		   * I enter title <Title>
+		   * I enter title2 <Title>
 		   * I select work in progress as no
 		   * I click on save button
 		   * I mouse hover on assessment
@@ -31,16 +31,16 @@ Feature: Care Plan - Preview Assessment - Based On Patient Medical Record
 		   * I click on OK button
 		       * I click on save and close button
 		   
-#		   * I click on care plan tab
-#		   * I click on add new care plan button
-#		   * I click on basedonpatientmedicalrecord
-#		   * I enter title <Title>
-#		   * I select work in progress as no
-#		   * I click on save button
-#		   
-#		   When I click on saveapprove button
-#		   * I click on proceed button
-#		   * I click on title from care plan grid
+		   * I click on care plan tab
+		   * I click on add new care plan button
+		   * I click on basedonpatientmedicalrecord
+		   * I enter title2 <Title>
+		   * I select work in progress as no
+		   * I click on save button
+		   
+		   When I click on saveapprove button
+		   * I click on proceed button
+		   * I click on title from care plan grid
 #		   * I mouse hover on assessment
 #		   * I click on assessment icon
 #		   * I click on assessment name to preview assessment detail

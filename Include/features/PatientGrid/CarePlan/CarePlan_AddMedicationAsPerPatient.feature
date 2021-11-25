@@ -20,5 +20,5 @@ Feature: Care Plan - ADD Medication
 		Then I should see <MedicationCode> and <StartDate> as updated medication as perpatient
 
 		Examples: 
-			| Patient          | MedicationCode       | SucessMessage                           | StartDate | Title   |
-			| Dermo505, Mac505 | 99 | successCare Plan Saved SuccessfullyHide |  12012020 | Medication as per patient |
+			| Patient          | MedicationCode | SucessMessage                           | StartDate | Title                     |
+			| Dermo505, Mac505 |             99 | successCare Plan Saved SuccessfullyHide |  12012020 | Medication as per patient |

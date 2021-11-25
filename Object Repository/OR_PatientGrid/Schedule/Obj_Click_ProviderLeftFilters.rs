@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@id='schedulerFiltersContainer']//div)[205]</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>(//ul[@id='FilterAppointment-attendees_taglist'])//parent::div</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

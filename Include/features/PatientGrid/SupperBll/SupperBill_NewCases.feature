@@ -3,7 +3,7 @@ Feature: Supper Bill flows
 	Background: 
 		Given I navigate to patient grid
 
-	@SmokeUSMM_SupperBill_Status_Signed
+	@SmokeUSMM_SupperBill_NewCases
 	Scenario Outline: Verify that patients are filtered against the selected soap status signed
 		When I click on schedule tab
 		   * I double click on screen to add appointment

@@ -7,14 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='rightResult']/div/span/span[1]</value>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>span.ui-select-placeholder.text-muted.ng-binding</value>
+         <value>div[id='rightResult']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

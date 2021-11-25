@@ -1,9 +1,10 @@
-Feature: Soap Note Creation from Schedule flow
+Feature: Soap Note - Existing Medications
 
 	Background: 
 		Given I navigate to patient grid
 
-	Scenario Outline: Verify Creating Schedule Appointment Using Soap Notes
+@ExistingMedications
+	Scenario Outline: Verify Existing Medications
 		When I search <Patient> using global search
 		 And I click on Clinical tab
 		   * I click on Medication	tab
@@ -20,7 +21,7 @@ Feature: Soap Note Creation from Schedule flow
 		   * I drag chat list
 		   * I click create button to save appointment
 		   * I click on yes button
-		   * I click on proceed button to appointment
+#		   * I click on proceed button to appointment
 		Then I should see appointment success message
 		   * I should see already scheduled appointment
 		When I click on three dots

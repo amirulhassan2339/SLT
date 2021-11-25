@@ -15,7 +15,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//li[contains(text(), 'Sanctuary at McAuley')])[2]</value>
+         <value>(//ul[@id='officeLocation_listbox'])//li[5]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

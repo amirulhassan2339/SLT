@@ -14,10 +14,20 @@ import utility_Functions.UtilityFunctions
 public class SD_TransitionOfCareForm {
 
 	TestObject frame=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/CareManagementForm/Obj_CCMFrame')
+	TestObject privacyobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/selectprivacy')
+	TestObject priotityobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/selectpriority')
+	TestObject ERprivacyobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/ER Follow Up Calls/selectprivacy')
+	TestObject ERpriotityobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/ER Follow Up Calls/selectpriority')
+	
+	TestObject Hosprivacyobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Hospital Discharge Calls/selectprivacy')
+	TestObject Hospriotityobj=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Hospital Discharge Calls/selectpriority')
+	
+	
 	TestObject ContactMethodClick=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_ContactMethod_Click')
 	TestObject DiscussWithClick=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_DiscussedWith_CLick')
 	TestObject AdditionalRecordsClick=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_AdditionalRecord_Click')
 	TestObject OutreachClick=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_OutreachDropdown_Click')
+	TestObject FormTypeClick=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_FormType_Click')
 	
 	TestObject InGeneralHowAreYouFeelingClick=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Surgical Follow Up Calls/Obj_InGeneralHowAreYouFeeling_Click')
 	
@@ -32,8 +42,67 @@ public class SD_TransitionOfCareForm {
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_CourtesyCall'))
 	}
 
+	@Then("I select Coutesy Call privacy:(.*)")
+	public void i_select_privacy_privacy(String privacy) {
+		'I click on privacy field'
+		WebUI.click(privacyobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='//li[text()="'+privacy+'"]'
+		obj.selectdropdown(frame,xpath)
+	}
 
+	@Then("I select Coutesy Call priority:(.*)")
+	public void i_select_priority_priority(String priority) {
+		'I click on priority field'
+		WebUI.click(priotityobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='(//li[text()="'+priority+'"])[4]'
+		obj.selectdropdown(frame,xpath)
+	}
+	
+	@Then("I select Hospital Discharge Calls privacy:(.*)")
+	public void i_select_Hos_privacy(String privacy) {
+		'I click on privacy field'
+		WebUI.click(Hosprivacyobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='//li[text()="'+privacy+'"]'
+		obj.selectdropdown(frame,xpath)
+	}
 
+	@Then("I select Hospital Discharge Calls priority:(.*)")
+	public void i_select_Hos_priority(String priority) {
+		'I click on priority field'
+		WebUI.click(Hospriotityobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='(//li[text()="'+priority+'"])[4]'
+		obj.selectdropdown(frame,xpath)
+	}
+
+	@Then("I select ER Follow Up Call privacy:(.*)")
+	public void i_select_ER_privacy(String privacy) {
+		'I click on privacy field'
+		WebUI.click(ERprivacyobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='//li[text()="'+privacy+'"]'
+		obj.selectdropdown(frame,xpath)
+	}
+
+	@Then("I select ER Follow Up Call priority:(.*)")
+	public void i_select_ER_priority(String priority) {
+		'I click on priority field'
+		WebUI.click(ERpriotityobj)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='(//li[text()="'+priority+'"])[4]'
+		obj.selectdropdown(frame,xpath)
+	}
+	
+	
 	@And("I should see transition of care form title")
 	public void I_should_see_transition_Title() {
 
@@ -88,9 +157,46 @@ public class SD_TransitionOfCareForm {
 		String xpath='//li[text()="'+AdditionalRecords+'"]'
 		obj.selectdropdown(frame,xpath)
 	}
+	
+	@Then("I select form type:(.*)")
+	public void i_select_formType(String FormType) {
+		'I click on Form Type field'
+		WebUI.click(FormTypeClick)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='//li[text()="'+FormType+'"]'
+		obj.selectdropdown(frame,xpath)
+	}
+
+	@And("I click on analytics reset button")
+	public void ClickAnalyticsReset() {
 
 
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_ResetBtn_Analytics'))
+	}
+	
+	@And("I click on analytics apply button")
+	public void ClickAnalyticsApply() {
 
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_ApplyBtn_Analytics'))
+	}
+
+	@And("I enter analytics from date")
+	public void i_enter_FromDate() {
+
+		//String ToDate = WebUI.getAttribute(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_Analytics_ToDate'), 'value')
+
+		WebUI.clearText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_Analytics_FromDate'))
+		
+		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_Analytics_FromDate'), '11022021')
+		
+//		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_Analytics_FromDate'), ToDate)
+//		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_Analytics_FromDate'), ToDate)
+		
+	}
+
+	
 	@And("I enter (.*) as notified name")
 	public void i_enter_notificationName(String NotifiedName) {
 
@@ -154,9 +260,11 @@ public class SD_TransitionOfCareForm {
 
 	@And("I click on save button to save transition of care form data")
 	public void I_SaveBtn_Transition() {
-
+		Thread.sleep(2000)
+		
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Courtesy Calls/Obj_SaveBTN'))
 
+		Thread.sleep(2000)
 	}
 
 	@And("I enter (.*) as how are you feeling since discharge")
@@ -215,6 +323,11 @@ public class SD_TransitionOfCareForm {
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Surgical Follow Up Calls/Obj_TypeOfSurgery'), TypeOfSurgery)
 	}
 	
+	@And("I should see data in analytics")
+	public void i_enter_AnalyticsDate() {
+
+		WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/Surgical Follow Up Calls/Obj_DateTime'),3)
+	}
 	
 
 	

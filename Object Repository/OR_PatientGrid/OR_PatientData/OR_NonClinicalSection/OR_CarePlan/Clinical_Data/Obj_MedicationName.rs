@@ -6,16 +6,16 @@
    <elementGuidId>723b346c-6075-4de6-a5e1-89ea9bc13eab</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>(//div[contains(@id, 'ccmMedicationsAsPerPatient')])/div[3]//span[contains(text(), 'ABC to Z::10287')]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//*[@type = 'button' and (text() = 'Save &amp; Close' or . = 'Save &amp; Close') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_BtnFrame']</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>button.btn.btn-sm.btn-primary.patientCarePlanTabSaveAndCloseBtn</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='ccmMedicationsAsPerPatient_516296'])/div[3]//span[contains(text(), 'ABC to Z::10287')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

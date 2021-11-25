@@ -12,9 +12,13 @@ import utility_Functions.UtilityFunctions
 
 
 public class SD_SaveNotes {
-	
-	UtilityFunctions obj=new UtilityFunctions();
 
+TestObject frame=findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/CareManagementForm/Obj_CCMFrame')
+TestObject PrivacyClick=findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Privacy')
+TestObject PriorityClick=findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority')
+
+UtilityFunctions obj=new UtilityFunctions();
+	
 	@Then("I click on notes tab")
 	public void i_click_on_notes_tab() {
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/span_Notes'))
@@ -36,32 +40,46 @@ public class SD_SaveNotes {
 		WebUI.verifyEqual(Actual_Title, 'Add Note')
 	}
 
-	@When("I select privacy")
-	public void i_select_Private() {
+	@When("I select privacy for save notes:(.*)")
+	public void i_select_Private(String privacy) {
 
-		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Privacy'))
-		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Privacy'))
-		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Privacy'))
 
+		'I click on privacy field'
+		WebUI.click(PrivacyClick)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='//li[text()="'+privacy+'"]'
+		obj.selectdropdown(frame,xpath)
+		
+		
 		//WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/li_Private'))
 	}
 
-	@When("I select priority")
-	public void i_select_Medium() {
+	@When("I select priority for save notes:(.*)")
+	public void i_select_Medium(String priority) {
 
-		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
-		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
-		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
+//		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
+//		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
+//		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Priority'))
 
 		//WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/li_Medium'))
-	}
+	
+		'I click on priority field'
+		WebUI.click(PriorityClick)
+		'I select value from the dropdown'
+		Thread.sleep(2000);
+		String xpath='(//li[text()="'+priority+'"])[4]'
+		obj.selectdropdown(frame,xpath)
+		
+		
+		}
 
 	@When("I select type")
 	public void i_select_CCM() {
 
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_Type'))
-
-		//WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/li_CCM'))
+		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/OR_Save/Obj_TypeSelect'))
+		
 	}
 
 	@When("I (.*) notes")
@@ -103,7 +121,7 @@ public class SD_SaveNotes {
 	@And("I verify that the record exists in the notes section having date:(.*),Note Type:(.*),username:(.*) and priority:(.*)")
 
 	void verification(String date,String type,String username,String priority) {
-		
+
 		String datexpath='//td[@role="gridcell"]//span[@class="priority-container"]//span[text()="'+priority+'"]//following-sibling::span//span[text()="'+type+'"]//preceding::strong//span[@class="modified-date"]'
 		TestObject frame=findTestObject('Object Repository/ProgramEnrollment/frameObject')
 		obj.customVerify(frame,datexpath,date)

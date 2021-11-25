@@ -6,12 +6,12 @@
    <elementGuidId>0d9721f3-8f21-40f1-8e2f-632cadf805b3</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[contains(@class, 'clinical medication k-grid has-wizard mz-widget k-widget k-editable')]//div)[3]//button[1]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//div[@data-mz-key='clinical.medication'])//button[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

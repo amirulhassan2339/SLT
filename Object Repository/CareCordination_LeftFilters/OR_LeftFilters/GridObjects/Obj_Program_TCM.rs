@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@id='tocGrid']//table)[2]//tr[1]//td[7]</value>
+         <value>(//div[@id='tocGrid'])//div[4]//tr[1]//td[7]</value>
       </entry>
       <entry>
          <key>CSS</key>

@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='hra k-grid has-wizard hraAssessment mz-widget']/div/div[1]</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div[data-mz-key='hra']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

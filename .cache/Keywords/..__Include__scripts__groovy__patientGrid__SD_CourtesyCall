@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "9AD158EDB77063F2A970E79DA56154C8",
+  "keywordFileContentHash": "3408CA57404F9A489ED498ADF5F34FC7",
   "keywordClasses": [
     {
       "name": "patientGrid.SD_CourtesyCall",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }

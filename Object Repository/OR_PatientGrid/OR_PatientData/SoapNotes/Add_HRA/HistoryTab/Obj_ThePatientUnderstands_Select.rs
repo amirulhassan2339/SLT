@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='well']/div/form/div[1]/div/div[2]/div[1]/div/div[2]/div/div/input[1]</value>
+         <value>(//div[@id='table7Select'])//input[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

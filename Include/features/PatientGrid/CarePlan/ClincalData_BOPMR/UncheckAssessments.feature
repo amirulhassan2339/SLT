@@ -6,17 +6,17 @@ Feature: Care Plan - Preview Assessment - Based On Patient Medical Record
 	@Smoke_USMM
 	Scenario Outline: Preview assessment by clicking name of assessment when we are on careplan and selecting assessments
 		When I search <Patient> using global search
-		#		 And I click on assessment
-		#		   * I click on add
-		#		   * I click on other assessment tempelate
-		#		   * I click Asthma
-		#		   * I click on procced
-		#		   * I enter <Title> title
-		#		   * I click billable radio button
-		#		   * I enter <CPTCode> as cpt code
-		#		   * I select dropdown values
-		#		   * I enter <Comment> comment
-		#		   * I click save button
+				 And I click on assessment
+				   * I click on add
+				   * I click on other assessment tempelate
+				   * I click Asthma
+				   * I click on procced
+				   * I enter <Title> title
+				   * I click billable radio button
+				   * I enter <CPTCode> as cpt code
+				   * I select dropdown values
+				   * I enter <Comment> comment
+				   * I click save button
 		   * I click on care plan tab
 		   * I click on add new care plan button
 		   * I click on basedonpatientmedicalrecord
@@ -37,8 +37,8 @@ Feature: Care Plan - Preview Assessment - Based On Patient Medical Record
 		   * I select multiple assessment checkboxes
 		   * I click on OK button
 		Then I should see assessment data
-		   * I enter <AssessmentComment> as assessmentcomment
-		   * I enter title
+		When I enter <AssessmentComment> as assessmentcomment
+		 And I enter title2 <Title>
 		   * I click on save button
 		   * I should see assessment data
 		   * I click on save and close button
@@ -51,7 +51,7 @@ Feature: Care Plan - Preview Assessment - Based On Patient Medical Record
 		   * I should not see assessment data
 		   * I click on save and close button
 		   * I click on title from care plan grid
-		   * I should not see assessment data
+		Then I should not see assessment data
 
 		Examples: 
 			| Patient          | Title                  | Comment                                                                    | CPTCode   | AssessmentComment |

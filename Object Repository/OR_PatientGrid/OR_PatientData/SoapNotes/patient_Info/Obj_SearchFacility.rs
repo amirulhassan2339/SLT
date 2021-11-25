@@ -6,15 +6,15 @@
    <elementGuidId>a69c7907-f8fa-4619-9ce2-a596b6a3775c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#carePlanPatientInfoDiv_550910 > div</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='soapServingFacility-list']//input)[1]</value>
+         <key>CSS</key>
+         <value>input[aria-owns='soapServingFacility_listbox']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

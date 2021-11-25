@@ -6,16 +6,16 @@
    <elementGuidId>4f43835f-46db-41f3-89b6-03dd93c05101</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>(//span[@class='AssessmentTemplateTitle'])[2]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//*[@type = 'button' and (text() = 'Save &amp; Close' or . = 'Save &amp; Close') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_BtnFrame']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>button.btn.btn-sm.btn-primary.patientCarePlanTabSaveAndCloseBtn</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//span[@class='AssessmentTemplateTitle'])</value>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

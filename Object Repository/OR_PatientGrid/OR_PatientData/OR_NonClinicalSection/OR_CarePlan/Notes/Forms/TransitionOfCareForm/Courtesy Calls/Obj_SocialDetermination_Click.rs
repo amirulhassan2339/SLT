@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class='k-select'])[63]</value>
+         <value>(//span[@class='k-select'])[67]</value>
       </entry>
       <entry>
          <key>BASIC</key>

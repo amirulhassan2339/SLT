@@ -13,7 +13,7 @@ Feature: Soap Note Creation from Schedule flow
 		   * I drag chat list
 		   * I click create button to save appointment
 		   * I click on yes button
-		   * I click on proceed button to appointment
+		#		   * I click on proceed button to appointment
 		Then I should see appointment success message
 
 		Examples: 
@@ -37,10 +37,10 @@ Feature: Soap Note Creation from Schedule flow
 		   * I enter <Allergy_Start_Date> as allergy_StartDate
 		   * I enter <Allergy_End_Date> as allergy_EndDate
 		   * I click on saveclose button to save allergy
-		When I click on select existing allergies button
-		 And I select the existing allergy checkbox
+		   * I click on select existing allergies button
+		   * I select the existing allergy checkbox
 		   * I click on procced button
-		* I click on Save button to save SOAP NOTE
+		   * I click on Save button to save SOAP NOTE
 		Then I should see <Allergy> and <Allergy_Start_Date> and <Allergy_End_Date> as allergy data in soap note grid
 
 		Examples: 

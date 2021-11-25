@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='super-bill single-bill k-grid single-mode-only mz-widget']/div[1]/div[1]</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div[data-mz-key='superBillSingle']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

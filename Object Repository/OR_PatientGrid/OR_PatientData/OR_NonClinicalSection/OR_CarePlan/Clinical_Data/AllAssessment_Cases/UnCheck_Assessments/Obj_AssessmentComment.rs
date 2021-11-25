@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//textarea[@id='carePlanAssessmentNotes_516296'])</value>
+         <value>(//textarea[contains(@id, 'carePlanAssessmentNotes')])</value>
       </entry>
       <entry>
          <key>CSS</key>

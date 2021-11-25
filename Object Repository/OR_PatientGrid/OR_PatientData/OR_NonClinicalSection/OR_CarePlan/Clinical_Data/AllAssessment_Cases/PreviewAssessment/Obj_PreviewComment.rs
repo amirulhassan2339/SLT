@@ -6,16 +6,16 @@
    <elementGuidId>f8efbb5b-56e3-4523-b6c0-8e1aa528aeb3</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>(//div[@class='pre-view'])[2]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//*[@type = 'button' and (text() = '
 				Save
 			' or . = '
 				Save
 			') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_BtnFrame']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='pre-view'])</value>
       </entry>
       <entry>
          <key>CSS</key>

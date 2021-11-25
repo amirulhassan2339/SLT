@@ -6,16 +6,16 @@
    <elementGuidId>ec36fd93-3c30-4da3-8f06-60598b17ad15</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>span.single-line-text.facility-link</value>
       </entry>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>(//div[@id='patient-grid']//tr)[2]//td[11]//span[contains(text(), 'Sanctuary at McAuley')]</value>
+         <value>(//div[@id='patient-grid']//tr)[2]//td[12]//span[contains(text(), 'Sanctuary at McAuley')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

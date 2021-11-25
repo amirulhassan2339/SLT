@@ -43,19 +43,6 @@ Feature: Soap Note Creation from Schedule flow
     Then I should see assessment saved successfully message
     * I click on cross icon to close the popup
     * I should see added assessment data in soap note popup
-    When I click on add Medication plus button
-    And I enter <MedicationCode> as the medication code
-    * I enter <Medication_Route> as medication route
-    * I enter <Medication_Start_Date> as start date
-    * I enter <Medication_Reason> as medication reason
-    * I enter <Medication_DispensedQuantity> as medication despensed quantity
-    * I click on saveclose button to save medications
-    Then I should see medications data in soap note popup
-    When I click on add Problems plus button
-    And I enter <ProblemsCode> as the problems code
-    * I enter <Problems_Start_Date> as problems start date
-    * I click on saveclose button to save problems
-    Then I should see problems data in soap note popup
     When I click on add Lab Results plus button
     And I enter <LabResults> as lab results in search and select analyte
     * I click on lab resutls OK button

@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='well']/div/form/div[3]/div/div[2]/div[42]/div/div[2]/div/div</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div[id='panel34Columns5Select']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

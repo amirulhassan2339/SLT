@@ -6,16 +6,16 @@
    <elementGuidId>4eecd897-e010-4a76-9fd1-fe32eab7af7a</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>(//div[contains(@id, 'carePlanPatientDiagnosisInfoDiv')])/div[3]//span[contains(text(), 'Cholera, unspecified::A00.9')]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//*[@type = 'button' and (text() = '
 				Save
 			' or . = '
 				Save
 			') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_BtnFrame']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='carePlanPatientDiagnosisInfoDiv_516296'])/div[3]//span[contains(text(), 'Cholera, unspecified::A00.9')]</value>
       </entry>
       <entry>
          <key>CSS</key>

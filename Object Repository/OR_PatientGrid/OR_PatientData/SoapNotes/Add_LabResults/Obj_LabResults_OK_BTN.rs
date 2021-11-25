@@ -11,10 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@class='btn btn-primary btn-sm add-analyte']</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button[class='btn btn-primary btn-sm add-analyte']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

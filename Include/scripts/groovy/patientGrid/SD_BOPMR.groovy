@@ -185,13 +185,20 @@ class SD_BOPMR {
 		WebUI.setText(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGridInput/Input'), Title)
 	}
 
+	@When("I enter title2 (.*)")
+	public void user_Enter_Title2_TestingPatient(String Title) {
+
+		WebUI.setText(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGridInput/Input - Copy'), Title)
+	}
+
+
 	@And("I click on save and close button")
 	public void click_On_SaveClose_Button() {
 
 
 		WebUI.click(findTestObject('OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_buttonSaveClose'))
 
-		Thread.sleep(5000)
+		Thread.sleep(3000)
 	}
 
 	@And("Close CP Popup")
@@ -267,12 +274,12 @@ class SD_BOPMR {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_SaveApprove'))
 
-		//		Thread.sleep(1000)
-		//		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_Review'))
-		//
-		//		Thread.sleep(1000)
-		//
-		//		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_SaveApprove'))
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_Review'))
+
+		Thread.sleep(1000)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_CPGrid_Buttons/Obj_button_SaveApprove'))
 
 	}
 

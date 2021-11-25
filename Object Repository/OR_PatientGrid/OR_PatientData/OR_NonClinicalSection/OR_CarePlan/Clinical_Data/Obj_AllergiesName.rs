@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@id='ccmAllergiesDiv_516296'])/div[3]//span[contains(text(), 'abciximab::83929')]</value>
+         <value>(//div[contains(@id, 'ccmAllergiesDiv')])/div[3]//span[contains(text(), 'oxitropium')]</value>
       </entry>
       <entry>
          <key>CSS</key>

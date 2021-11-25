@@ -1,9 +1,10 @@
-Feature: Soap Note Creation from Schedule flow
+Feature: Soap Note - Existing Problems
 
 	Background: 
 		Given I navigate to patient grid
 
-	Scenario Outline: Verify Creating Schedule Appointment Using Soap Notes
+@ExistingProblems
+	Scenario Outline: Verify Existing Problems
 		When I search <Patient> using global search
 		 And I click on Clinical tab
 		   * I click on Problem List	tab
@@ -19,7 +20,7 @@ Feature: Soap Note Creation from Schedule flow
 		   * I drag chat list
 		   * I click create button to save appointment
 		   * I click on yes button
-		   * I click on proceed button to appointment
+#		   * I click on proceed button to appointment
 		Then I should see appointment success message
 		   * I should see already scheduled appointment
 		When I click on three dots
@@ -29,7 +30,7 @@ Feature: Soap Note Creation from Schedule flow
 		   * I select the Problem checkbox
 		   * I click on procced button
 		   * I click on Save button to save SOAP NOTE
-		Then I should see problem existing data in grid
+		Then I should see problems data in soap note popup
 
 		Examples: 
 			| Patient          | Reason    | Code_Name                                                 |

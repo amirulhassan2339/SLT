@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@class='staticAssessment']//div)[3]/span</value>
+         <value>(//div[@class='staticAssessment']//div)[4]/span</value>
       </entry>
       <entry>
          <key>CSS</key>

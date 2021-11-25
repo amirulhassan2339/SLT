@@ -6,15 +6,15 @@
    <elementGuidId>abeb158b-d15c-4f2c-82a7-33f0ce97c14d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>span.k-dropdown-wrap.k-state-default.k-state-hover > span.k-select</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='Priority'])[6]/following::span[4]</value>
+         <key>CSS</key>
+         <value>span[aria-owns='pwb_note_form_template_priority_listbox']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

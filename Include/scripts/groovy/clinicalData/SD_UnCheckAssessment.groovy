@@ -53,9 +53,7 @@ public class SD_UnCheckAssessment {
 
 
 		WebUI.verifyElementNotPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/UnCheck_Assessments/Obj_AssessmentName_AssessmentSection_CP'), 2)
-		
-		WebUI.clearText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Clinical_Data/AllAssessment_Cases/UnCheck_Assessments/Obj_AssessmentComment'))
-		
+				
 	}
 	
 	@When("I click on Cancel button")

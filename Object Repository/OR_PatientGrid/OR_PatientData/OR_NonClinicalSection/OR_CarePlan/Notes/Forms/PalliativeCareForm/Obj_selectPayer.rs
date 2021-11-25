@@ -6,12 +6,11 @@
    <elementGuidId>1bc7df40-d98b-41df-ba76-6f5002e9ebc9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//li[contains(text(),'Buckeye - Medicaid')]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//ul[@id='palliativecareformPayer_listbox']//li[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

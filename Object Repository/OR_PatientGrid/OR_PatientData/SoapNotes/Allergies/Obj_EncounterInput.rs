@@ -6,19 +6,19 @@
    <elementGuidId>5fd8f15c-7d97-44c9-bf1f-374ce7736eb9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@id='encounterFieldId'])[2]</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>input[id='encounterSoapCode']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

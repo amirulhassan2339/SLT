@@ -10,15 +10,15 @@
          <value>//*[(text() = 'Ahmad, Murtaza' or . = 'Ahmad, Murtaza') and @ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#carePlanPatientInfoDiv_550910 > div</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='col-sm-12 form form-horizontal encounter-stats']//div)[22]//div[2]/span</value>
+         <key>CSS</key>
+         <value>span[aria-owns='soapServingFacility_listbox']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

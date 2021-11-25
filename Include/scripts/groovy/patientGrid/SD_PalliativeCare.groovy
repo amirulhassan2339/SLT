@@ -2,10 +2,6 @@ package patientGrid
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import java.util.concurrent.ConcurrentHashMap.KeySetView
-
-import javax.servlet.http.WebConnection
-
 import org.openqa.selenium.Keys
 
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -173,8 +169,11 @@ public class SD_PalliativeCare {
 
 		Thread.sleep(1000)
 		WebUI.setText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/PalliativeCareForm/Obj_DiagnosesInput'), Diagnoses)
-
-		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/PalliativeCareForm/Obj_SelectDiagnoses'))
+		Thread.sleep(1000)
+		
+		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/PalliativeCareForm/Obj_DiagnosesInput'),Keys.chord(Keys.ENTER))
+		
+		//WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/PalliativeCareForm/Obj_SelectDiagnoses'))
 	}
 
 
@@ -363,6 +362,38 @@ public class SD_PalliativeCare {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/PalliativeCareForm/Obj_SaveBtn'))
 	}
+	
+	@And("I should see current date of notes form")
+	public void CurrentDate() {
+
+
+	String actual = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/Notes/Forms/TransitionOfCareForm/ER Follow Up Calls/Obj_CurrentDateForms'))
+		
+	String date = actual.substring(0, 2)
+
+		String date1 = actual.substring(0, 2)
+
+		if(actual.println(actual)) {
+			
+			WebUI.verifyMatch(date, date1, false)
+		}else {
+			
+			print("SOrry")
+		}
+	
+	}
+	
+	
+	@And("I should see (.*) as palliativeCare")
+	public void I_click_DateOfPalliative(String DateTime) {
+
+		'Verify Date'
+		String date = DateTime.substring(0, 8)
+
+		String date1 = DateTime.substring(0, 8)
+
+		WebUI.verifyMatch(date, date1, false)	}
+	
 
 	@And("I should see record success message")
 	public void I_should_see_record_success_message() {

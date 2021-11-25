@@ -61,6 +61,8 @@ public class SD_PatientGrid {
 		WebUI.mouseOver(findTestObject('OR_LandingPage/OR_CMR/Obj_CMR'))
 
 
+		Thread.sleep(2000)
+		
 		WebUI.click(findTestObject('Object Repository/OR_LandingPage/OR_CMR/Obj_Patients'))
 
 		//		WebUI.click(findTestObject('OR_Alert/Obj_Hide'))

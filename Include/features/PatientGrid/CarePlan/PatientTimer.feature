@@ -11,11 +11,11 @@ Feature: Patient Timer
 		Then I should see patient <Patient> as patient_name in timer popup
 		   * I should see current date
 		   * I click on start timer button
-		   * I select patient timer program
+#		   * I select patient timer program
 		   * I click on notes tab
 		   * I click on plus notes button
 		   * I should see notes popup
-		   * I select priority
+#		   * I select priority
 		   * I select type
 		   * I <Enter_Notes> notes
 		   * I click on save btn
@@ -129,14 +129,14 @@ Feature: Patient Timer
 		Then I should see patient <Patient> as patient_name in timer popup
 		   * I should see current date
 		   * I click on start timer button
-		   * I select patient timer program_WFB
+#		   * I select patient timer program_WFB
 		   
 		   
 		   * I click on notes tab
 		   * I should see patient <Patient> as patient_name in timer popup
 		   * I click on plus notes button
 		   * I should see notes popup
-		   * I select priority
+#		   * I select priority
 		   * I select type
 		   * I <Enter_Notes> notes
 		   * I click on save btn
@@ -266,12 +266,12 @@ Feature: Patient Timer
 		   * I checked non billable checkbox
 		   * I should see current date
 		   * I click on start timer button
-		   * I select patient timer program
+#		   * I select patient timer program
 		   
 		   * I click on notes tab
 		   * I click on plus notes button
 		   * I should see notes popup
-		   * I select priority
+#		   * I select priority
 		   * I select type
 		   * I <Enter_Notes> notes
 		   * I click on save btn
@@ -387,13 +387,13 @@ Feature: Patient Timer
 		   * I checked non billable checkbox
 		   * I should see current date
 		   * I click on start timer button
-		   * I select patient timer program_WFB
+#		   * I select patient timer program_WFB
 		   
 * I click on notes tab
 		   * I should see patient <Patient> as patient_name in timer popup
 		   * I click on plus notes button
 		   * I should see notes popup
-		   * I select priority
+#		   * I select priority
 		   * I select type
 		   * I <Enter_Notes> notes
 		   * I click on save btn

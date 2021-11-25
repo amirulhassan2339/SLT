@@ -6,16 +6,16 @@
    <elementGuidId>0bd100c6-48bf-4bdd-9afe-a9577d529ff7</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>td.program.k-state-border-down</value>
       </entry>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>(//div[@id='patient-grid']//tr)[2]//td[33]</value>
+         <value>(//div[@id='patient-grid']//tr)[2]//td[34]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@type='search'])[17]</value>
+         <value>(//div[@id='leftResult'])//input[1]</value>
       </entry>
       <entry>
          <key>CSS</key>

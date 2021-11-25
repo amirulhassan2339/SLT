@@ -44,7 +44,7 @@
    <testCaseLink>
       <guid>9d98bc0b-fb15-4d67-9c0c-75f6bf8dc4b8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_Components_HideShow</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -124,5 +124,89 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/WIPBySaveCloseBtn</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>555addb7-ad17-40e8-8a16-7f4dcd6293f9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_AddAllergies</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>62fc47c0-7786-4671-8161-f04e3ed21ca7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_AddMedicationAsPerEHR</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>56eae369-23d7-4850-9ae3-be23452adf02</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_AddMedicationAsPerPatient</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ab27009a-217d-4496-bf89-53f66f147d11</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_AddProblem</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>94611909-e4d3-42b2-9abb-190a0f1e1991</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_ClinicalData</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a86c9a83-e83f-45c0-a8b6-38901af522d7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_ExportFileValidation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1efa7a1c-9623-4daa-a1f8-e2b4eed798cd</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_LOBandLOBType</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ce11f46c-a4cd-4bae-add3-0ce4fc0f4a8b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_PatientTimer_Disable</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ceb1d8fa-6e59-4da3-9ae8-0d4c674d15ff</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_PatientTimer_NoDiscard</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>01303cab-344a-4c21-835d-2e094db11f3a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_PatientTimer_SaveClose</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a321a629-e9ce-47c8-8dee-9c9e601050a2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_PatientTimerCMModule</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>cff9f843-84e1-48ff-abe6-3f5cbe0231a0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_PreviewAssessment</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b3ae8ee6-d62e-4c46-91f2-c654ae3efb1b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_PreviewAssessment_DraftApprove</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>44cf9e93-443b-447e-9ef4-be1fc779a48d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CucumberRunners/Based On Patient Medical Record/TC_UncheckAssessment</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
