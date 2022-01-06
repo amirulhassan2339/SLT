@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>REGRESSION_CYCLE1_SCHEDULE_NEWCASES_EXECUTION</name>
+   <name>SMOKE_SCHEDULE_NEWCASES</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -14,7 +14,7 @@
    <testCaseLink>
       <guid>d1b5aaea-c9f8-42ff-8d95-44181874ecec</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/CucumberRunners/Schedule Module/TC_LeftFilters_Status</testCaseId>
    </testCaseLink>
    <testCaseLink>

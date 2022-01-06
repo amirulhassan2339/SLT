@@ -26,7 +26,7 @@ Feature: Care Plan - Reject Status Using Save Button
     When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
     And I should see patient data as read only
-    And I should see reject status as <Rejected Status> on CP header
+    #And I should see reject status as <Rejected Status> on CP header
 
     Examples: 
       | Patient          | Title           | New Status | Draft Status | Rejected Status | SucessMessage                           |

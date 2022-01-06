@@ -18,7 +18,8 @@ Feature: Care Plan - ADD Problem
 		   * I enter title <Title>
 		   * I click on save and close button
 		   * I click on title from care plan grid
-		   Then I should see <ProblemCode> and <StartDate> as updated problem
+		   Then I should see patient <Patient> as patient_name
+#		   Then I should see <ProblemCode> and <StartDate> as updated problem
 		   
 
 		Examples: 

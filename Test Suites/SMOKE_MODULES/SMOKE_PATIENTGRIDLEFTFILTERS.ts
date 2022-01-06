@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Regression_Cycle1_PATIENT GRID LEFT FILTERS_Execution</name>
+   <name>SMOKE_PATIENTGRIDLEFTFILTERS</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>

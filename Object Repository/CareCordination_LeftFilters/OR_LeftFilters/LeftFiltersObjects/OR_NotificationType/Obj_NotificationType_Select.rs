@@ -6,16 +6,16 @@
    <elementGuidId>27f53f03-e0fc-4b58-9279-a2ba2485d873</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//ul[@id=&quot;toc_filter_notification_listbox&quot;]/li[1]</value>
+         <key>BASIC</key>
+         <value>//*[(text() = 'CCM' or . = 'CCM') and @ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>li.k-item.k-state-hover</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[(text() = 'CCM' or . = 'CCM') and @ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
+         <key>XPATH</key>
+         <value>//ul[@id=&quot;toc_filter_notification_listbox&quot;]/li[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

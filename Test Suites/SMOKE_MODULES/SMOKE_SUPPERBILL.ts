@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Smoke_Cycle1_SUPPERBILL_Execution</name>
+   <name>SMOKE_SUPPERBILL</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -43,18 +43,6 @@
    </testCaseLink>
    <testCaseLink>
       <guid>7327ad3f-594d-4d3d-a614-c41f9bc627e7</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/CucumberRunners/Supper Bill/TC_DeleteScheduleAppointment</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>bf04bf76-2281-4ff4-badf-cdd77c93ada4</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/CucumberRunners/Supper Bill/TC_SuperBillNewCases</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0be1854c-9483-4779-b4a4-6ce31f93465c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/CucumberRunners/Supper Bill/TC_DeleteScheduleAppointment</testCaseId>

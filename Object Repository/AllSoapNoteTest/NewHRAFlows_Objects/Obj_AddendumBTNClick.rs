@@ -6,15 +6,15 @@
    <elementGuidId>a32403a9-24cd-4169-b3ef-e12ea48802c8</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//button[@class='btn btn-sm btn-info btn-addendum'])</value>
+         <key>CSS</key>
+         <value>button[id='encounterSoap_btn_addendum']</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>span.ui-select-placeholder.text-muted.ng-binding</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

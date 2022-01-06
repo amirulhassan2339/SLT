@@ -3,7 +3,7 @@ Feature: Soap Note - Existing Medications
 	Background: 
 		Given I navigate to patient grid
 
-@ExistingMedications
+	@ExistingMedications
 	Scenario Outline: Verify Existing Medications
 		When I search <Patient> using global search
 		 And I click on Clinical tab
@@ -14,14 +14,13 @@ Feature: Soap Note - Existing Medications
 		   * I click on medication Save All button
 		   * I click on schedule tab
 		   * I double click on screen to add appointment
-		Then I should see schedule appointment popup
-		When I enter <Patient> as appointment patient
-		 And I enter <Reason> as appointment reason
+		   * I enter <Patient> as appointment patient
+		   * I enter <Reason> as appointment reason
 		   * I should see <Patient> as actual patient name
 		   * I drag chat list
 		   * I click create button to save appointment
 		   * I click on yes button
-#		   * I click on proceed button to appointment
+		#		   * I click on proceed button to appointment
 		Then I should see appointment success message
 		   * I should see already scheduled appointment
 		When I click on three dots

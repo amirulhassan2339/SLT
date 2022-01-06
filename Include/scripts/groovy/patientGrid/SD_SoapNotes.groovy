@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 
 import cucumber.api.java.en.And
 import cucumber.api.java.en.Given
@@ -59,7 +60,10 @@ class SD_SoapNotes {
 		Thread.sleep(5000)
 
 		WebUI.sendKeys(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Appointment_PatientSearch'), Keys.chord(Keys.ENTER))
-	}
+	
+		Thread.sleep(2000)
+		
+		}
 
 	@When("I enter (.*) as appointment reason")
 	public void I_enter_reason_as_appointment(String Reason) {
@@ -82,8 +86,8 @@ class SD_SoapNotes {
 		WebUI.click(VisitTypeObj)
 		'I select value from the dropdown'
 		Thread.sleep(2000);
-		//String xpath='(//div[@id="Appointment-type-list"])[2]//ul//li[text()="'+VisitType+'"]'
-		String xpath='(//ul[@id="Appointment-type-list"])[3]//li[text()="'+VisitType+'"]'
+		//String xpath='(//div[@id="Appointment-type-list"])[3]//ul//li[text()="'+VisitType+'"]'
+		String xpath='(//ul[@id="Appointment-type_listbox"])[2]//li[text()="'+VisitType+'"]'
 		
 
 		obj.selectdropdown(frame,xpath)
@@ -164,29 +168,8 @@ class SD_SoapNotes {
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_YesBtn'))
 
-		if(WebUI.verifyElementPresent(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_ProceedBtn'), 3, FailureHandling.OPTIONAL)) {
-			
-			WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_ProceedBtn'))
-			
-		}else {
-			
-			print("Sorry")
-		}
-
-		//		WebElement  ProccedBTN = driver.findElement(By.xpath("//button[contains(@class, 'btn btn-primary btnProceed') and contains(text(), 'Proceed')]"));
-		//
-		//
-		//
-		//
-		//		if(!ProccedBTN.isDisplayed()) {
-		//
-		//
-		//			ProccedBTN.click();
-		//
-		//		}else {
-		//
-		//			print("OK")
-		//		}
+		Thread.sleep(3000)
+		
 	}
 
 	@And("I click on proceed button to appointment")
@@ -195,6 +178,8 @@ class SD_SoapNotes {
 
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_ProceedBtn'), 10)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_ProceedBtn'))
+		
+		Thread.sleep(3000)
 	}
 
 	@Then("I should see appointment success message")
@@ -280,7 +265,7 @@ class SD_SoapNotes {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Click_BasedOnPatientMedicalRecord'), 5)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Click_BasedOnPatientMedicalRecord'))
 
-		Thread.sleep(5000)
+		Thread.sleep(8000)
 	}
 
 	@And("I click on blankSoapNote")
@@ -696,7 +681,7 @@ class SD_SoapNotes {
 		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HRA_Table_Verification/Obj_Diagnosis_Question'), 20)
 
 		String Actual_Question = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_HRA/HRA_Table_Verification/Obj_Diagnosis_Question'))
-		WebUI.verifyEqual(Actual_Question, "Have you ever been told you have  problems with sight?")
+		WebUI.verifyEqual(Actual_Question, "The patient understands")
 
 
 	}
@@ -828,22 +813,28 @@ class SD_SoapNotes {
 
 		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_MedicationCode'), 20)
 
-		String Actual_Medication = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_MedicationCode'))
-		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_MedicationCode'), Actual_Medication, FailureHandling.STOP_ON_FAILURE)
+//		String Actual_Medication = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_MedicationCode'))
+//		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_MedicationCode'), Actual_Medication, FailureHandling.STOP_ON_FAILURE)
 
 
 		String Actual_Route = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_Route'))
-		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_Route'), Actual_Route, FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyEqual(Actual_Route, "buccal")
+		
+		//WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_Route'), Actual_Route, FailureHandling.STOP_ON_FAILURE)
 
+		
 		String Actual_StartDate = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_StartDate'))
 		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_StartDate'), Actual_StartDate, FailureHandling.STOP_ON_FAILURE)
 
-		String Actual_Reason = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_Reason'))
-		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_Reason'), Actual_Reason, FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_DeleteMedication'))
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_ConfirmDeleteMedication'))
+		
+//		String Actual_Reason = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_Reason'))
+//		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_Reason'), Actual_Reason, FailureHandling.STOP_ON_FAILURE)
 
 
-		String Actual_DispensedQuantity = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_DispensedQuantity'))
-		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_DispensedQuantity'), Actual_DispensedQuantity, FailureHandling.STOP_ON_FAILURE)
+//		String Actual_DispensedQuantity = WebUI.getText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_DispensedQuantity'))
+//		WebUI.verifyElementText(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Medication_DataVerification/Obj_Entered_DispensedQuantity'), Actual_DispensedQuantity, FailureHandling.STOP_ON_FAILURE)
 
 
 	}
@@ -964,6 +955,23 @@ class SD_SoapNotes {
 		Thread.sleep(3000)
 	}
 
+	@And("I click on SaveAll button to save Lab Results")
+	public void I_click_SaveAll_LabResults() {
+
+
+		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_LabResults/Obj_LabResults_Hover'), 25)
+
+		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_LabResults/Obj_LabResults_Hover'))
+
+		Thread.sleep(5000)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_LabResults/Obj_LabResults_Plus'), 10)
+
+		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_LabResults/Obj_LabResults_SaveAll'))
+
+		Thread.sleep(2000)
+	}
+	
 	@And("I click on add Lab Results plus button")
 	public void I_click_Add_LabResults() {
 
@@ -1437,7 +1445,7 @@ class SD_SoapNotes {
 
 
 		WebUI.click(findTestObject('AllSoapNoteTest/NewHRAFlows_Objects/Obj_button_Yes_unsign'))
-		Thread.sleep(3000)
+		Thread.sleep(2000)
 	}
 
 	@When("I should see unsigned message")

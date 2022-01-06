@@ -26,7 +26,7 @@ Feature: Care Plan - Notes - Forms
 
 		Examples: 
 			| Patient        | DateTime          | privacy | priority | outreach        | time   | name   | module |
-			| Powsen, Powsen | 03152021 03:20 AM | Private | Low      | Initial Contact | 15 min | Doctor | adding |
+			| Dermo505, Mac505 | 03152021 03:20 AM | Private | Low      | Initial Contact | 15 min | Doctor | adding |
 
 #	Scenario Outline: Edit Care Management Form
 #		When I search <Patient> using global search
@@ -39,7 +39,7 @@ Feature: Care Plan - Notes - Forms
 #
 #		Examples: 
 #			| Patient        | DateTime          | privacy | priority | outreach        | time   | name   | module | type                 |
-#			| Powsen, Powsen | 03152021 03:20 AM | Private | Low      | Initial Contact | 15 min | Doctor | adding | Care Management Form |
+#			| Dermo505, Mac505 | 03152021 03:20 AM | Private | Low      | Initial Contact | 15 min | Doctor | adding | Care Management Form |
 #
 #	Scenario Outline: Delete Care Management Form
 #		When I search <Patient> using global search
@@ -50,4 +50,4 @@ Feature: Care Plan - Notes - Forms
 #
 #		Examples: 
 #			| Patient        | DateTime          | privacy | priority | outreach        | time   | name   | module   | type                 | dynamicid                    | message                                 |
-#			| Powsen, Powsen | 03152021 03:20 AM | Private | Low      | Initial Contact | 15 min | Doctor | deleting | Care Management Form | Record deleted successfully! | successRecord deleted successfully!Hide |
+#			| Dermo505, Mac505 | 03152021 03:20 AM | Private | Low      | Initial Contact | 15 min | Doctor | deleting | Care Management Form | Record deleted successfully! | successRecord deleted successfully!Hide |

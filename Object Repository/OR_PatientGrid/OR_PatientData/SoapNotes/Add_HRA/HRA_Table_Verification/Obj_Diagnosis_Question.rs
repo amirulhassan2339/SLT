@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@data-mz-key='hra'])/div[2]//table[2]//tr[2]//td[1]</value>
+         <value>(//div[@data-mz-key='hra'])/div[2]//table[1]//tr[1]//td[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

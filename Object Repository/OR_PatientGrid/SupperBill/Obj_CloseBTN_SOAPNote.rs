@@ -4,17 +4,26 @@
    <name>Obj_CloseBTN_SOAPNote</name>
    <tag></tag>
    <elementGuidId>b438cc5b-0863-4b8f-85d7-b611e6ec92f9</elementGuidId>
+   <imagePath></imagePath>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='toolbar k-header']//button)[8]</value>
-      </entry>
       <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button[id='encounterSoap_btn_cancel']</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

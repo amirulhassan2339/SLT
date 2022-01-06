@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "3F77DC848DC2380E442A9E49A2050DF6",
+  "keywordFileContentHash": "B0E3650E1EE87EFDA3343F40A3360462",
   "keywordClasses": [
     {
       "name": "patientGrid.SD_SNFWaiver",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }

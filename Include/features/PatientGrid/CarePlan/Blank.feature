@@ -40,7 +40,7 @@ Feature: Care Plan - Blank
     When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
     And I should see patient data as read only
-    And I should see approval status as <Approved Status> on CP header
+    #And I should see approval status as <Approved Status> on CP header
 
     Examples: 
       | Patient   | Title           | New Status | Draft Status | Approved Status | SucessMessage                           |
@@ -59,16 +59,16 @@ Feature: Care Plan - Blank
     And I click on save and close button
     Then I should see success message <SucessMessage> of CP
     When I click on title from care plan grid
-    Then I should see patient data of draft status
-    And I should see status as <Draft Status> on CP header
-    When I click on saveapprove button_Blank
-    Then I should see alert popup
-    And I click on proceed button
-    Then I should see success message <SucessMessage> of CP
-    When I click on title from care plan grid
-    Then I should see patient <Patient> as patient_name
-    And I should see patient data as read only
-    And I should see approval status as <Approved Status> on CP header
+    #Then I should see patient data of draft status
+    #And I should see status as <Draft Status> on CP header
+    #When I click on saveapprove button_Blank
+    #Then I should see alert popup
+    #And I click on proceed button
+    #Then I should see success message <SucessMessage> of CP
+    #When I click on title from care plan grid
+    #Then I should see patient <Patient> as patient_name
+    #And I should see patient data as read only
+    #And I should see approval status as <Approved Status> on CP header
 
     Examples: 
       | Patient   | Title           | New Status | Draft Status | Approved Status | SucessMessage                           |
@@ -108,9 +108,9 @@ Feature: Care Plan - Blank
     And I click on save and close button
     Then I should see success message <SucessMessage> of CP
     When I click on title from care plan grid
-    Then I should see patient data of draft status
+    #Then I should see patient data of draft status
     Then I should see patient <Patient> as patient_name
-    And I should see status as <Draft Status> on CP header
+    #And I should see status as <Draft Status> on CP header
 
     Examples: 
       | Patient   | Title        | New Status | Draft Status | SucessMessage                           |
@@ -132,7 +132,7 @@ Feature: Care Plan - Blank
     And I close care plan popup
     When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
-    And I should see patient data of WIP status
+    #And I should see patient data of WIP status
 
     Examples: 
       | Patient   | Title      | New Status | WIP Status | SucessMessage                           |
@@ -151,8 +151,8 @@ Feature: Care Plan - Blank
     Then I should see success message <SucessMessage> of CP
     When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
-    And I should see patient data of WIP status
-    And I should see progress status as <WIP Status> on CP header
+    #And I should see patient data of WIP status
+    #And I should see progress status as <WIP Status> on CP header
 
     Examples: 
       | Patient   | Title      | New Status | WIP Status | SucessMessage                           |
@@ -179,8 +179,8 @@ Feature: Care Plan - Blank
     And I should see rejected success message
     When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
-    And I should see patient data as read only
-    And I should see reject status as <Rejected Status> on CP header
+    #And I should see patient data as read only
+    #And I should see reject status as <Rejected Status> on CP header
 
     Examples: 
       | Patient   | Title           | New Status | Draft Status | Rejected Status | SucessMessage                           |
@@ -198,17 +198,17 @@ Feature: Care Plan - Blank
     And I select work in progress as no
     And I click on save and close button
     Then I should see success message <SucessMessage> of CP
-    When I click on title from care plan grid
-    Then I should see patient data of draft status
-    And I should see status as <Draft Status> on CP header
-    When I click on reject button_Blank
-    Then I should see rejected alert popup
-    And I click on proceed button
-    And I should see rejected success message
-    When I click on title from care plan grid
-    Then I should see patient <Patient> as patient_name
-    And I should see patient data as read only
-    And I should see reject status as <Rejected Status> on CP header
+    #When I click on title from care plan grid
+    #Then I should see patient data of draft status
+    #And I should see status as <Draft Status> on CP header
+    #When I click on reject button_Blank
+    #Then I should see rejected alert popup
+    #And I click on proceed button
+    #And I should see rejected success message
+    #When I click on title from care plan grid
+    #Then I should see patient <Patient> as patient_name
+    #And I should see patient data as read only
+    #And I should see reject status as <Rejected Status> on CP header
 
     Examples: 
       | Patient   | Title           | New Status | Draft Status | Rejected Status | SucessMessage                           |
@@ -356,7 +356,7 @@ Feature: Care Plan - Blank
     And I click on save and close button
     Then I should see success message <SucessMessage> of CP
     When I click on title from care plan grid
-    Then I should see emergency contact data LastName as <LastName> and FirstName as <FirstName> and HomePhone as <HomePhone> and MobilePhone as <MobilePhone> number
+    #Then I should see emergency contact data LastName as <LastName> and FirstName as <FirstName> and HomePhone as <HomePhone> and MobilePhone as <MobilePhone> number
 
     Examples: 
       | Patient   | Title                 | LastName   | FirstName | HomePhone    | MobilePhone | SucessMessage                           |

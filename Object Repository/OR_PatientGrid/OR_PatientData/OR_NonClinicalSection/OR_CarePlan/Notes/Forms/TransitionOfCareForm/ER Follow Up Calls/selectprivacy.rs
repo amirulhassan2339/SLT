@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//span[@aria-owns='pwb_note_form_toc_cc_shareWith_listbox']</value>
+         <value>(//*[@name='shareWith'])//parent::span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

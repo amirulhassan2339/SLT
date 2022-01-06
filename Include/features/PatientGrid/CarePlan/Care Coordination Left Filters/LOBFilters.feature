@@ -13,8 +13,6 @@ Feature: Care Cordination Left Filters
     And I click on care cordination apply button
     Then I should see <LOB> as care cordination LOB
     
-    
-
  Examples:
  |LOB|
  |Non-ACO (IAH)|

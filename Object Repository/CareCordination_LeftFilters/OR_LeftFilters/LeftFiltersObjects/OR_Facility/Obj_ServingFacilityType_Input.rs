@@ -6,12 +6,12 @@
    <elementGuidId>cdc2c382-13dd-40b4-a87c-3c8751860ffa</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//input[@aria-owns='toc_filter_serving_practice_type_taglist toc_filter_serving_practice_type_listbox'])</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>div.k-widget.k-multiselect.k-header.form-control.k-state-hover.k-state-focused.k-state-border-down > div.k-multiselect-wrap.k-floatwrap > input.k-input</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//input[@aria-owns='toc_filter_serving_practice_taglist toc_filter_serving_practice_listbox'])</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

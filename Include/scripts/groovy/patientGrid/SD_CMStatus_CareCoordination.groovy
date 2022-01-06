@@ -46,8 +46,9 @@ public class SD_CMStatus_CareCoordination {
 	public void I_should_see_care_cordination_LOB_filters(String CM_Status) {
 
 
+		Thread.sleep(3000)
 		String Actual_CMStatus = WebUI.getText(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/CM Status/CM Grid/Obj_VerifyCMStatus'))
-
+		
 		if(!Actual_CMStatus.is(CM_Status)) {
 
 			WebUI.verifyEqual(CM_Status, Actual_CMStatus)

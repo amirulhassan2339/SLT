@@ -41,12 +41,7 @@ Feature: Care Plan - Preview Assessment - Based On Patient Medical Record
 		   When I click on saveapprove button
 		   * I click on proceed button
 		   * I click on title from care plan grid
-#		   * I mouse hover on assessment
-#		   * I click on assessment icon
-#		   * I click on assessment name to preview assessment detail
-#		Then I should see assessment data <Title> in preview window as title
-#		   * I should see assessment data <Comment> in preview window as comment
-#		   * I click on OK button
+		   
 
 		Examples: 
 			| Patient          | Title                  | Comment                                                                    | CPTCode   |

@@ -27,4 +27,4 @@ Feature: Care Plan - Notes - Forms
 		#		Then I should see record success message
 		Examples: 
 			| Patient        |module| NotificationDate  | DischargeDate     | privacy | priority | ProviderName | TransitionDate    |type|
-			| Powsen, Powsen |adding| 03152021 03:20 AM | 03152021 11:45 PM | Private | Low      | Amir         | 03152021 03:20 AM |patient Transition|
+			| Dermo505, Mac505 |adding| 03152021 03:20 AM | 03152021 11:45 PM | Private | Low      | Amir         | 03152021 03:20 AM |patient Transition|

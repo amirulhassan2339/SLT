@@ -14,7 +14,7 @@ Feature: Soap Note Creation from Schedule flow
 		   * I drag chat list
 		   * I click create button to save appointment
 		   * I click on yes button
-#		   * I click on proceed button to appointment
+		   * I click on proceed button to appointment
 		Then I should see appointment success message
 		   * I click on three dots
 		#		   * I click on edit soapnotes
@@ -69,10 +69,6 @@ Feature: Soap Note Creation from Schedule flow
 		   * I click on Apply button to apply supper bill filters
 		   * I open Patient using <MRN> on superbill screen
 		Then I should see <MRN> on superbill grid
-		When I click on patient tab
-		   * I search <Patient> using global search
-		   * I click on encounter tab button to land on enconter section
-		Then I should see signed status on encounter grid
 		When I click on schedule tab
 		   * I click on three dots
 		   * I click on view soap note

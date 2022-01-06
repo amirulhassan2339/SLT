@@ -16,16 +16,16 @@ Feature: Care Plan - Approved Using SaveClose Button
     And I click on save and close button
     Then I should see success message <SucessMessage> of CP
     When I click on title from care plan grid
-    Then I should see patient data of draft status
-    And I should see status as <Draft Status> on CP header
-    When I click on saveapprove button
-    Then I should see alert popup
-    And I click on proceed button
-    Then I should see success message <SucessMessage> of CP
-    When I click on title from care plan grid
+    #Then I should see patient data of draft status
+    #And I should see status as <Draft Status> on CP header
+    #When I click on saveapprove button
+    #Then I should see alert popup
+    #And I click on proceed button
+    #Then I should see success message <SucessMessage> of CP
+    #When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
-    And I should see patient data as read only
-    And I should see approval status as <Approved Status> on CP header
+    #And I should see patient data as read only
+    #And I should see approval status as <Approved Status> on CP header
 
     Examples: 
       | Patient          | Title           | New Status | Draft Status | Approved Status | SucessMessage                           |

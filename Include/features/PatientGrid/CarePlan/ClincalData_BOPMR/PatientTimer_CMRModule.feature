@@ -24,7 +24,7 @@ Feature: Patient Timer
 		   * I drag chat list
 		   * I click create button to save appointment
 		   * I click on yes button
-		   * I click on proceed button to appointment
+#		   * I click on proceed button to appointment
 		   * I click on three dots
 		   * I click on view patient record
 		Then I should see patient <Patient> as patient_name in timer popup
@@ -41,19 +41,10 @@ Feature: Patient Timer
 		When I click on analytics tab
 		   * I click on form option
 		   * I select the patient from analytics grid
-		Then I should see patient <Patient> as patient_name in timer popup
-		   * I click on minimize button
+		Then I should see patient <Patient> as patient_name in timer popup		   
+		   * I click on stop timer button
+		   * I click on update button
 		   * I click on WFB cross button from schedule
-		When I click on task tab
-		   * I select the patient from task grid
-		Then I should see patient <Patient> as patient_name in timer popup
-		   * I click on minimize button
-		   * I click on WFB cross button from schedule
-		When I click on care cordination
-		   * I search <Patient> using global search
-		   * I select the patient from care coordination grid
-		   * I select the patient from task grid
-		Then I should see patient <Patient> as patient_name in timer popup
 		When I click on scheduleTab
 		And I click on three dots
 		 * I click on delete appointment

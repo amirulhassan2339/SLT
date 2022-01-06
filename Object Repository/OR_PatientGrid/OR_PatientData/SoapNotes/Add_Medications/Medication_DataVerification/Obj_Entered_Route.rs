@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='patient-data col-sm-12 soap-note-cs']/div[1]/div[2]/div[5]/div[3]/table/tbody/tr[1]/td[7]</value>
+         <value>//div[@data-mz-key='clinical.medication']/div[3]//tr[1]//td[7]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

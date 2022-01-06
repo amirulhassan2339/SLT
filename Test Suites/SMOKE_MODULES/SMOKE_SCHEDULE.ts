@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>REGRESSION_CYCLE1_SCHEDULE_EXECUTION</name>
+   <name>SMOKE_SCHEDULE</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>

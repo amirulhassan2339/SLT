@@ -19,7 +19,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@id='grid_campaign'])/div[3]//table//tbody//tr[6]//td[4]//span</value>
+         <value>(//div[@id='grid_campaign'])/div[3]//table//tbody//tr[1]//td[1]/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

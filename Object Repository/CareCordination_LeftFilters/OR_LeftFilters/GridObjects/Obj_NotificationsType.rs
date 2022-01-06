@@ -6,16 +6,16 @@
    <elementGuidId>9a019555-b923-4da4-9e7c-f843189651e9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='tocGrid'])//div[4]//tr[1]//td[42]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>//*[(text() = 'Heart Failure, CCM, Readmission' or . = 'Heart Failure, CCM, Readmission') and @ref_element = 'Object Repository/OR_PatientGrid/OR_LeftFilters/GridObjects/Obj_CCMFrame']</value>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>td.program.k-state-border-down</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='tocGrid']//div[@class='k-grid-content k-auto-scrollable']//tr[1]//td[39]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -49,18 +49,11 @@
       <value>tooltip</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>Heart Failure, CCM, Readmission</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath</name>
-      <type>Main</type>
-      <value>id(&quot;patient-grid&quot;)/div[@class=&quot;k-grid-content k-auto-scrollable&quot;]/table[1]/tbody[1]/tr[@class=&quot;k-master-row&quot;]/td[@class=&quot;program k-state-border-down&quot;]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

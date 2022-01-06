@@ -10,15 +10,15 @@
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>CSS</key>
          <value></value>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
          <value>(//ul[@id='FilterAppointment-type_taglist'])//parent::div</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

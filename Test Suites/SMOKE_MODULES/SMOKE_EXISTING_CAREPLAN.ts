@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Regression_Cycle1_PATIENT_TIMER_Execution</name>
+   <name>SMOKE_EXISTING_CAREPLAN</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,29 +10,29 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>eb49627e-18ec-422c-a43c-57789d43fba2</testSuiteGuid>
+   <testSuiteGuid>c2ecfae5-7bba-4bb6-828d-a0acf74ac47e</testSuiteGuid>
    <testCaseLink>
-      <guid>10210b30-a6a0-49c6-b0c6-0b570824a9bf</guid>
+      <guid>4fb8a2bd-38b7-4631-9342-b675bda26b82</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/CucumberRunners/PatientTimer/TC_PatientGrid_Billable</testCaseId>
+      <testCaseId>Test Cases/CucumberRunners/Existing Care Plans/TC_Approved</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>70fad889-23ec-411c-b5d8-657101e088a8</guid>
+      <guid>9afa9381-c307-45e7-b4f2-4c3e55bf9b14</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/CucumberRunners/PatientTimer/TC_PatientGrid_NonBillable</testCaseId>
+      <testCaseId>Test Cases/CucumberRunners/Existing Care Plans/TC_Draft</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3a3056c8-c91b-4e20-9213-15e93e858b09</guid>
+      <guid>80a656e0-61e8-41d7-80ae-711e3c1e7e2b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/CucumberRunners/PatientTimer/TC_PatientWorkFlowBox_Billable</testCaseId>
+      <testCaseId>Test Cases/CucumberRunners/Existing Care Plans/TC_Rejected</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d316bd29-5d0d-41ca-89c4-26ce84fc1f47</guid>
+      <guid>1b09a12e-c283-4ba6-8db5-91a82ede24e4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/CucumberRunners/PatientTimer/TC_PatientWorkFlowBox_NonBillable</testCaseId>
+      <testCaseId>Test Cases/CucumberRunners/Existing Care Plans/TC_WIP</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Regression_Cycle1_FROM PREVIOUS CAREPLANS_Execution</name>
+   <name>SMOKE_FROM PREVIOUS CAREPLANS</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>

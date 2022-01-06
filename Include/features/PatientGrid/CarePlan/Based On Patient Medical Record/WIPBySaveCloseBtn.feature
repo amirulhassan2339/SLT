@@ -17,8 +17,8 @@ Feature: Care Plan - Reject Status Using SaveClose Button
     Then I should see success message <SucessMessage> of CP
     When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
-    And I should see patient data of WIP status
-    And I should see progress status as <WIP Status> on CP header
+    #And I should see patient data of WIP status
+    #And I should see progress status as <WIP Status> on CP header
 
     Examples: 
       | Patient          | Title      | New Status | WIP Status | SucessMessage                           |

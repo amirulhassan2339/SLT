@@ -10,11 +10,15 @@
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
+         <key>CSS</key>
+         <value>button[class='btn btn-primary btn-sm btn-apply pull-right btn-apply-scheduler']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>(//div[@id='schedulerFiltersContainer']//div)[217]//button[1]</value>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

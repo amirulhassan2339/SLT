@@ -27,7 +27,7 @@ Feature: Care Plan - Approved Using Save Button
 		Then I should see patient <Patient> as patient_name
 		#Then I should see patient data <Patient_Name> and <MRN> and <DOB> and <LOB> and <Enterprise> on care plan
 		 And I should see patient data as read only
-		 And I should see approval status as <Approved Status> on CP header
+#		 And I should see approval status as <Approved Status> on CP header
 
 		Examples: 
 			| Patient          | Title           | New Status | Draft Status | Approved Status | SucessMessage                           |

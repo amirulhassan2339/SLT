@@ -24,7 +24,6 @@ Feature: Care Plan - Notes - Forms
 		   * I select patient patient attributeIAH
 		   * I enter SNF <Comments> as SNF comments
 		   * I click on save button to save patient data
-		   * I click on save button to save patient data
 		Then I should see success message for <module> record
 		* I should see current date of notes form
 		
@@ -51,4 +50,4 @@ Feature: Care Plan - Notes - Forms
 		#		Then I select Delete from the confirmation box
 		Examples: 
 			| Patient          | FormType   | DateTime          | priority | type       | AprimaID | ReferralSourceDate | ReferralName | LastSeenByVPAProvider | AdmissionDate | Facility | EstimatedLOS | DischargeDate | module | Comments                                                                   |
-			| Powsen, Powsen | SNF Waiver | 03152021 03:20 AM | Low      | SNF Waiver |      122 |           12022020 | Ali          |              12022020 |      12202021 | MHPN     |           10 |      15092020 |        adding | Lorem Ipsum is simply dummy text of the printing and typesetting industry. |
+			| Dermo505, Mac505 | SNF Waiver | 03152021 03:20 AM | Low      | SNF Waiver |      122 |           12022020 | Ali          |              12022020 |      12202021 | MHPN     |           10 |      15092020 |        adding | Lorem Ipsum is simply dummy text of the printing and typesetting industry. |

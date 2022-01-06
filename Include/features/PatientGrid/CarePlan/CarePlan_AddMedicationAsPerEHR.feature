@@ -17,7 +17,8 @@ Feature: Care Plan - ADD Medication
 		   * I enter title <Title>
 		   * I click on save and close button
 		   * I click on title from care plan grid
-		Then I should see <MedicationCode> and <StartDate> as updated medication as PerEHR
+		   Then I should see patient <Patient> as patient_name
+#		Then I should see <MedicationCode> and <StartDate> as updated medication as PerEHR
 
 		Examples: 
 			| Patient          | MedicationCode       | SucessMessage                           | StartDate | Title   |

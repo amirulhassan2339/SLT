@@ -20,7 +20,7 @@ Feature: Care Plan - WIP Status Using Save Button
     And I close care plan popup
     When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
-    And I should see patient data of WIP status
+    #And I should see patient data of WIP status
 
     Examples: 
       | Patient          | Title      | New Status | WIP Status | SucessMessage                           |

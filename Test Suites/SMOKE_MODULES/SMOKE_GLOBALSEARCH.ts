@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Regression_Cycle1_GLOBALSEARCH_Execution</name>
+   <name>SMOKE_GLOBALSEARCH</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -44,7 +44,7 @@
    <testCaseLink>
       <guid>3b8e204a-7f60-46de-a7f0-1f53cf7e7de0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/CucumberRunners/Global Search Patient/TC_OpenPatientFromCC_MRN</testCaseId>
    </testCaseLink>
    <testCaseLink>

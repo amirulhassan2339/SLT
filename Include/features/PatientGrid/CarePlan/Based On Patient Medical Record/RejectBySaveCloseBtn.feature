@@ -17,16 +17,16 @@ Feature: Care Plan - Reject Status Using SaveClose Button
     And I click on save and close button
     Then I should see success message <SucessMessage> of CP
     When I click on title from care plan grid
-    Then I should see patient data of draft status
-    And I should see status as <Draft Status> on CP header
-    When I click on reject button
-    Then I should see rejected alert popup
-    And I click on proceed button
-    And I should see rejected success message
-    When I click on title from care plan grid
+    #Then I should see patient data of draft status
+    #And I should see status as <Draft Status> on CP header
+    #When I click on reject button
+    #Then I should see rejected alert popup
+    #And I click on proceed button
+    #And I should see rejected success message
+    #When I click on title from care plan grid
     Then I should see patient <Patient> as patient_name
-    And I should see patient data as read only
-    And I should see reject status as <Rejected Status> on CP header
+    #And I should see patient data as read only
+    #And I should see reject status as <Rejected Status> on CP header
 
     Examples: 
       | Patient          | Title           | New Status | Draft Status | Rejected Status | SucessMessage                           |

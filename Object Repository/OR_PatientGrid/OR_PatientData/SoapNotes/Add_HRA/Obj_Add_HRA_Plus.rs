@@ -10,12 +10,11 @@
          <value>//*[@ref_element = 'Object Repository/OR_PatientGrid/OR_PatientData/OR_NonClinicalSection/OR_CarePlan/OR_Close Popup/Obj_CCMFrame']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value></value>
+         <key>CSS</key>
+         <value>div[data-mz-key='hra'] button</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>button[id='pwb_soap_action_add_btn']</value>
+         <key>XPATH</key>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

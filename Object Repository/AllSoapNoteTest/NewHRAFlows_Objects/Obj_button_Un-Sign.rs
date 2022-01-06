@@ -6,15 +6,15 @@
    <elementGuidId>239e92c5-8f92-44d1-8d9b-071df25eefc7</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//button[@class='btn btn-sm btn-info btn-unSign'])</value>
+         <key>CSS</key>
+         <value>button[id='encounterSoap_btn_unSign']</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>button.btn.btn-sm.btn-info.btn-unSign</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
