@@ -68,6 +68,18 @@ class SD_CareCordination_LeftFilters {
 
 		WebUI.sendKeys(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_Facility/Obj_ServingFacilityType_Input'), Keys.chord(Keys.ENTER))
 	}
+	
+	@When("I enter (.*) as assign date from")
+	public void user_Enter_AssignFromDate(String AssignDateFrom) {
+
+		WebUI.setText(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_AssignDates/Obj_FromDate'),AssignDateFrom )
+	}
+	@When("I enter (.*) as assign date to")
+	public void user_Enter_AssignToDate(String AssignDateTo) {
+
+		WebUI.setText(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/LeftFiltersObjects/OR_AssignDates/Obj_ToDate'),AssignDateTo )
+
+	}
 
 
 
@@ -106,6 +118,8 @@ class SD_CareCordination_LeftFilters {
 	public void I_should_see_care_cordination_LOB_filters(String LOB) {
 
 
+		WebUI.scrollToElement(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/GridObjects/Obj_LOB'), 5)
+		
 		Thread.sleep(2000)
 		String Actual_LOB = WebUI.getText(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/GridObjects/Obj_LOB'))
 
@@ -122,7 +136,8 @@ class SD_CareCordination_LeftFilters {
 	@Then("I should see care cordination (.*) as serving facility type")
 	public void I_should_see_care_cordination_ServingFacilityType_filters(String Facility) {
 
-
+		WebUI.scrollToElement(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/GridObjects/Obj_ServingFacilityType_HOS'), 5)
+		
 		String Actual_ServingFacilityType = WebUI.getText(findTestObject('Object Repository/CareCordination_LeftFilters/OR_LeftFilters/GridObjects/Obj_ServingFacilityType_HOS'))
 
 		WebUI.verifyEqual(Actual_ServingFacilityType, Facility)
