@@ -6,12 +6,11 @@
    <elementGuidId>9d0d495b-a388-49a7-9800-e850a39cbc94</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='ccmAllergiesDiv_564272'])/div[1]//div</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//div[contains(@id, 'ccmAllergiesDiv')])/div[1]//div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

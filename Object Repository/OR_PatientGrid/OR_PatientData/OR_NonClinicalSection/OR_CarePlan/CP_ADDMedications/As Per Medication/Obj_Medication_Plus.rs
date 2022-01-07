@@ -6,12 +6,11 @@
    <elementGuidId>f9901e21-4831-4843-91f6-fc936872de3d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='ccmMedicationsAsPerPatient_564272']/div[1])//div//span[2]//a[1]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//div[contains(@id, 'ccmMedicationsAsPerPatient')]/div[1])//div//span[2]//a[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -6,12 +6,11 @@
    <elementGuidId>0f2f413c-66a9-4c2d-91d0-622ced7b1dc4</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@id='carePlanPatientDiagnosisInfoDiv_564272']/div[1])//div//span[2]//a[1]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//div[contains(@id,'carePlanPatientDiagnosisInfoDiv')]/div[1])//div//span[2]//a[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
