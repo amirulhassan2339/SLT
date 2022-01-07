@@ -6,12 +6,12 @@
    <elementGuidId>9978a638-07b6-47ec-a142-cdefbe5a6bd5</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//th[@data-field=&quot;mrn&quot;])[2]//a[1]//span</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>a.k-header-column-menu.k-state-active > span.k-icon.k-i-arrowhead-s</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//th[@data-field=&quot;mrn&quot;])[1]//a[1]//span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

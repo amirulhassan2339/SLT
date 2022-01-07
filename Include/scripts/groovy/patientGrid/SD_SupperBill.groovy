@@ -58,7 +58,7 @@ class SD_SupperBill {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ApplyBTN'), 15)
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/SupperBill/Obj_ApplyBTN'))
-		Thread.sleep(10000)
+		Thread.sleep(14000)
 	}
 
 	@Then("I should see particualar patient data in (.*) as selected date")
