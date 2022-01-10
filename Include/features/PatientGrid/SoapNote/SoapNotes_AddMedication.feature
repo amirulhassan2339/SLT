@@ -1,10 +1,9 @@
 Feature: Soap Note Creation from Schedule flow
 
   Background: 
-    Given I navigate to patient grid
+    Given I navigate to CMR_Schedule
 
   #Scenario Outline: Verify Creating Schedule Appointment Using Soap Notes
-    #When I click on schedule tab
     #And I double click on screen to add appointment
     #Then I should see schedule appointment popup
     #When I enter <Patient> as appointment patient
@@ -22,11 +21,8 @@ Feature: Soap Note Creation from Schedule flow
 
   @Smoke_USMM_CreateMedications
   Scenario Outline: Verify Creating Medication - Based On Patient's Medical Record
-    When I click on schedule tab
     Then I should see already scheduled appointment
     When I click on three dots
-    #* I hover over on create soapnotes
-    #* I click on based on patient medical record
     * I click on edit soapnotes
     Then I should see <Patient> as patient
     When I click on add Medication plus button
@@ -43,7 +39,6 @@ Feature: Soap Note Creation from Schedule flow
       | Lipitor Oral   | buccal           |              04162021 | burns of multiple sites |                            2   | Dermo505, Mac505 |
 
   #Scenario: Verify deleting Scheduled Appointment
-    #When I click on schedule tab
     #Then I should see already scheduled appointment
     #When I click on three dots
     #And I click on delete appointment

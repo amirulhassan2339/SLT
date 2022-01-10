@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>((//div[@id='carePlanPatientDiagnosisInfoDiv_564272'])//table)[2]//tr[1]//td[3]</value>
+         <value>((//div[contains(@id,'carePlanPatientDiagnosisInfoDiv')])//table)[2]//tr[1]//td[3]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

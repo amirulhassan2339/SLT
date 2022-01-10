@@ -88,7 +88,7 @@ Feature: Patient Timer
 		   * I click on patient save button to save encounter
 		   * I click on patient timer button again
 		   * I click on stop timer button
-		   * I verify billable checkbox
+		   * I verify Non_billable checkbox is checked
 		   * I enter <Comment> as comment in timer popup
 		   * I click on update button
 		Then I should see success message <TimerSucessMessage> of timer
@@ -200,7 +200,7 @@ Feature: Patient Timer
 		   
 		   * I click on patient timer button again_WFB
 		   * I click on stop timer button
-		   * I verify billable checkbox
+		   * I verify Non_billable checkbox is checked
 		   * I enter <Comment> as comment in timer popup
 		   * I click on update button
 		Then I should see success message <TimerSucessMessage> of timer
@@ -302,7 +302,7 @@ Feature: Patient Timer
 		   * I click on patient save button to save encounter
 		   * I click on patient timer button again
 		   * I click on stop timer button
-		   * I verify billable checkbox
+		   * I verify Non_billable checkbox is checked
 		   * I enter <Comment> as comment in timer popup
 		   * I click on update button
 		Then I should see success message <TimerSucessMessage> of timer
@@ -419,7 +419,7 @@ Feature: Patient Timer
 
 		   * I click on patient timer button again_WFB
 		   * I click on stop timer button
-		   * I verify billable checkbox
+		   * I verify Non_billable checkbox is checked
 		   * I enter <Comment> as comment in timer popup
 		   * I click on update button
 		Then I should see success message <TimerSucessMessage> of timer

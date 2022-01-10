@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//div[@id='ccmAllergiesDiv_564272'])/div[3]//table//tr[1]//td[2]</value>
+         <value>(//div[contains(@id,'ccmAllergiesDiv')])/div[3]//table//tr[1]//td[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

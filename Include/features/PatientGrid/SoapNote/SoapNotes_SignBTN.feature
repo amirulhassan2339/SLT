@@ -1,11 +1,10 @@
 Feature: Soap Note Creation from Schedule flow
 
 	Background: 
-		Given I navigate to patient grid
+		Given I navigate to CMR_Schedule
 
 	@SmokeUSMM_SignInBTNFunction
 	Scenario Outline: Verify Creating Schedule Appointment Using Soap Notes
-		When I click on schedule tab
 		Then I should see already scheduled appointment
 		When I click on three dots
 		 And I click on edit soapnotes

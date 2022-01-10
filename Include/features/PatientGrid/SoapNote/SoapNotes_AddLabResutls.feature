@@ -1,7 +1,7 @@
 Feature: Soap Note Creation from Schedule flow
 
   Background: 
-    Given I navigate to patient grid
+    Given I navigate to CMR_Schedule
 
   #Scenario Outline: Verify Creating Schedule Appointment Using Soap Notes
     #When I click on schedule tab
@@ -23,7 +23,6 @@ Feature: Soap Note Creation from Schedule flow
 @Smoke_USMM_CreateLabResults
 
   Scenario Outline: Verify Creating Lab Results - Based On Patient's Medical Record
-    When I click on schedule tab
     Then I should see already scheduled appointment
     When I click on three dots
     #* I hover over on create soapnotes

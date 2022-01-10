@@ -265,7 +265,7 @@ class SD_SoapNotes {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Click_BasedOnPatientMedicalRecord'), 5)
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Obj_Click_BasedOnPatientMedicalRecord'))
 
-		Thread.sleep(8000)
+		Thread.sleep(10000)
 	}
 
 	@And("I click on blankSoapNote")
@@ -705,12 +705,17 @@ class SD_SoapNotes {
 	@Then("I click on add Medication existing button")
 	public void I_click_On_Medication_existing() {
 
+		
+		Thread.sleep(12000)
+		
+		
+		WebUI.scrollToElement(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medicatoin_Hover'), 30)
+		
+		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing'), 15)
+		
+				
+				
 		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medicatoin_Hover'))
-
-
-		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing'), 20)
-
-		Thread.sleep(5000)
 
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Medications/Obj_Medication_Existing'))
 
@@ -857,13 +862,12 @@ class SD_SoapNotes {
 	@Then("I click on add Problem existing button")
 	public void I_click_On_Problems_ExistingBTN() {
 
-		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Obj_Problems_Hover'))
-
-
-		WebUI.waitForElementClickable(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Obj_Problems_Plus'), 10)
-
+		WebUI.enableSmartWait()
+		
+		Thread.sleep(12000)
+				
+		WebUI.mouseOver(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Obj_Problems_Hover'))		
 		Thread.sleep(5000)
-
 		WebUI.click(findTestObject('Object Repository/OR_PatientGrid/OR_PatientData/SoapNotes/Add_Problems/Obj_Problems_Plus'))
 
 	}
